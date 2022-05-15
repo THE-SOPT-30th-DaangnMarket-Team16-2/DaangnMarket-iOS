@@ -7,19 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33FCCFC6B3A74A404D24D33E /* Pods_DaangnMarket_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */; };
 		EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7428311102001416D8 /* AppDelegate.swift */; };
 		EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7628311102001416D8 /* SceneDelegate.swift */; };
 		EBB25F7E28311103001416D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB25F7D28311103001416D8 /* Assets.xcassets */; };
 		EBB25F8128311103001416D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB25F7F28311103001416D8 /* LaunchScreen.storyboard */; };
+		EBB25FA828311911001416D8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FA728311911001416D8 /* UIView+.swift */; };
+		EBB25FAA28311926001416D8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FA928311926001416D8 /* UIStackView+.swift */; };
+		EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FAB28311937001416D8 /* UITextField+.swift */; };
+		EBB25FAE2831194A001416D8 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FAD2831194A001416D8 /* UILabel+.swift */; };
+		EBB25FB028311956001416D8 /* Reactive+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FAF28311956001416D8 /* Reactive+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A9DBF19FA6F6C795F23839B /* Pods-DaangnMarket-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket-iOS.release.xcconfig"; path = "Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarket_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8133F19115414C0F7EC57B9 /* Pods-DaangnMarket-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB25F7128311102001416D8 /* DaangnMarket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaangnMarket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB25F7428311102001416D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB25F7628311102001416D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EBB25F7D28311103001416D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB25F8028311103001416D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB25F8228311103001416D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB25FA728311911001416D8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		EBB25FA928311926001416D8 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		EBB25FAB28311937001416D8 /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		EBB25FAD2831194A001416D8 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		EBB25FAF28311956001416D8 /* Reactive+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33FCCFC6B3A74A404D24D33E /* Pods_DaangnMarket_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32C7C963561B7832E031A446 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8133F19115414C0F7EC57B9 /* Pods-DaangnMarket-iOS.debug.xcconfig */,
+				0A9DBF19FA6F6C795F23839B /* Pods-DaangnMarket-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		EBB25F6828311102001416D8 = {
 			isa = PBXGroup;
 			children = (
 				EBB25F7328311102001416D8 /* DaangnMarket-iOS */,
 				EBB25F7228311102001416D8 /* Products */,
+				32C7C963561B7832E031A446 /* Pods */,
+				F94A29A01BE128371292BB9E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +165,11 @@
 		EBB25F9C28311509001416D8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EBB25FA728311911001416D8 /* UIView+.swift */,
+				EBB25FA928311926001416D8 /* UIStackView+.swift */,
+				EBB25FAB28311937001416D8 /* UITextField+.swift */,
+				EBB25FAD2831194A001416D8 /* UILabel+.swift */,
+				EBB25FAF28311956001416D8 /* Reactive+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -213,6 +245,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		F94A29A01BE128371292BB9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -220,9 +260,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBB25F8528311103001416D8 /* Build configuration list for PBXNativeTarget "DaangnMarket-iOS" */;
 			buildPhases = (
+				CB1C0AFAC89F5A98EE0A57F3 /* [CP] Check Pods Manifest.lock */,
 				EBB25F6D28311102001416D8 /* Sources */,
 				EBB25F6E28311102001416D8 /* Frameworks */,
 				EBB25F6F28311102001416D8 /* Resources */,
+				541DD77FA8F929EA7D84CA55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -278,13 +320,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		541DD77FA8F929EA7D84CA55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB1C0AFAC89F5A98EE0A57F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaangnMarket-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBB25F6D28311102001416D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB25FAE2831194A001416D8 /* UILabel+.swift in Sources */,
+				EBB25FA828311911001416D8 /* UIView+.swift in Sources */,
+				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
 				EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */,
+				EBB25FB028311956001416D8 /* Reactive+.swift in Sources */,
 				EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */,
+				EBB25FAA28311926001416D8 /* UIStackView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +507,7 @@
 		};
 		EBB25F8628311103001416D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8133F19115414C0F7EC57B9 /* Pods-DaangnMarket-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -446,6 +536,7 @@
 		};
 		EBB25F8728311103001416D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9DBF19FA6F6C795F23839B /* Pods-DaangnMarket-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
