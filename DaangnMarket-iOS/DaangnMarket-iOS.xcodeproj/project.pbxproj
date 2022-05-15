@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7428311102001416D8 /* AppDelegate.swift */; };
 		EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7628311102001416D8 /* SceneDelegate.swift */; };
-		EBB25F7928311102001416D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7828311102001416D8 /* ViewController.swift */; };
-		EBB25F7C28311102001416D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB25F7A28311102001416D8 /* Main.storyboard */; };
 		EBB25F7E28311103001416D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB25F7D28311103001416D8 /* Assets.xcassets */; };
 		EBB25F8128311103001416D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB25F7F28311103001416D8 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +17,6 @@
 		EBB25F7128311102001416D8 /* DaangnMarket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaangnMarket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB25F7428311102001416D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB25F7628311102001416D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBB25F7828311102001416D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EBB25F7B28311102001416D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBB25F7D28311103001416D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB25F8028311103001416D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB25F8228311103001416D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,165 @@
 		EBB25F7328311102001416D8 /* DaangnMarket-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EBB25F7428311102001416D8 /* AppDelegate.swift */,
-				EBB25F7628311102001416D8 /* SceneDelegate.swift */,
-				EBB25F7828311102001416D8 /* ViewController.swift */,
-				EBB25F7A28311102001416D8 /* Main.storyboard */,
-				EBB25F7D28311103001416D8 /* Assets.xcassets */,
-				EBB25F7F28311103001416D8 /* LaunchScreen.storyboard */,
 				EBB25F8228311103001416D8 /* Info.plist */,
+				EBB25F9428311431001416D8 /* Application */,
+				EBB25F9528311488001416D8 /* Global */,
+				EBB25F7F28311103001416D8 /* LaunchScreen.storyboard */,
+				EBB25F99283114A4001416D8 /* Utils */,
+				EBB25F962831149F001416D8 /* Data */,
+				EBB25F98283114A3001416D8 /* Domain */,
+				EBB25F97283114A1001416D8 /* Presentation */,
 			);
 			path = "DaangnMarket-iOS";
+			sourceTree = "<group>";
+		};
+		EBB25F9428311431001416D8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				EBB25F7628311102001416D8 /* SceneDelegate.swift */,
+				EBB25F7428311102001416D8 /* AppDelegate.swift */,
+				EBB25F9A283114DA001416D8 /* Coordinator */,
+				EBB25F9B283114DF001416D8 /* Manager */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		EBB25F9528311488001416D8 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				EBB25FA02831150F001416D8 /* Supporting Files */,
+				EBB25F9F2831150C001416D8 /* Resources */,
+				EBB25F9E2831150B001416D8 /* Protocols */,
+				EBB25F9D2831150A001416D8 /* Literals */,
+				EBB25F9C28311509001416D8 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		EBB25F962831149F001416D8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				EBB25FA328311550001416D8 /* Repository */,
+				EBB25FA22831154F001416D8 /* Network */,
+				EBB25FA12831154B001416D8 /* Entity */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		EBB25F97283114A1001416D8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EBB25FA62831157F001416D8 /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		EBB25F98283114A3001416D8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EBB25FA52831156D001416D8 /* Usecase */,
+				EBB25FA428311568001416D8 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		EBB25F99283114A4001416D8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EBB25F9A283114DA001416D8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		EBB25F9B283114DF001416D8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		EBB25F9C28311509001416D8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EBB25F9D2831150A001416D8 /* Literals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Literals;
+			sourceTree = "<group>";
+		};
+		EBB25F9E2831150B001416D8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		EBB25F9F2831150C001416D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EBB25F7D28311103001416D8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EBB25FA02831150F001416D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBB25FA12831154B001416D8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		EBB25FA22831154F001416D8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		EBB25FA328311550001416D8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		EBB25FA428311568001416D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EBB25FA52831156D001416D8 /* Usecase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Usecase;
+			sourceTree = "<group>";
+		};
+		EBB25FA62831157F001416D8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +273,6 @@
 			files = (
 				EBB25F8128311103001416D8 /* LaunchScreen.storyboard in Resources */,
 				EBB25F7E28311103001416D8 /* Assets.xcassets in Resources */,
-				EBB25F7C28311102001416D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +283,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB25F7928311102001416D8 /* ViewController.swift in Sources */,
 				EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */,
 				EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +291,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EBB25F7A28311102001416D8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EBB25F7B28311102001416D8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EBB25F7F28311103001416D8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
