@@ -39,26 +39,6 @@ extension UILabel {
           }
       }
     
-    /// 글씨의 오토레이아웃이 기본으로 되어있는 메서드
-    func setLabel(text: String, color: UIColor = .nadoBlack, size: CGFloat, weight: FontWeight = .regular) {
-        let font: UIFont
-        switch weight {
-        case .light:
-            font = .PretendardL(size: size.adjusted)
-        case .regular:
-            font = .PretendardR(size: size.adjusted)
-        case .medium:
-            font = .PretendardM(size: size.adjusted)
-        case .bold:
-            font = .PretendardB(size: size.adjusted)
-        case .semiBold:
-            font = .PretendardSB(size: size.adjusted)
-        }
-        self.font = font
-        self.textColor = color
-        self.text = text
-    }
-    
     /// 라벨 일부 font 변경해주는 함수
     /// - targerString에는 바꾸고자 하는 특정 문자열을 넣어주세요
     /// - font에는 targetString에 적용하고자 하는 UIFont를 넣어주세요

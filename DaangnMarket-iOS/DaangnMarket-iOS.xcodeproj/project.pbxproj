@@ -58,6 +58,19 @@
 		EBB260112831F356001416D8 /* calculateTopInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260102831F356001416D8 /* calculateTopInset.swift */; };
 		EBB260132831F36E001416D8 /* calculatePastTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260122831F36E001416D8 /* calculatePastTime.swift */; };
 		EBB260152831F38D001416D8 /* applyShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260142831F38D001416D8 /* applyShadow.swift */; };
+		EBB2601728321205001416D8 /* UITableViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2601628321205001416D8 /* UITableViewRegisterable.swift */; };
+		EBB2601928321223001416D8 /* UICollectionViewRegisterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2601828321222001416D8 /* UICollectionViewRegisterable.swift */; };
+		EBB2601B28321236001416D8 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2601A28321236001416D8 /* ViewModelType.swift */; };
+		EBB2601D28321538001416D8 /* StoryboardLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2601C28321538001416D8 /* StoryboardLiterals.swift */; };
+		EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2601F28321D1D001416D8 /* BaseVC.swift */; };
+		EBB2602728321E3F001416D8 /* PostDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2602628321E3F001416D8 /* PostDetailVC.swift */; };
+		EBB26033283221D1001416D8 /* PostListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB26032283221D1001416D8 /* PostListVC.swift */; };
+		EBB260352832228D001416D8 /* PostDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB260342832228D001416D8 /* PostDetail.storyboard */; };
+		EBB26037283225D0001416D8 /* Result+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB26036283225D0001416D8 /* Result+.swift */; };
+		EBB26039283226BB001416D8 /* BaseNotiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB26038283226BB001416D8 /* BaseNotiList.swift */; };
+		EBB2603B28322BB1001416D8 /* PostList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB2603A28322BB1001416D8 /* PostList.storyboard */; };
+		EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2603C28322C19001416D8 /* PostWriteVC.swift */; };
+		EBB2603F28322C21001416D8 /* PostWrite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB2603E28322C21001416D8 /* PostWrite.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +129,19 @@
 		EBB260102831F356001416D8 /* calculateTopInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculateTopInset.swift; sourceTree = "<group>"; };
 		EBB260122831F36E001416D8 /* calculatePastTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculatePastTime.swift; sourceTree = "<group>"; };
 		EBB260142831F38D001416D8 /* applyShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = applyShadow.swift; sourceTree = "<group>"; };
+		EBB2601628321205001416D8 /* UITableViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewRegisterable.swift; sourceTree = "<group>"; };
+		EBB2601828321222001416D8 /* UICollectionViewRegisterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewRegisterable.swift; sourceTree = "<group>"; };
+		EBB2601A28321236001416D8 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		EBB2601C28321538001416D8 /* StoryboardLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLiterals.swift; sourceTree = "<group>"; };
+		EBB2601F28321D1D001416D8 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		EBB2602628321E3F001416D8 /* PostDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC.swift; sourceTree = "<group>"; };
+		EBB26032283221D1001416D8 /* PostListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListVC.swift; sourceTree = "<group>"; };
+		EBB260342832228D001416D8 /* PostDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostDetail.storyboard; sourceTree = "<group>"; };
+		EBB26036283225D0001416D8 /* Result+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+.swift"; sourceTree = "<group>"; };
+		EBB26038283226BB001416D8 /* BaseNotiList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNotiList.swift; sourceTree = "<group>"; };
+		EBB2603A28322BB1001416D8 /* PostList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostList.storyboard; sourceTree = "<group>"; };
+		EBB2603C28322C19001416D8 /* PostWriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteVC.swift; sourceTree = "<group>"; };
+		EBB2603E28322C21001416D8 /* PostWrite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostWrite.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +189,6 @@
 				EBB25F8228311103001416D8 /* Info.plist */,
 				EBB25F9428311431001416D8 /* Application */,
 				EBB25F9528311488001416D8 /* Global */,
-				EBB25F7F28311103001416D8 /* LaunchScreen.storyboard */,
 				EBB25F99283114A4001416D8 /* Utils */,
 				EBB25F962831149F001416D8 /* Data */,
 				EBB25F98283114A3001416D8 /* Domain */,
@@ -208,6 +233,8 @@
 		EBB25F97283114A1001416D8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2602128321D5F001416D8 /* Common */,
+				EBB2602C2832212E001416D8 /* MainTabBar */,
 				EBB25FA62831157F001416D8 /* Home */,
 			);
 			path = Presentation;
@@ -269,6 +296,7 @@
 				EBB25FD32831D7D7001416D8 /* UI */,
 				EBB25FAF28311956001416D8 /* Reactive+.swift */,
 				EBB25FDB2831DA86001416D8 /* Adjusted+.swift */,
+				EBB26036283225D0001416D8 /* Result+.swift */,
 				EBB25FC128311E95001416D8 /* UserDefaults+.swift */,
 				EBB25FC328311EAD001416D8 /* String+.swift */,
 			);
@@ -278,6 +306,8 @@
 		EBB25F9D2831150A001416D8 /* Literals */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2601C28321538001416D8 /* StoryboardLiterals.swift */,
+				EBB26038283226BB001416D8 /* BaseNotiList.swift */,
 			);
 			path = Literals;
 			sourceTree = "<group>";
@@ -286,6 +316,9 @@
 			isa = PBXGroup;
 			children = (
 				EBB25FDD2831DAB4001416D8 /* Storyboarded.swift */,
+				EBB2601628321205001416D8 /* UITableViewRegisterable.swift */,
+				EBB2601828321222001416D8 /* UICollectionViewRegisterable.swift */,
+				EBB2601A28321236001416D8 /* ViewModelType.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -301,6 +334,7 @@
 		EBB25FA02831150F001416D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EBB25F7F28311103001416D8 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -343,6 +377,9 @@
 		EBB25FA62831157F001416D8 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2602528321DC6001416D8 /* PostList */,
+				EBB2602428321DBD001416D8 /* PostWrite */,
+				EBB2602328321DB8001416D8 /* PostDetail */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -415,6 +452,128 @@
 			path = Factory;
 			sourceTree = "<group>";
 		};
+		EBB2601E28321D11001416D8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2601F28321D1D001416D8 /* BaseVC.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EBB2602128321D5F001416D8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2602228321D92001416D8 /* UIComponents */,
+				EBB2601E28321D11001416D8 /* Base */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EBB2602228321D92001416D8 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		EBB2602328321DB8001416D8 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2602B2832211C001416D8 /* Junho */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
+		EBB2602428321DBD001416D8 /* PostWrite */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2603028322197001416D8 /* Views */,
+				EBB2602F28322192001416D8 /* Cells */,
+				EBB2603C28322C19001416D8 /* PostWriteVC.swift */,
+				EBB2603E28322C21001416D8 /* PostWrite.storyboard */,
+			);
+			path = PostWrite;
+			sourceTree = "<group>";
+		};
+		EBB2602528321DC6001416D8 /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2603A28322BB1001416D8 /* PostList.storyboard */,
+				EBB26032283221D1001416D8 /* PostListVC.swift */,
+				EBB26031283221B4001416D8 /* Views */,
+				EBB2602D28322168001416D8 /* Cells */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		EBB2602928321E4C001416D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBB2602A28321E50001416D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EBB2602B2832211C001416D8 /* Junho */ = {
+			isa = PBXGroup;
+			children = (
+				EBB260342832228D001416D8 /* PostDetail.storyboard */,
+				EBB2602628321E3F001416D8 /* PostDetailVC.swift */,
+				EBB2602E28322182001416D8 /* ViewModel */,
+				EBB2602928321E4C001416D8 /* Views */,
+				EBB2602A28321E50001416D8 /* Cells */,
+			);
+			path = Junho;
+			sourceTree = "<group>";
+		};
+		EBB2602C2832212E001416D8 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		EBB2602D28322168001416D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EBB2602E28322182001416D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EBB2602F28322192001416D8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EBB2603028322197001416D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EBB26031283221B4001416D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F94A29A01BE128371292BB9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -483,7 +642,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB2603F28322C21001416D8 /* PostWrite.storyboard in Resources */,
+				EBB2603B28322BB1001416D8 /* PostList.storyboard in Resources */,
 				EBB25F8128311103001416D8 /* LaunchScreen.storyboard in Resources */,
+				EBB260352832228D001416D8 /* PostDetail.storyboard in Resources */,
 				EBB25F7E28311103001416D8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,8 +699,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB2601D28321538001416D8 /* StoryboardLiterals.swift in Sources */,
+				EBB2602728321E3F001416D8 /* PostDetailVC.swift in Sources */,
+				EBB26037283225D0001416D8 /* Result+.swift in Sources */,
 				EBB25FC228311E95001416D8 /* UserDefaults+.swift in Sources */,
 				EBB25FAE2831194A001416D8 /* UILabel+.swift in Sources */,
+				EBB26039283226BB001416D8 /* BaseNotiList.swift in Sources */,
 				EBB25FA828311911001416D8 /* UIView+.swift in Sources */,
 				EBB25FC028311E72001416D8 /* UIViewController+.swift in Sources */,
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
@@ -547,6 +713,7 @@
 				EBB25FB828311DBF001416D8 /* UIScrollView+.swift in Sources */,
 				EBB260152831F38D001416D8 /* applyShadow.swift in Sources */,
 				EBB2600B2831F2A5001416D8 /* makeVibrate.swift in Sources */,
+				EBB26033283221D1001416D8 /* PostListVC.swift in Sources */,
 				EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */,
 				EBB25FF72831E930001416D8 /* CoordinatorFactory.swift in Sources */,
 				EBB25FB028311956001416D8 /* Reactive+.swift in Sources */,
@@ -554,16 +721,19 @@
 				EBB2600F2831F313001416D8 /* getClassName.swift in Sources */,
 				EBB25FEF2831E8CA001416D8 /* LaunchInstructor.swift in Sources */,
 				EBB25FF92831EB2E001416D8 /* controllerFromStoryBoard.swift in Sources */,
+				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
 				EBB25FDA2831D881001416D8 /* UIImageView+.swift in Sources */,
 				EBB25FF52831E91C001416D8 /* ModuleFactory.swift in Sources */,
 				EBB25FBC28311DF4001416D8 /* UITableView+.swift in Sources */,
 				EBB25FBA28311DE1001416D8 /* UITabBar+.swift in Sources */,
 				EBB25FD82831D864001416D8 /* UIScreen+.swift in Sources */,
+				EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */,
 				EBB260032831F137001416D8 /* setImage.swift in Sources */,
 				EBB260092831F273001416D8 /* manageObserverAction.swift in Sources */,
 				EBB25FBE28311E38001416D8 /* UITextView+.swift in Sources */,
 				EBB260072831F1B2001416D8 /* buttonPress.swift in Sources */,
 				EBB25FDE2831DAB4001416D8 /* Storyboarded.swift in Sources */,
+				EBB2601928321223001416D8 /* UICollectionViewRegisterable.swift in Sources */,
 				EBB25FE82831E865001416D8 /* CoordinatorFinishOutput.swift in Sources */,
 				EBB25FE62831E81B001416D8 /* Presentable.swift in Sources */,
 				EBB25FEA2831E88D001416D8 /* BaseControllable.swift in Sources */,
@@ -571,6 +741,7 @@
 				EBB260132831F36E001416D8 /* calculatePastTime.swift in Sources */,
 				EBB25FE42831E803001416D8 /* BaseCoordinator.swift in Sources */,
 				EBB260052831F18D001416D8 /* setDefaultFonts.swift in Sources */,
+				EBB2601728321205001416D8 /* UITableViewRegisterable.swift in Sources */,
 				EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */,
 				EBB2600D2831F2D0001416D8 /* makeAlert.swift in Sources */,
 				EBB25FE02831E6B1001416D8 /* addSubViewFromNib.swift in Sources */,
@@ -579,6 +750,7 @@
 				EBB260012831EFDE001416D8 /* ShowToast.swift in Sources */,
 				EBB260112831F356001416D8 /* calculateTopInset.swift in Sources */,
 				EBB25FC428311EAD001416D8 /* String+.swift in Sources */,
+				EBB2601B28321236001416D8 /* ViewModelType.swift in Sources */,
 				EBB25FFD2831EEF6001416D8 /* Logger.swift in Sources */,
 				EBB25FB228311D18001416D8 /* UIButton+.swift in Sources */,
 				EBB25FDC2831DA86001416D8 /* Adjusted+.swift in Sources */,
@@ -729,7 +901,6 @@
 				INFOPLIST_FILE = "DaangnMarket-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -741,7 +912,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -758,7 +929,6 @@
 				INFOPLIST_FILE = "DaangnMarket-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -770,7 +940,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

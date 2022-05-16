@@ -9,14 +9,6 @@ import UIKit
 
 extension UIViewController {
     
-    static var className: String {
-        NSStringFromClass(self.classForCoder()).components(separatedBy: ".").last!
-    }
-    
-    var className: String {
-        NSStringFromClass(self.classForCoder).components(separatedBy: ".").last!
-    }
-    
     /**
      - Description: 화면 터치시 작성 종료
      */

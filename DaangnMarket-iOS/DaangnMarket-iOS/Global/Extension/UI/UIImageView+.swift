@@ -72,13 +72,4 @@ extension UIImageView {
         }
         return true
     }
-    
-    func setImage(with url: String, disposeBag: DisposeBag) {
-        DefaultImageCacheService.shared.setImage(url)
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext: { [weak self] image in
-                self?.image = UIImage(data: image)
-            })
-            .disposed(by: disposeBag)
-    }
 }

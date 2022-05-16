@@ -5,6 +5,8 @@
 //  Created by Junho Lee on 2022/05/15.
 //
 
+import UIKit
+
 extension UITextView {
     
     /// 자간 설정 메서드
