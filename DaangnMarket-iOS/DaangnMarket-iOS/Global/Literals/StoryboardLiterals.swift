@@ -14,6 +14,7 @@ import UIKit
  스토리보드를 추가할때마다 case 과 값을 추가하면 됩니다!
  - UIStoryboard.list(.base)와 같이 사용
  */
+
 enum Storyboards: String {
     case postDetail = "PostDetail"
     case PostList = "PostList"

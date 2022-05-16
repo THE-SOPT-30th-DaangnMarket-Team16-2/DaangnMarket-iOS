@@ -20,7 +20,6 @@
 		EBB25FB228311D18001416D8 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FB128311D18001416D8 /* UIButton+.swift */; };
 		EBB25FB428311D4E001416D8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FB328311D4E001416D8 /* UIColor+.swift */; };
 		EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FB528311D65001416D8 /* UIFont+.swift */; };
-		EBB25FB828311DBF001416D8 /* UIScrollView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FB728311DBF001416D8 /* UIScrollView+.swift */; };
 		EBB25FBA28311DE1001416D8 /* UITabBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FB928311DE1001416D8 /* UITabBar+.swift */; };
 		EBB25FBC28311DF4001416D8 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FBB28311DF4001416D8 /* UITableView+.swift */; };
 		EBB25FBE28311E38001416D8 /* UITextView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FBD28311E38001416D8 /* UITextView+.swift */; };
@@ -29,8 +28,6 @@
 		EBB25FC428311EAD001416D8 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FC328311EAD001416D8 /* String+.swift */; };
 		EBB25FD22831D7D2001416D8 /* UIDevice+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FD12831D7D2001416D8 /* UIDevice+.swift */; };
 		EBB25FD62831D84F001416D8 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FD52831D84F001416D8 /* UIImage+.swift */; };
-		EBB25FD82831D864001416D8 /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FD72831D864001416D8 /* UIScreen+.swift */; };
-		EBB25FDA2831D881001416D8 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FD92831D881001416D8 /* UIImageView+.swift */; };
 		EBB25FDC2831DA86001416D8 /* Adjusted+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FDB2831DA86001416D8 /* Adjusted+.swift */; };
 		EBB25FDE2831DAB4001416D8 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FDD2831DAB4001416D8 /* Storyboarded.swift */; };
 		EBB25FE02831E6B1001416D8 /* addSubViewFromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25FDF2831E6B1001416D8 /* addSubViewFromNib.swift */; };
@@ -91,7 +88,6 @@
 		EBB25FB128311D18001416D8 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		EBB25FB328311D4E001416D8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		EBB25FB528311D65001416D8 /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
-		EBB25FB728311DBF001416D8 /* UIScrollView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+.swift"; sourceTree = "<group>"; };
 		EBB25FB928311DE1001416D8 /* UITabBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+.swift"; sourceTree = "<group>"; };
 		EBB25FBB28311DF4001416D8 /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
 		EBB25FBD28311E38001416D8 /* UITextView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+.swift"; sourceTree = "<group>"; };
@@ -100,8 +96,6 @@
 		EBB25FC328311EAD001416D8 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		EBB25FD12831D7D2001416D8 /* UIDevice+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+.swift"; sourceTree = "<group>"; };
 		EBB25FD52831D84F001416D8 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
-		EBB25FD72831D864001416D8 /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
-		EBB25FD92831D881001416D8 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 		EBB25FDB2831DA86001416D8 /* Adjusted+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjusted+.swift"; sourceTree = "<group>"; };
 		EBB25FDD2831DAB4001416D8 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		EBB25FDF2831E6B1001416D8 /* addSubViewFromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addSubViewFromNib.swift; sourceTree = "<group>"; };
@@ -252,6 +246,7 @@
 		EBB25F99283114A4001416D8 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EBB25FDB2831DA86001416D8 /* Adjusted+.swift */,
 				EBB25FDF2831E6B1001416D8 /* addSubViewFromNib.swift */,
 				EBB25FFA2831EE7E001416D8 /* setRootViewController.swift */,
 				EBB25FFC2831EEF6001416D8 /* Logger.swift */,
@@ -295,7 +290,6 @@
 				EBB25FD42831D7F6001416D8 /* Design */,
 				EBB25FD32831D7D7001416D8 /* UI */,
 				EBB25FAF28311956001416D8 /* Reactive+.swift */,
-				EBB25FDB2831DA86001416D8 /* Adjusted+.swift */,
 				EBB26036283225D0001416D8 /* Result+.swift */,
 				EBB25FC128311E95001416D8 /* UserDefaults+.swift */,
 				EBB25FC328311EAD001416D8 /* String+.swift */,
@@ -397,10 +391,7 @@
 				EBB25FAB28311937001416D8 /* UITextField+.swift */,
 				EBB25FBD28311E38001416D8 /* UITextView+.swift */,
 				EBB25FAD2831194A001416D8 /* UILabel+.swift */,
-				EBB25FB728311DBF001416D8 /* UIScrollView+.swift */,
 				EBB25FB128311D18001416D8 /* UIButton+.swift */,
-				EBB25FD72831D864001416D8 /* UIScreen+.swift */,
-				EBB25FD92831D881001416D8 /* UIImageView+.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -710,7 +701,6 @@
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
 				EBB25FF22831E8EA001416D8 /* Router.swift in Sources */,
 				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
-				EBB25FB828311DBF001416D8 /* UIScrollView+.swift in Sources */,
 				EBB260152831F38D001416D8 /* applyShadow.swift in Sources */,
 				EBB2600B2831F2A5001416D8 /* makeVibrate.swift in Sources */,
 				EBB26033283221D1001416D8 /* PostListVC.swift in Sources */,
@@ -722,11 +712,9 @@
 				EBB25FEF2831E8CA001416D8 /* LaunchInstructor.swift in Sources */,
 				EBB25FF92831EB2E001416D8 /* controllerFromStoryBoard.swift in Sources */,
 				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
-				EBB25FDA2831D881001416D8 /* UIImageView+.swift in Sources */,
 				EBB25FF52831E91C001416D8 /* ModuleFactory.swift in Sources */,
 				EBB25FBC28311DF4001416D8 /* UITableView+.swift in Sources */,
 				EBB25FBA28311DE1001416D8 /* UITabBar+.swift in Sources */,
-				EBB25FD82831D864001416D8 /* UIScreen+.swift in Sources */,
 				EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */,
 				EBB260032831F137001416D8 /* setImage.swift in Sources */,
 				EBB260092831F273001416D8 /* manageObserverAction.swift in Sources */,

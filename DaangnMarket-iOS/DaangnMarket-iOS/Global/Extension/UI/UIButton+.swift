@@ -26,14 +26,6 @@ extension UIButton {
         self.clipsToBounds = true
         self.setBackgroundImage(colorImage, for: state)
     }
-    
-    /// button의 기본, 클릭 이미지를 빠르게 설정하는 메서드
-    func setImgByName(name: String, selectedName: String?) {
-        self.setImage(UIImage(named: name), for: .normal)
-        if let selected = selectedName {
-            self.setImage(UIImage(named: selected), for: .selected)
-        }
-    }
 }
 
 

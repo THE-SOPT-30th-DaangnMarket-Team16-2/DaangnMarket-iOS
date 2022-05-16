@@ -14,6 +14,13 @@ extension UIView {
         views.forEach { self.addSubview($0) }
     }
     
+    func addSubviewFromNib(view : UIView){
+      let view = Bundle.main.loadNibNamed(view.className, owner: self, options: nil)?.first as! UIView
+      view.frame = bounds
+      view.clipsToBounds = true
+      addSubview(view)
+    }
+    
     func setGradient() {
         let gradient = CAGradientLayer()
         gradient.frame = bounds
@@ -23,4 +30,16 @@ extension UIView {
         gradient.endPoint = CGPoint(x: 1.0, y: 1)
         layer.insertSublayer(gradient, at: 0)
     }
+}
+
+class XibView : UIView{
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    addSubviewFromNib(view: self)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    addSubviewFromNib(view: self)
+  }
 }
