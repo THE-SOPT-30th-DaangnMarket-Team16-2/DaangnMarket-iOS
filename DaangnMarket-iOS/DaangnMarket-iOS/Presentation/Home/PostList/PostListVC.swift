@@ -9,12 +9,13 @@ import UIKit
 
 class PostListVC: UIViewController, Storyboarded {
     
-    static var storyboard: Storyboards = .PostList
+    static var storyboard: Storyboards = .postList
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = .black
     }
     
 

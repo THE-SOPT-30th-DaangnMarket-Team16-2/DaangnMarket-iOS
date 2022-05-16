@@ -10,7 +10,8 @@ import UIKit
 struct ImageLiterals{
     
     struct MainTabBar{
-        static let homeIcon = UIImage(named: "icon_home")!
+        static let homeIcon = UIImage(systemName: "heart")
+        static let homeIcon_selected = UIImage(systemName: "Contacts")
     }
     
     struct PostList {

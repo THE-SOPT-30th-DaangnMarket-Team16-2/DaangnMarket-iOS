@@ -9,7 +9,7 @@ import UIKit
 
 class PostWriteVC: UIViewController, Storyboarded {
     
-    static var storyboard: Storyboards = .PostWrite
+    static var storyboard: Storyboards = .postWrite
 
     override func viewDidLoad() {
         super.viewDidLoad()

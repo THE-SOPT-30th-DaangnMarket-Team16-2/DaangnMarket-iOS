@@ -69,6 +69,11 @@
 		EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2603C28322C19001416D8 /* PostWriteVC.swift */; };
 		EBB2603F28322C21001416D8 /* PostWrite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB2603E28322C21001416D8 /* PostWrite.storyboard */; };
 		EBB2604128322F8A001416D8 /* ImageLiterals.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604028322F8A001416D8 /* ImageLiterals.swift */; };
+		EBB2604528323248001416D8 /* MainTBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604428323248001416D8 /* MainTBC.swift */; };
+		EBB2604828323369001416D8 /* TownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604728323369001416D8 /* TownVC.swift */; };
+		EBB2604A2832337D001416D8 /* AroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260492832337D001416D8 /* AroundVC.swift */; };
+		EBB2604C28323386001416D8 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604B28323386001416D8 /* ChatVC.swift */; };
+		EBB2604E28323393001416D8 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604D28323393001416D8 /* MyPageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +143,11 @@
 		EBB2603C28322C19001416D8 /* PostWriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteVC.swift; sourceTree = "<group>"; };
 		EBB2603E28322C21001416D8 /* PostWrite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostWrite.storyboard; sourceTree = "<group>"; };
 		EBB2604028322F8A001416D8 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
+		EBB2604428323248001416D8 /* MainTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
+		EBB2604728323369001416D8 /* TownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownVC.swift; sourceTree = "<group>"; };
+		EBB260492832337D001416D8 /* AroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AroundVC.swift; sourceTree = "<group>"; };
+		EBB2604B28323386001416D8 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		EBB2604D28323393001416D8 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +242,7 @@
 				EBB2602128321D5F001416D8 /* Common */,
 				EBB2602C2832212E001416D8 /* MainTabBar */,
 				EBB25FA62831157F001416D8 /* Home */,
+				EBB26046283232BA001416D8 /* OtherTabs */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -529,6 +540,7 @@
 		EBB2602C2832212E001416D8 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2604428323248001416D8 /* MainTBC.swift */,
 			);
 			path = MainTabBar;
 			sourceTree = "<group>";
@@ -566,6 +578,17 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EBB26046283232BA001416D8 /* OtherTabs */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2604728323369001416D8 /* TownVC.swift */,
+				EBB260492832337D001416D8 /* AroundVC.swift */,
+				EBB2604B28323386001416D8 /* ChatVC.swift */,
+				EBB2604D28323393001416D8 /* MyPageVC.swift */,
+			);
+			path = OtherTabs;
 			sourceTree = "<group>";
 		};
 		F94A29A01BE128371292BB9E /* Frameworks */ = {
@@ -701,19 +724,24 @@
 				EBB26039283226BB001416D8 /* BaseNotiList.swift in Sources */,
 				EBB25FA828311911001416D8 /* UIView+.swift in Sources */,
 				EBB25FC028311E72001416D8 /* UIViewController+.swift in Sources */,
+				EBB2604528323248001416D8 /* MainTBC.swift in Sources */,
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
 				EBB25FF22831E8EA001416D8 /* Router.swift in Sources */,
 				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
 				EBB260152831F38D001416D8 /* applyShadow.swift in Sources */,
+				EBB2604E28323393001416D8 /* MyPageVC.swift in Sources */,
 				EBB2600B2831F2A5001416D8 /* makeVibrate.swift in Sources */,
 				EBB2604128322F8A001416D8 /* ImageLiterals.swift in Sources */,
 				EBB26033283221D1001416D8 /* PostListVC.swift in Sources */,
 				EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */,
 				EBB25FF72831E930001416D8 /* CoordinatorFactory.swift in Sources */,
+				EBB2604A2832337D001416D8 /* AroundVC.swift in Sources */,
 				EBB25FB028311956001416D8 /* Reactive+.swift in Sources */,
 				EBB25FFB2831EE7E001416D8 /* setRootViewController.swift in Sources */,
 				EBB2600F2831F313001416D8 /* getClassName.swift in Sources */,
 				EBB25FEF2831E8CA001416D8 /* LaunchInstructor.swift in Sources */,
+				EBB2604828323369001416D8 /* TownVC.swift in Sources */,
+				EBB2604C28323386001416D8 /* ChatVC.swift in Sources */,
 				EBB25FF92831EB2E001416D8 /* controllerFromStoryBoard.swift in Sources */,
 				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
 				EBB25FF52831E91C001416D8 /* ModuleFactory.swift in Sources */,

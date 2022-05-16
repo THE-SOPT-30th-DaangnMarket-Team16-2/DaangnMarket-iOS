@@ -17,8 +17,8 @@ import UIKit
 
 enum Storyboards: String {
     case postDetail = "PostDetail"
-    case PostList = "PostList"
-    case PostWrite = "PostWrite"
+    case postList = "PostList"
+    case postWrite = "PostWrite"
 }
 
 extension UIStoryboard{
