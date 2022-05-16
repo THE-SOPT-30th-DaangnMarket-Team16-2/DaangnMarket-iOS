@@ -5,4 +5,6 @@
 //  Created by Junho Lee on 2022/05/16.
 //
 
-import Foundation
+protocol CoordinatorFinishOutput {
+  var finishScene: (() -> Void)? { get set }
+}
