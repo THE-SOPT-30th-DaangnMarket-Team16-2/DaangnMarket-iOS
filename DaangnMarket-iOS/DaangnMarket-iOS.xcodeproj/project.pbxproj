@@ -83,6 +83,7 @@
 		EBB260662833C6C9001416D8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605E2833C6C9001416D8 /* Poppins-Medium.ttf */; };
 		EBB260672833C6C9001416D8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */; };
 		EBB2606B2833C9D6001416D8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */; };
+		EBB2606D2833EB63001416D8 /* PostDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		EBB2605E2833C6C9001416D8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -534,6 +536,7 @@
 		EBB2602928321E4C001416D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -816,6 +819,7 @@
 				EBB25FC428311EAD001416D8 /* String+.swift in Sources */,
 				EBB2601B28321236001416D8 /* ViewModelType.swift in Sources */,
 				EBB25FFD2831EEF6001416D8 /* Logger.swift in Sources */,
+				EBB2606D2833EB63001416D8 /* PostDetailBottomView.swift in Sources */,
 				EBB25FB228311D18001416D8 /* UIButton+.swift in Sources */,
 				EBB25FDC2831DA86001416D8 /* Adjusted+.swift in Sources */,
 				EBB25FB428311D4E001416D8 /* UIColor+.swift in Sources */,

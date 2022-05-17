@@ -13,9 +13,11 @@ import SnapKit
 
 final class PostDetailVC: BaseVC, Storyboarded {
     
+    // MARK: - Properties
+    
     static var storyboard: Storyboards = .postDetail
     
-    // MARK: - Properties
+    private let bottomView = PostDetailBottomView()
     
     
     // MARK: - Life Cycles
@@ -23,7 +25,6 @@ final class PostDetailVC: BaseVC, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .blue
         bind()
     }
     
@@ -39,5 +40,17 @@ final class PostDetailVC: BaseVC, Storyboarded {
     
     // MARK: - UI & Layout
     
+    override func configUI() {
+        view.backgroundColor = .carrotWhite
+    }
+    
+    override func setLayout() {
+        view.addSubviews(bottomView)
+        
+        bottomView.snp.makeConstraints { make in
+            make.leading.trailing.bottom.equalToSuperview()
+            make.height.equalTo(103)
+        }
+    }
 }
 
