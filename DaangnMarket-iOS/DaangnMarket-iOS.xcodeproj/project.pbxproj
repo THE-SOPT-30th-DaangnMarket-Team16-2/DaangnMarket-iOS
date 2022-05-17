@@ -75,6 +75,14 @@
 		EBB2604C28323386001416D8 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604B28323386001416D8 /* ChatVC.swift */; };
 		EBB2604E28323393001416D8 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2604D28323393001416D8 /* MyPageVC.swift */; };
 		EBB260502832606B001416D8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB2604F2832606B001416D8 /* Colors.xcassets */; };
+		EBB260602833C6C9001416D8 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB260582833C6C8001416D8 /* Poppins-Light.ttf */; };
+		EBB260612833C6C9001416D8 /* NunitoSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB260592833C6C8001416D8 /* NunitoSans-ExtraBold.ttf */; };
+		EBB260622833C6C9001416D8 /* NotoSansSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605A2833C6C8001416D8 /* NotoSansSC-Regular.otf */; };
+		EBB260632833C6C9001416D8 /* NotoSansSC-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605B2833C6C9001416D8 /* NotoSansSC-Bold.otf */; };
+		EBB260642833C6C9001416D8 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605C2833C6C9001416D8 /* Poppins-ExtraBold.ttf */; };
+		EBB260662833C6C9001416D8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605E2833C6C9001416D8 /* Poppins-Medium.ttf */; };
+		EBB260672833C6C9001416D8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */; };
+		EBB2606B2833C9D6001416D8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,6 +158,14 @@
 		EBB2604B28323386001416D8 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		EBB2604D28323393001416D8 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		EBB2604F2832606B001416D8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		EBB260582833C6C8001416D8 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		EBB260592833C6C8001416D8 /* NunitoSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EBB2605A2833C6C8001416D8 /* NotoSansSC-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Regular.otf"; sourceTree = "<group>"; };
+		EBB2605B2833C6C9001416D8 /* NotoSansSC-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansSC-Bold.otf"; sourceTree = "<group>"; };
+		EBB2605C2833C6C9001416D8 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EBB2605E2833C6C9001416D8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +352,7 @@
 		EBB25F9F2831150C001416D8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EBB260572833C6BB001416D8 /* Fonts */,
 				EBB25F7D28311103001416D8 /* Assets.xcassets */,
 				EBB2604F2832606B001416D8 /* Colors.xcassets */,
 			);
@@ -594,6 +611,21 @@
 			path = OtherTabs;
 			sourceTree = "<group>";
 		};
+		EBB260572833C6BB001416D8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2605B2833C6C9001416D8 /* NotoSansSC-Bold.otf */,
+				EBB2605A2833C6C8001416D8 /* NotoSansSC-Regular.otf */,
+				EBB260592833C6C8001416D8 /* NunitoSans-ExtraBold.ttf */,
+				EBB2605C2833C6C9001416D8 /* Poppins-ExtraBold.ttf */,
+				EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */,
+				EBB260582833C6C8001416D8 /* Poppins-Light.ttf */,
+				EBB2605E2833C6C9001416D8 /* Poppins-Medium.ttf */,
+				EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		F94A29A01BE128371292BB9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -662,12 +694,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB260612833C6C9001416D8 /* NunitoSans-ExtraBold.ttf in Resources */,
+				EBB260602833C6C9001416D8 /* Poppins-Light.ttf in Resources */,
 				EBB2603F28322C21001416D8 /* PostWrite.storyboard in Resources */,
+				EBB260662833C6C9001416D8 /* Poppins-Medium.ttf in Resources */,
 				EBB2603B28322BB1001416D8 /* PostList.storyboard in Resources */,
 				EBB25F8128311103001416D8 /* LaunchScreen.storyboard in Resources */,
 				EBB260502832606B001416D8 /* Colors.xcassets in Resources */,
 				EBB260352832228D001416D8 /* PostDetail.storyboard in Resources */,
+				EBB260672833C6C9001416D8 /* Poppins-Regular.ttf in Resources */,
+				EBB2606B2833C9D6001416D8 /* Poppins-Bold.ttf in Resources */,
 				EBB25F7E28311103001416D8 /* Assets.xcassets in Resources */,
+				EBB260622833C6C9001416D8 /* NotoSansSC-Regular.otf in Resources */,
+				EBB260642833C6C9001416D8 /* Poppins-ExtraBold.ttf in Resources */,
+				EBB260632833C6C9001416D8 /* NotoSansSC-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
