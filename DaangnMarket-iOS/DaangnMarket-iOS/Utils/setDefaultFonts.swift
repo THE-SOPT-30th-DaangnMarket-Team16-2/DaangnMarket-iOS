@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 struct AppFontName {
-    static let bold = "SpoqaHanSansNeo-Bold"
-    static let regular = "SpoqaHanSansNeo-Regular"
-    static let light = "SpoqaHanSansNeo-Regular"
+    static let bold = "Poppins-Bold"
+    static let regular = "Poppins-Regular"
+    static let light = "Poppins-Light"
 }
 
 extension UIFontDescriptor.AttributeName {
