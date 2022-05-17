@@ -19,9 +19,8 @@ final class PostDetailBottomView: UIView {
     
     private lazy var likeButton: UIButton = {
         let bt = UIButton()
-        bt.setImage(ImageLiterals.MainTabBar.homeIcon, for: .normal)
-        bt.setImage(ImageLiterals.MainTabBar.homeIcon, for: .selected)
-        bt.setTitleColor(UIColor.carrotWhite, for: .normal)
+        bt.setImage(ImageLiterals.PostDetail.heartOffIcon, for: .normal)
+        bt.setImage(ImageLiterals.PostDetail.hearOnIcon, for: .selected)
         return bt
     }()
     
