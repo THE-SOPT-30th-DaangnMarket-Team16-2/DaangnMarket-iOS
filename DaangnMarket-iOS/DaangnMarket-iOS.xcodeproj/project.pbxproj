@@ -84,6 +84,8 @@
 		EBB260672833C6C9001416D8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */; };
 		EBB2606B2833C9D6001416D8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */; };
 		EBB2606D2833EB63001416D8 /* PostDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */; };
+		EBB2606F28341DD6001416D8 /* PostDetailUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */; };
+		EBB2607128342D70001416D8 /* PostContentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607028342D70001416D8 /* PostContentCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +170,8 @@
 		EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailBottomView.swift; sourceTree = "<group>"; };
+		EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUserHeader.swift; sourceTree = "<group>"; };
+		EBB2607028342D70001416D8 /* PostContentCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -537,6 +541,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */,
+				EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 		EBB2602A28321E50001416D8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2607028342D70001416D8 /* PostContentCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -775,6 +781,7 @@
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
 				EBB25FF22831E8EA001416D8 /* Router.swift in Sources */,
 				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
+				EBB2607128342D70001416D8 /* PostContentCVC.swift in Sources */,
 				EBB260152831F38D001416D8 /* applyShadow.swift in Sources */,
 				EBB2604E28323393001416D8 /* MyPageVC.swift in Sources */,
 				EBB2600B2831F2A5001416D8 /* makeVibrate.swift in Sources */,
@@ -814,6 +821,7 @@
 				EBB25FE02831E6B1001416D8 /* addSubViewFromNib.swift in Sources */,
 				EBB25FD22831D7D2001416D8 /* UIDevice+.swift in Sources */,
 				EBB25FAA28311926001416D8 /* UIStackView+.swift in Sources */,
+				EBB2606F28341DD6001416D8 /* PostDetailUserHeader.swift in Sources */,
 				EBB260012831EFDE001416D8 /* ShowToast.swift in Sources */,
 				EBB260112831F356001416D8 /* calculateTopInset.swift in Sources */,
 				EBB25FC428311EAD001416D8 /* String+.swift in Sources */,
