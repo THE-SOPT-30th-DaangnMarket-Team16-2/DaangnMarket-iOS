@@ -17,10 +17,14 @@ final class PostDetailBottomView: UIView {
         return view
     }()
     
-    private lazy var likeButton: UIButton = {
+    lazy var likeButton: UIButton = {
         let bt = UIButton()
         bt.setImage(ImageLiterals.PostDetail.heartOffIcon, for: .normal)
         bt.setImage(ImageLiterals.PostDetail.hearOnIcon, for: .selected)
+        bt.adjustsImageWhenHighlighted = false
+        bt.addAction(UIAction(handler: { _ in
+            bt.isSelected.toggle()
+        }),for: .touchUpInside)
         return bt
     }()
     

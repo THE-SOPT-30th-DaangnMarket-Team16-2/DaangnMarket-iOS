@@ -22,11 +22,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         case postSection = 1
     }
     
-    private lazy var postContentCell = PostContentCVC() {
-        didSet {
-            
-        }
-    }
+    private lazy var postContentCell = PostContentCVC()
     
     private lazy var detailCV: UICollectionView = {
         let layout = createLayout()
@@ -65,7 +61,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         return bt
     }()
     
-    private let bottomView = PostDetailBottomView()
+    private lazy var bottomView = PostDetailBottomView()
     
     // MARK: - Life Cycles
     
