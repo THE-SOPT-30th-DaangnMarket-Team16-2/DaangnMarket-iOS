@@ -115,6 +115,10 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
 //        nameLabel.text = username
     }
     
+    func changeSellStatus(status: String) {
+        sellStatusLabel.text = status
+    }
+    
     // MARK: @objc methods
     
     @objc

@@ -22,6 +22,12 @@ final class PostDetailVC: BaseVC, Storyboarded {
         case postSection = 1
     }
     
+    private lazy var postContentCell = PostContentCVC() {
+        didSet {
+            
+        }
+    }
+    
     private lazy var detailCV: UICollectionView = {
         let layout = createLayout()
         layout.configuration.interSectionSpacing = 0
@@ -158,6 +164,7 @@ extension PostDetailVC: UICollectionViewDataSource{
         case .postSection:
             guard let postContentCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostContentCVC.className, for: indexPath) as? PostContentCVC else { return UICollectionViewCell() }
             postContentCell.delegate = self
+            self.postContentCell = postContentCell
             
             return postContentCell
         }
@@ -177,9 +184,15 @@ extension PostDetailVC: PostContentDelegate {
     func presentSellStatusActionSheet() {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
 
-        let sellingAction = UIAlertAction(title: "판매중", style: .default, handler: nil)
-        let reservedAction = UIAlertAction(title: "예약중", style: .default, handler: nil)
-        let completedAction = UIAlertAction(title: "거래완료", style: .default, handler: nil)
+        let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
+            self.postContentCell.changeSellStatus(status: "판매중")
+        }
+        let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
+            self.postContentCell.changeSellStatus(status: "예약중")
+        }
+        let completedAction = UIAlertAction(title: "거래완료", style: .default) { _ in
+            self.postContentCell.changeSellStatus(status: "거래완료")
+        }
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
 
         actionSheet.addAction(sellingAction)
