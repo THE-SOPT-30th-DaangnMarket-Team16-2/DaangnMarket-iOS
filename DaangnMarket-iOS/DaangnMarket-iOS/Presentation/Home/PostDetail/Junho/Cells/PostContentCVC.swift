@@ -28,12 +28,19 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
     
     private let nameLabel: UILabel = {
         let lb = UILabel()
-        lb.font = UIFont.systemFont(ofSize: 10)
-        lb.textColor = .black
-        lb.text = ""
+        lb.textColor = .carrotBlack
+        lb.font = .NotoBold(size: 16)
+        lb.text = "Usssj"
         lb.numberOfLines = 1
-        lb.lineBreakMode = .byTruncatingTail
         lb.textAlignment = .center
+        return lb
+    }()
+    
+    private let guideLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "가격제안불가"
+        lb.textColor = .carrotDarkLightGray
+        lb.font = .NotoBold(size: 13)
         return lb
     }()
     

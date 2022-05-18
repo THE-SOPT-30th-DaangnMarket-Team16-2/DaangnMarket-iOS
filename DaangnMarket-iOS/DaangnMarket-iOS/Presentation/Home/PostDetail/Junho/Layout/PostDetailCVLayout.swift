@@ -30,7 +30,7 @@ extension PostDetailVC {
                 let section = NSCollectionLayoutSection(group: group)
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(85))
                 let header =
-                NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: "header", alignment: .topLeading)
+                NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: PostDetailUserHeader.className, alignment: .topLeading)
                 section.boundarySupplementaryItems = [header]
                 section.orthogonalScrollingBehavior = .none
                 return section

@@ -31,7 +31,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         return cv
     }()
     
-    private let pageControl = UIPageControl()
+    internal let pageControl = UIPageControl()
     
     private let bottomView = PostDetailBottomView()
     
@@ -57,7 +57,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         detailCV.delegate = self
         detailCV.dataSource = self
         
-        detailCV.register(Header.self, forSupplementaryViewOfKind: "header", withReuseIdentifier: "HeaderView")
+        detailCV.register(PostDetailUserHeader.self, forSupplementaryViewOfKind: PostDetailUserHeader.className, withReuseIdentifier: PostDetailUserHeader.className)
         PostContentCVC.register(target: detailCV)
     }
     
@@ -98,8 +98,8 @@ extension PostDetailVC: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == "header" {
-            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "HeaderView", for: indexPath)
+        if kind == PostDetailUserHeader.className {
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: PostDetailUserHeader.className, for: indexPath)
             return view
         }
         else { return UICollectionReusableView() }
