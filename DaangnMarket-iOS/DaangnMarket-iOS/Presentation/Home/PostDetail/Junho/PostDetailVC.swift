@@ -39,6 +39,26 @@ final class PostDetailVC: BaseVC, Storyboarded {
         return pc
     }()
     
+    private lazy var naviHomeButton: UIButton =  {
+        let bt = UIButton()
+        bt.setImage(ImageLiterals.PostDetail.homeIcon, for: .normal)
+        bt.addAction(UIAction(handler: { _ in
+            
+        }), for: .touchUpInside)
+        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        return bt
+    }()
+    
+    private lazy var naviMoreButton: UIButton =  {
+        let bt = UIButton()
+        bt.setImage(ImageLiterals.PostDetail.moreIcon, for: .normal)
+        bt.addAction(UIAction(handler: { _ in
+            
+        }), for: .touchUpInside)
+        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        return bt
+    }()
+    
     private let bottomView = PostDetailBottomView()
     
     // MARK: - Life Cycles
@@ -78,6 +98,11 @@ final class PostDetailVC: BaseVC, Storyboarded {
     
     override func configUI() {
         view.backgroundColor = .carrotWhite
+        
+        let homeBtn = UIBarButtonItem(customView: naviHomeButton)
+        let moreBtn = UIBarButtonItem(customView: naviMoreButton)
+        self.navigationItem.setLeftBarButton(homeBtn, animated: false)
+        self.navigationItem.setRightBarButton(moreBtn, animated: false)
     }
     
     override func setLayout() {
@@ -140,7 +165,6 @@ extension PostDetailVC: UICollectionViewDataSource{
     }
 }
 
-//액션과 관련
 extension PostDetailVC: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.pageControl.snp.remakeConstraints { make in
