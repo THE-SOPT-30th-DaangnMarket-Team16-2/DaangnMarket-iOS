@@ -83,8 +83,6 @@ final class PostDetailVC: BaseVC, Storyboarded {
     private func setDelegate() {
         detailCV.delegate = self
         detailCV.dataSource = self
-        
-        
     }
     
     private func setCollectionView() {
@@ -159,6 +157,7 @@ extension PostDetailVC: UICollectionViewDataSource{
             return postImageCell
         case .postSection:
             guard let postContentCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostContentCVC.className, for: indexPath) as? PostContentCVC else { return UICollectionViewCell() }
+            postContentCell.delegate = self
             
             return postContentCell
         }
@@ -171,5 +170,23 @@ extension PostDetailVC: UICollectionViewDelegate {
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().inset(-scrollView.contentOffset.y+UIScreen.main.bounds.width-40)
         }
+    }
+}
+
+extension PostDetailVC: PostContentDelegate {
+    func presentSellStatusActionSheet() {
+        let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
+
+        let sellingAction = UIAlertAction(title: "판매중", style: .default, handler: nil)
+        let reservedAction = UIAlertAction(title: "예약중", style: .default, handler: nil)
+        let completedAction = UIAlertAction(title: "거래완료", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
+
+        actionSheet.addAction(sellingAction)
+        actionSheet.addAction(reservedAction)
+        actionSheet.addAction(completedAction)
+        actionSheet.addAction(cancelAction)
+        
+        self.present(actionSheet, animated: true)
     }
 }

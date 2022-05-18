@@ -9,11 +9,17 @@ import UIKit
 
 import SnapKit
 
+protocol PostContentDelegate: AnyObject {
+    func presentSellStatusActionSheet()
+}
+
 final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
     
     // MARK: - Properties
     
     static var isFromNib = false
+    
+    weak var delegate: PostContentDelegate?
     
     private let sellStatusView: UIView = {
         let view = UIView()
@@ -91,6 +97,7 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
 
         setUI()
         setLayout()
+        setAddTargets()
     }
     
     required init?(coder: NSCoder) {
@@ -99,8 +106,20 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
     
     // MARK: Custom Methods
     
+    private func setAddTargets() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(presentActionSheet))
+        sellStatusView.addGestureRecognizer(tap)
+    }
+    
     func setData(username: String, userImage: String) {
 //        nameLabel.text = username
+    }
+    
+    // MARK: @objc methods
+    
+    @objc
+    private func presentActionSheet() {
+        delegate?.presentSellStatusActionSheet()
     }
     
     // MARK: UI & Layout
