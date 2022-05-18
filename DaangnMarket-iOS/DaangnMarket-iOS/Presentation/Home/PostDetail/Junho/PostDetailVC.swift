@@ -31,7 +31,13 @@ final class PostDetailVC: BaseVC, Storyboarded {
         return cv
     }()
     
-    internal let pageControl = UIPageControl()
+    internal let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.numberOfPages = 5
+        pc.pageIndicatorTintColor = .carrotDarkLightGray
+        pc.currentPageIndicatorTintColor = .carrotWhite
+        return pc
+    }()
     
     private let bottomView = PostDetailBottomView()
     
@@ -58,7 +64,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         detailCV.delegate = self
         detailCV.dataSource = self
         
-
+        
     }
     
     private func setCollectionView() {
@@ -75,11 +81,16 @@ final class PostDetailVC: BaseVC, Storyboarded {
     }
     
     override func setLayout() {
-        view.addSubviews(detailCV, bottomView)
+        view.addSubviews(detailCV, pageControl, bottomView)
         
         detailCV.snp.makeConstraints { make in
             make.top.leading.trailing.equalToSuperview()
             make.bottom.equalTo(bottomView.snp.top)
+        }
+        
+        pageControl.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(UIScreen.main.bounds.width-23)
         }
         
         bottomView.snp.makeConstraints { make in
@@ -131,5 +142,10 @@ extension PostDetailVC: UICollectionViewDataSource{
 
 //액션과 관련
 extension PostDetailVC: UICollectionViewDelegate {
-    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.pageControl.snp.remakeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().inset(-scrollView.contentOffset.y+UIScreen.main.bounds.width-40)
+        }
+    }
 }

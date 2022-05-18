@@ -53,7 +53,7 @@ final class PostImageCVC: UICollectionViewCell, UICollectionViewRegisterable {
     }
     
     private func setLayout() {
-        addSubviews(profileImageView)
+        contentView.addSubviews(profileImageView)
         
         profileImageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
