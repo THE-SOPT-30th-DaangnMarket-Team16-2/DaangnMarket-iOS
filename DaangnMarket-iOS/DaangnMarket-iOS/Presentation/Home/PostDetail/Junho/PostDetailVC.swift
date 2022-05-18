@@ -80,37 +80,6 @@ final class PostDetailVC: BaseVC, Storyboarded {
             make.height.equalTo(103)
         }
     }
-    
-    private func createLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { (sectionNumber, env) -> NSCollectionLayoutSection? in
-            
-            if sectionNumber == 0 {
-                let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
-                let item = NSCollectionLayoutItem(layoutSize: itemSize)
-                let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(UIScreen.main.bounds.width), heightDimension: .absolute(UIScreen.main.bounds.width))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-                let section = NSCollectionLayoutSection(group: group)
-                section.orthogonalScrollingBehavior = .groupPagingCentered
-                section.visibleItemsInvalidationHandler = { items, contentOffset, environment in
-                    let currentPage = Int(max(0, round(contentOffset.x / environment.container.contentSize.width)))
-                    self.pageControl.currentPage = currentPage
-                }
-                return section
-            } else {
-                let item = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-                let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(375)), subitem: item, count: 1)
-                let section = NSCollectionLayoutSection(group: group)
-                
-                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(85))
-                let header =
-                NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: "header", alignment: .topLeading)
-                section.boundarySupplementaryItems = [header]
-                section.orthogonalScrollingBehavior = .none
-                section.interGroupSpacing = 0
-                return section
-            }
-        }
-    }
 }
 
 extension PostDetailVC: UICollectionViewDataSource{
