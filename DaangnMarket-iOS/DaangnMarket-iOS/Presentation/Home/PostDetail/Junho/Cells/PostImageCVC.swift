@@ -42,8 +42,8 @@ final class PostImageCVC: UICollectionViewCell, UICollectionViewRegisterable {
     
     // MARK: Custom Methods
     
-    func setData(postImage: String) {
-        profileImageView.image = UIImage(named: postImage)
+    func setData(postImage: UIImage?) {
+        profileImageView.image = postImage
     }
     
     // MARK: UI & Layout

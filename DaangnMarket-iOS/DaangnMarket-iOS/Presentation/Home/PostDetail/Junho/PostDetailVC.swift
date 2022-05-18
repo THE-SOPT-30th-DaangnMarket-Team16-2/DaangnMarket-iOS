@@ -155,6 +155,7 @@ extension PostDetailVC: UICollectionViewDataSource{
         switch sectionType {
         case .imageSection:
             guard let postImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostImageCVC.className, for: indexPath) as? PostImageCVC else { return UICollectionViewCell() }
+            postImageCell.setData(postImage: ImageLiterals.PostDetail.sample[indexPath.row])
             
             return postImageCell
         case .postSection:
