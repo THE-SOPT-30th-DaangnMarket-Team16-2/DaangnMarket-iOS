@@ -553,8 +553,8 @@
 		EBB2602A28321E50001416D8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				EBB2607028342D70001416D8 /* PostContentCVC.swift */,
 				EBB260752834BA0A001416D8 /* PostImageCVC.swift */,
+				EBB2607028342D70001416D8 /* PostContentCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";

@@ -24,6 +24,7 @@ struct ImageLiterals{
         static let hearOnIcon = UIImage(named: "icn_heart_on")
         static let homeIcon = UIImage(named: "icn_home")
         static let moreIcon = UIImage(named: "icn_more")
+        static let arrowIcon = UIImage(named: "icn_arrow")
     }
     
     struct PostWrite {

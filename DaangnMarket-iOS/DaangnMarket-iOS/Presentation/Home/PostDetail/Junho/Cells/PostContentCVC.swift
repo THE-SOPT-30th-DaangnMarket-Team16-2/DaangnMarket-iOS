@@ -15,32 +15,72 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
     
     static var isFromNib = false
     
-    private let profileImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.backgroundColor = .gray
-        iv.layer.borderWidth = 0.5
-        iv.layer.borderColor = UIColor.gray.cgColor
-        iv.layer.cornerRadius = 24
-        iv.layer.masksToBounds = true
-        iv.contentMode = .scaleAspectFill
-        return iv
+    private let sellStatusView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .carrotWhite
+        view.layer.borderColor = UIColor.carrotSquareGray.cgColor
+        view.layer.borderWidth = 1
+        view.layer.cornerRadius = 3
+        return view
     }()
     
-    private let nameLabel: UILabel = {
+    private let sellStatusLabel: UILabel = {
         let lb = UILabel()
         lb.textColor = .carrotBlack
-        lb.font = .NotoBold(size: 16)
-        lb.text = "Usssj"
-        lb.numberOfLines = 1
+        lb.font = .PopExtraBold(size: 14)
+        lb.text = "판매중"
         lb.textAlignment = .center
         return lb
     }()
     
-    private let guideLabel: UILabel = {
+    private let sellArrowImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.backgroundColor = .clear
+        iv.layer.masksToBounds = true
+        iv.image = ImageLiterals.PostDetail.arrowIcon
+        return iv
+    }()
+    
+    private let postTitleLabel: UILabel = {
         let lb = UILabel()
-        lb.text = "가격제안불가"
+        lb.textColor = .carrotBlack
+        lb.font = .PopExtraBold(size: 19)
+        lb.text = "최태성 한능검 심화 기출 500제"
+        return lb
+    }()
+    
+    private lazy var categoryButton: UIButton = {
+        let bt = UIButton()
+        bt.setTitleColor(UIColor.carrotDarkLightGray, for: .normal)
+        bt.setTitle("도서/티켓/음반", for: .normal)
+        bt.titleLabel?.font = .PopMedium(size: 13)
+        bt.setUnderline()
+        return bt
+    }()
+
+    private let timeLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "5분 전"
         lb.textColor = .carrotDarkLightGray
-        lb.font = .NotoBold(size: 13)
+        lb.font = .PopMedium(size: 13)
+        return lb
+    }()
+    
+    private let postContentLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "새책입니다."
+        lb.textColor = .carrotBlack
+        lb.font = .PopMedium(size: 15)
+        lb.numberOfLines = 0
+        lb.lineBreakMode = .byCharWrapping
+        return lb
+    }()
+    
+    private let viewCountLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "조회 3"
+        lb.textColor = .carrotDarkLightGray
+        lb.font = .PopMedium(size: 13)
         return lb
     }()
     
@@ -57,16 +97,10 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func prepareForReuse() {
-        nameLabel.text = ""
-        profileImageView.image = UIImage()
-    }
-    
     // MARK: Custom Methods
     
     func setData(username: String, userImage: String) {
-        nameLabel.text = username
-        profileImageView.image = UIImage(named: userImage)
+//        nameLabel.text = username
     }
     
     // MARK: UI & Layout
@@ -76,17 +110,53 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
     }
     
     private func setLayout() {
-        addSubviews(profileImageView, nameLabel)
+        addSubviews(sellStatusView, postTitleLabel, categoryButton,
+                    timeLabel, postContentLabel, viewCountLabel)
         
-        profileImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview().inset(10)
-            make.centerX.equalToSuperview()
-            make.width.height.equalTo(48)
+        sellStatusView.snp.makeConstraints { make in
+            make.top.equalToSuperview().inset(18)
+            make.leading.equalToSuperview().inset(16)
+            make.width.equalTo(99)
+            make.height.equalTo(39)
         }
         
-        nameLabel.snp.makeConstraints { make in
-            make.top.equalTo(profileImageView.snp.bottom).offset(4)
-            make.centerX.equalToSuperview()
+        sellStatusView.addSubviews(sellStatusLabel, sellArrowImageView)
+        
+        sellStatusLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(11)
+            make.centerY.equalToSuperview()
+        }
+        
+        sellArrowImageView.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().inset(12)
+            make.centerY.equalToSuperview()
+        }
+        
+        postTitleLabel.snp.makeConstraints { make in
+            make.leading.equalToSuperview().inset(15)
+            make.top.equalTo(sellStatusView.snp.bottom).offset(14)
+        }
+        
+        categoryButton.snp.makeConstraints { make in
+            make.leading.equalTo(postTitleLabel.snp.leading)
+            make.top.equalTo(postTitleLabel.snp.bottom).offset(7)
+        }
+        
+        timeLabel.snp.makeConstraints { make in
+            make.leading.equalTo(categoryButton.snp.trailing).offset(9)
+            make.centerY.equalTo(categoryButton.snp.centerY)
+        }
+        
+        postContentLabel.snp.makeConstraints { make in
+            make.leading.equalTo(postTitleLabel.snp.leading)
+            make.trailing.equalToSuperview().inset(15)
+            make.top.equalTo(categoryButton.snp.bottom).offset(14)
+        }
+        
+        viewCountLabel.snp.makeConstraints { make in
+            make.leading.equalTo(postTitleLabel.snp.leading)
+            make.top.equalTo(postContentLabel.snp.bottom).offset(12)
+            make.bottom.equalToSuperview().inset(46)
         }
     }
 }

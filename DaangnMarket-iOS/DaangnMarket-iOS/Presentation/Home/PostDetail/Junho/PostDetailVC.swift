@@ -27,7 +27,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         layout.configuration.interSectionSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = .carrotButtonOrange
+        cv.backgroundColor = .carrotWhite
         return cv
     }()
     
