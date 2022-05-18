@@ -87,6 +87,7 @@
 		EBB2606F28341DD6001416D8 /* PostDetailUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */; };
 		EBB2607128342D70001416D8 /* PostContentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607028342D70001416D8 /* PostContentCVC.swift */; };
 		EBB260742834ABF8001416D8 /* PostDetailCVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */; };
+		EBB260762834BA0A001416D8 /* PostImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260752834BA0A001416D8 /* PostImageCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +175,7 @@
 		EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUserHeader.swift; sourceTree = "<group>"; };
 		EBB2607028342D70001416D8 /* PostContentCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentCVC.swift; sourceTree = "<group>"; };
 		EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCVLayout.swift; sourceTree = "<group>"; };
+		EBB260752834BA0A001416D8 /* PostImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -552,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB2607028342D70001416D8 /* PostContentCVC.swift */,
+				EBB260752834BA0A001416D8 /* PostImageCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -844,6 +847,7 @@
 				EBB25FDC2831DA86001416D8 /* Adjusted+.swift in Sources */,
 				EBB25FB428311D4E001416D8 /* UIColor+.swift in Sources */,
 				EBB25FD62831D84F001416D8 /* UIImage+.swift in Sources */,
+				EBB260762834BA0A001416D8 /* PostImageCVC.swift in Sources */,
 				EBB25FFF2831EF11001416D8 /* JsonCoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

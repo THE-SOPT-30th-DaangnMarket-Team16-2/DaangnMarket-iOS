@@ -42,6 +42,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         
         bind()
         setDelegate()
+        setCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,7 +58,13 @@ final class PostDetailVC: BaseVC, Storyboarded {
         detailCV.delegate = self
         detailCV.dataSource = self
         
+
+    }
+    
+    private func setCollectionView() {
         detailCV.register(PostDetailUserHeader.self, forSupplementaryViewOfKind: PostDetailUserHeader.className, withReuseIdentifier: PostDetailUserHeader.className)
+        
+        PostImageCVC.register(target: detailCV)
         PostContentCVC.register(target: detailCV)
     }
     
@@ -105,16 +112,23 @@ extension PostDetailVC: UICollectionViewDataSource{
         else { return UICollectionReusableView() }
     }
     
-    //셀에 대한 설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let postContentCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostContentCVC.className, for: indexPath) as? PostContentCVC else {return UICollectionViewCell() }
+        guard let sectionType = SectionType(rawValue: indexPath.section) else { return UICollectionViewCell() }
         
-        return postContentCell
+        switch sectionType {
+        case .imageSection:
+            guard let postImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostImageCVC.className, for: indexPath) as? PostImageCVC else { return UICollectionViewCell() }
+            
+            return postImageCell
+        case .postSection:
+            guard let postContentCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostContentCVC.className, for: indexPath) as? PostContentCVC else { return UICollectionViewCell() }
+            
+            return postContentCell
+        }
     }
-    
-    
 }
+
 //액션과 관련
 extension PostDetailVC: UICollectionViewDelegate {
     
