@@ -10,16 +10,16 @@ import UIKit
 struct ImageLiterals{
     
     struct MainTabBar{
-        static let homeIcon = UIImage(systemName: "icn_homeT")
-        static let homeIcon_selected = UIImage(systemName: "icn_home_selected")
-        static let townIcon = UIImage(systemName: "icn_town")
-        static let townIcon_selected = UIImage(systemName: "icn_town_selected")
-        static let locationIcon = UIImage(systemName: "icn_location")
-        static let locationIcon_selected = UIImage(systemName: "icn_location_selected")
-        static let chatIcon = UIImage(systemName: "icn_chat")
-        static let chatIcon_selected = UIImage(systemName: "icn_chat_selected")
-        static let profileIcon = UIImage(systemName: "icn_profile")
-        static let profileIcon_selected = UIImage(systemName: "icn_profile_selected")
+        static let homeIcon = UIImage(named: "icn_homeT")
+        static let homeIcon_selected = UIImage(named: "icn_home_selected")
+        static let townIcon = UIImage(named: "icn_town")
+        static let townIcon_selected = UIImage(named: "icn_town_selected")
+        static let locationIcon = UIImage(named: "icn_location")
+        static let locationIcon_selected = UIImage(named: "icn_location_selected")
+        static let chatIcon = UIImage(named: "icn_chat")
+        static let chatIcon_selected = UIImage(named: "icn_chat_selected")
+        static let profileIcon = UIImage(named: "icn_profile")
+        static let profileIcon_selected = UIImage(named: "icn_profile_selected")
     }
     
     struct PostList {
