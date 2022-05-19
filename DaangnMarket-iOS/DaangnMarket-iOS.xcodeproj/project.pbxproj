@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		33FCCFC6B3A74A404D24D33E /* Pods_DaangnMarket_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */; };
+		8E6146D12834BC4C0032D8FF /* PhotoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6146D02834BC4C0032D8FF /* PhotoDataModel.swift */; };
+		8EBAFFE22834F983003A8278 /* AddPhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBAFFE12834F983003A8278 /* AddPhotoCVC.swift */; };
+		8EBAFFE42834F9AA003A8278 /* ListPhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBAFFE32834F9A9003A8278 /* ListPhotoCVC.swift */; };
 		EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7428311102001416D8 /* AppDelegate.swift */; };
 		EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7628311102001416D8 /* SceneDelegate.swift */; };
 		EBB25F7E28311103001416D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB25F7D28311103001416D8 /* Assets.xcassets */; };
@@ -87,6 +90,9 @@
 
 /* Begin PBXFileReference section */
 		0A9DBF19FA6F6C795F23839B /* Pods-DaangnMarket-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket-iOS.release.xcconfig"; path = "Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		8E6146D02834BC4C0032D8FF /* PhotoDataModel.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataModel.swift; sourceTree = "<group>"; };
+		8EBAFFE12834F983003A8278 /* AddPhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCVC.swift; sourceTree = "<group>"; };
+		8EBAFFE32834F9A9003A8278 /* ListPhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoCVC.swift; sourceTree = "<group>"; };
 		B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarket_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8133F19115414C0F7EC57B9 /* Pods-DaangnMarket-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EBB25F7128311102001416D8 /* DaangnMarket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaangnMarket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +155,7 @@
 		EBB26036283225D0001416D8 /* Result+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+.swift"; sourceTree = "<group>"; };
 		EBB26038283226BB001416D8 /* BaseNotiList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNotiList.swift; sourceTree = "<group>"; };
 		EBB2603A28322BB1001416D8 /* PostList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostList.storyboard; sourceTree = "<group>"; };
-		EBB2603C28322C19001416D8 /* PostWriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWriteVC.swift; sourceTree = "<group>"; };
+		EBB2603C28322C19001416D8 /* PostWriteVC.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PostWriteVC.swift; sourceTree = "<group>"; };
 		EBB2603E28322C21001416D8 /* PostWrite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostWrite.storyboard; sourceTree = "<group>"; };
 		EBB2604028322F8A001416D8 /* ImageLiterals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLiterals.swift; sourceTree = "<group>"; };
 		EBB2604428323248001416D8 /* MainTBC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTBC.swift; sourceTree = "<group>"; };
@@ -187,6 +193,32 @@
 				0A9DBF19FA6F6C795F23839B /* Pods-DaangnMarket-iOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E5675082834A98C00748B2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2603E28322C21001416D8 /* PostWrite.storyboard */,
+				EBB2603C28322C19001416D8 /* PostWriteVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E56750D2834A9FB00748B2F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8EBAFFE12834F983003A8278 /* AddPhotoCVC.swift */,
+				8EBAFFE32834F9A9003A8278 /* ListPhotoCVC.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8E5675132834BB4100748B2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E6146D02834BC4C0032D8FF /* PhotoDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		EBB25F6828311102001416D8 = {
@@ -238,7 +270,6 @@
 				EBB25FA02831150F001416D8 /* Supporting Files */,
 				EBB25F9F2831150C001416D8 /* Resources */,
 				EBB25F9E2831150B001416D8 /* Protocols */,
-				EBB25F9D2831150A001416D8 /* Literals */,
 				EBB25F9C28311509001416D8 /* Extension */,
 			);
 			path = Global;
@@ -249,7 +280,6 @@
 			children = (
 				EBB25FA328311550001416D8 /* Repository */,
 				EBB25FA22831154F001416D8 /* Network */,
-				EBB25FA12831154B001416D8 /* Entity */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -318,6 +348,7 @@
 		EBB25F9C28311509001416D8 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				EBB25F9D2831150A001416D8 /* Literals */,
 				EBB25FD42831D7F6001416D8 /* Design */,
 				EBB25FD32831D7D7001416D8 /* UI */,
 				EBB25FAF28311956001416D8 /* Reactive+.swift */,
@@ -371,7 +402,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Entity;
+			name = Entity;
+			path = ../../../Data/Entity;
 			sourceTree = "<group>";
 		};
 		EBB25FA22831154F001416D8 /* Network */ = {
@@ -512,10 +544,10 @@
 		EBB2602428321DBD001416D8 /* PostWrite */ = {
 			isa = PBXGroup;
 			children = (
-				EBB2603028322197001416D8 /* Views */,
-				EBB2602F28322192001416D8 /* Cells */,
-				EBB2603C28322C19001416D8 /* PostWriteVC.swift */,
-				EBB2603E28322C21001416D8 /* PostWrite.storyboard */,
+				EBB25FA12831154B001416D8 /* Entity */,
+				8E5675132834BB4100748B2F /* Model */,
+				8E56750D2834A9FB00748B2F /* Cells */,
+				8E5675082834A98C00748B2F /* Views */,
 			);
 			path = PostWrite;
 			sourceTree = "<group>";
@@ -577,20 +609,6 @@
 			children = (
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		EBB2602F28322192001416D8 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		EBB2603028322197001416D8 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		EBB26031283221B4001416D8 /* Views */ = {
@@ -781,6 +799,7 @@
 				EBB25FF72831E930001416D8 /* CoordinatorFactory.swift in Sources */,
 				EBB2604A2832337D001416D8 /* AroundVC.swift in Sources */,
 				EBB25FB028311956001416D8 /* Reactive+.swift in Sources */,
+				8EBAFFE22834F983003A8278 /* AddPhotoCVC.swift in Sources */,
 				EBB25FFB2831EE7E001416D8 /* setRootViewController.swift in Sources */,
 				EBB2600F2831F313001416D8 /* getClassName.swift in Sources */,
 				EBB25FEF2831E8CA001416D8 /* LaunchInstructor.swift in Sources */,
@@ -795,6 +814,7 @@
 				EBB260032831F137001416D8 /* setImage.swift in Sources */,
 				EBB260092831F273001416D8 /* manageObserverAction.swift in Sources */,
 				EBB25FBE28311E38001416D8 /* UITextView+.swift in Sources */,
+				8E6146D12834BC4C0032D8FF /* PhotoDataModel.swift in Sources */,
 				EBB260072831F1B2001416D8 /* buttonPress.swift in Sources */,
 				EBB25FDE2831DAB4001416D8 /* Storyboarded.swift in Sources */,
 				EBB2601928321223001416D8 /* UICollectionViewRegisterable.swift in Sources */,
@@ -805,6 +825,7 @@
 				EBB260132831F36E001416D8 /* calculatePastTime.swift in Sources */,
 				EBB25FE42831E803001416D8 /* BaseCoordinator.swift in Sources */,
 				EBB260052831F18D001416D8 /* setDefaultFonts.swift in Sources */,
+				8EBAFFE42834F9AA003A8278 /* ListPhotoCVC.swift in Sources */,
 				EBB2601728321205001416D8 /* UITableViewRegisterable.swift in Sources */,
 				EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */,
 				EBB2600D2831F2D0001416D8 /* makeAlert.swift in Sources */,
