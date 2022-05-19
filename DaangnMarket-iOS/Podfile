@@ -12,5 +12,5 @@ target 'DaangnMarket-iOS' do
   pod 'RxCocoa', '6.5.0'
   pod 'JJFloatingActionButton'
   pod 'Alamofire'
-
+  pod 'BSImagePicker', '~> 3.1' 
 end
