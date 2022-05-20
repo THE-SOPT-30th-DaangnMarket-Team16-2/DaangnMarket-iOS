@@ -26,28 +26,28 @@ final class MainTBC: UITabBarController {
     private func setViewControllers() {
         let PostListNVC = makeNavigationController(
             unselectedImage: ImageLiterals.MainTabBar.homeIcon,
-            selectedImage: ImageLiterals.MainTabBar.homeIcon,
-            rootViewController: PostListVC.instantiate())
+            selectedImage: ImageLiterals.MainTabBar.homeIcon_selected,
+            rootViewController: PostListVC.instantiate(), title: "홈")
         
         let townNVC = makeNavigationController(
-            unselectedImage: ImageLiterals.MainTabBar.homeIcon,
-            selectedImage: ImageLiterals.MainTabBar.homeIcon,
-            rootViewController: TownVC())
+            unselectedImage: ImageLiterals.MainTabBar.townIcon,
+            selectedImage: ImageLiterals.MainTabBar.townIcon_selected,
+            rootViewController: TownVC(), title: "동네생활")
         
         let aroundNVC = makeNavigationController(
-            unselectedImage: ImageLiterals.MainTabBar.homeIcon,
-            selectedImage: ImageLiterals.MainTabBar.homeIcon,
-            rootViewController: AroundVC())
+            unselectedImage: ImageLiterals.MainTabBar.locationIcon,
+            selectedImage: ImageLiterals.MainTabBar.locationIcon_selected,
+            rootViewController: AroundVC(), title: "내 근처")
         
         let chatNVC = makeNavigationController(
-            unselectedImage: ImageLiterals.MainTabBar.homeIcon,
-            selectedImage: ImageLiterals.MainTabBar.homeIcon,
-            rootViewController: ChatVC())
+            unselectedImage: ImageLiterals.MainTabBar.chatIcon,
+            selectedImage: ImageLiterals.MainTabBar.chatIcon_selected,
+            rootViewController: ChatVC(), title: "채팅")
         
         let myPageNVC = makeNavigationController(
-            unselectedImage: ImageLiterals.MainTabBar.homeIcon,
-            selectedImage: ImageLiterals.MainTabBar.homeIcon,
-            rootViewController: MyPageVC())
+            unselectedImage: ImageLiterals.MainTabBar.profileIcon,
+            selectedImage: ImageLiterals.MainTabBar.profileIcon_selected,
+            rootViewController: MyPageVC(), title: "나의 당근")
         
         viewControllers = [PostListNVC, townNVC, aroundNVC, chatNVC, myPageNVC]
     }
@@ -58,10 +58,11 @@ final class MainTBC: UITabBarController {
         tabBar.unselectedItemTintColor = .black
     }
     
-    private func makeNavigationController(unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController) -> UINavigationController {
+    private func makeNavigationController(unselectedImage: UIImage?, selectedImage: UIImage?, rootViewController: UIViewController, title: String) -> UINavigationController {
         let nav = UINavigationController(rootViewController: rootViewController)
         nav.tabBarItem.image = unselectedImage
         nav.tabBarItem.selectedImage = selectedImage
+        nav.tabBarItem.title = title
         nav.navigationBar.tintColor = .black
         nav.navigationBar.backgroundColor = .white
         nav.isNavigationBarHidden = true

@@ -86,6 +86,12 @@
 		EBB260662833C6C9001416D8 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605E2833C6C9001416D8 /* Poppins-Medium.ttf */; };
 		EBB260672833C6C9001416D8 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */; };
 		EBB2606B2833C9D6001416D8 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */; };
+		EBB2606D2833EB63001416D8 /* PostDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */; };
+		EBB2606F28341DD6001416D8 /* PostDetailUserHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */; };
+		EBB2607128342D70001416D8 /* PostContentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2607028342D70001416D8 /* PostContentCVC.swift */; };
+		EBB260742834ABF8001416D8 /* PostDetailCVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */; };
+		EBB260762834BA0A001416D8 /* PostImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260752834BA0A001416D8 /* PostImageCVC.swift */; };
+		EBB260912836AAC9001416D8 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260902836AAC8001416D8 /* PostDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -172,6 +178,12 @@
 		EBB2605E2833C6C9001416D8 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		EBB2606A2833C9D6001416D8 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailBottomView.swift; sourceTree = "<group>"; };
+		EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailUserHeader.swift; sourceTree = "<group>"; };
+		EBB2607028342D70001416D8 /* PostContentCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContentCVC.swift; sourceTree = "<group>"; };
+		EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCVLayout.swift; sourceTree = "<group>"; };
+		EBB260752834BA0A001416D8 /* PostImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCVC.swift; sourceTree = "<group>"; };
+		EBB260902836AAC8001416D8 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +578,8 @@
 		EBB2602928321E4C001416D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EBB2606C2833EB63001416D8 /* PostDetailBottomView.swift */,
+				EBB2606E28341DD6001416D8 /* PostDetailUserHeader.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -573,6 +587,8 @@
 		EBB2602A28321E50001416D8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EBB260752834BA0A001416D8 /* PostImageCVC.swift */,
+				EBB2607028342D70001416D8 /* PostContentCVC.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -582,6 +598,7 @@
 			children = (
 				EBB260342832228D001416D8 /* PostDetail.storyboard */,
 				EBB2602628321E3F001416D8 /* PostDetailVC.swift */,
+				EBB260722834ABBA001416D8 /* Layout */,
 				EBB2602E28322182001416D8 /* ViewModel */,
 				EBB2602928321E4C001416D8 /* Views */,
 				EBB2602A28321E50001416D8 /* Cells */,
@@ -607,6 +624,7 @@
 		EBB2602E28322182001416D8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EBB260902836AAC8001416D8 /* PostDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -642,6 +660,14 @@
 				EBB2605F2833C6C9001416D8 /* Poppins-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EBB260722834ABBA001416D8 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		F94A29A01BE128371292BB9E /* Frameworks */ = {
@@ -783,6 +809,7 @@
 				EBB26037283225D0001416D8 /* Result+.swift in Sources */,
 				EBB25FC228311E95001416D8 /* UserDefaults+.swift in Sources */,
 				EBB25FAE2831194A001416D8 /* UILabel+.swift in Sources */,
+				EBB260742834ABF8001416D8 /* PostDetailCVLayout.swift in Sources */,
 				EBB26039283226BB001416D8 /* BaseNotiList.swift in Sources */,
 				EBB25FA828311911001416D8 /* UIView+.swift in Sources */,
 				EBB25FC028311E72001416D8 /* UIViewController+.swift in Sources */,
@@ -790,6 +817,7 @@
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
 				EBB25FF22831E8EA001416D8 /* Router.swift in Sources */,
 				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
+				EBB2607128342D70001416D8 /* PostContentCVC.swift in Sources */,
 				EBB260152831F38D001416D8 /* applyShadow.swift in Sources */,
 				EBB2604E28323393001416D8 /* MyPageVC.swift in Sources */,
 				EBB2600B2831F2A5001416D8 /* makeVibrate.swift in Sources */,
@@ -832,16 +860,20 @@
 				EBB25FE02831E6B1001416D8 /* addSubViewFromNib.swift in Sources */,
 				EBB25FD22831D7D2001416D8 /* UIDevice+.swift in Sources */,
 				EBB25FAA28311926001416D8 /* UIStackView+.swift in Sources */,
+				EBB2606F28341DD6001416D8 /* PostDetailUserHeader.swift in Sources */,
 				EBB260012831EFDE001416D8 /* ShowToast.swift in Sources */,
 				EBB260112831F356001416D8 /* calculateTopInset.swift in Sources */,
 				EBB25FC428311EAD001416D8 /* String+.swift in Sources */,
 				EBB2601B28321236001416D8 /* ViewModelType.swift in Sources */,
 				EBB25FFD2831EEF6001416D8 /* Logger.swift in Sources */,
+				EBB2606D2833EB63001416D8 /* PostDetailBottomView.swift in Sources */,
 				EBB25FB228311D18001416D8 /* UIButton+.swift in Sources */,
 				EBB25FDC2831DA86001416D8 /* Adjusted+.swift in Sources */,
 				EBB25FB428311D4E001416D8 /* UIColor+.swift in Sources */,
 				EBB25FD62831D84F001416D8 /* UIImage+.swift in Sources */,
+				EBB260762834BA0A001416D8 /* PostImageCVC.swift in Sources */,
 				EBB25FFF2831EF11001416D8 /* JsonCoder.swift in Sources */,
+				EBB260912836AAC9001416D8 /* PostDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

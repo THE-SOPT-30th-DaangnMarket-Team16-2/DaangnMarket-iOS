@@ -18,7 +18,7 @@ extension UIColor {
     }
     
     @nonobjc class var carrotButtonOrange: UIColor {
-        return UIColor(red: 254.0 / 126.0, green: 53.0 / 255.0, blue: 1.0 / 255.0, alpha: 1.0)
+        return UIColor(red: 254.0 / 126.0, green: 126.0 / 255.0, blue: 53.0 / 255.0, alpha: 1.0)
     }
     
     @nonobjc class var carrotTextOrange: UIColor {
@@ -50,6 +50,6 @@ extension UIColor {
     }
     
     @nonobjc class var carrotLineLightGray: UIColor {
-        return UIColor(red: 240.0 / 240.0, green: 28.0 / 240.0, blue: 1.0 / 255.0, alpha: 1.0)
+        return UIColor(red: 240.0 / 255.0, green: 240.0 / 255.0, blue: 240.0 / 255.0, alpha: 1.0)
     }
 }
