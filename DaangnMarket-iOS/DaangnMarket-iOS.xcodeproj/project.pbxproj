@@ -92,6 +92,16 @@
 		EBB260742834ABF8001416D8 /* PostDetailCVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */; };
 		EBB260762834BA0A001416D8 /* PostImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260752834BA0A001416D8 /* PostImageCVC.swift */; };
 		EBB260912836AAC9001416D8 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260902836AAC8001416D8 /* PostDetailViewModel.swift */; };
+		EBB260942838A020001416D8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260932838A020001416D8 /* Router.swift */; };
+		EBB260992838A054001416D8 /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260982838A054001416D8 /* HeaderType.swift */; };
+		EBB2609B2838A069001416D8 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2609A2838A069001416D8 /* BaseService.swift */; };
+		EBB2609D2838A078001416D8 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2609C2838A078001416D8 /* NetworkResult.swift */; };
+		EBB2609F2838A092001416D8 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2609E2838A092001416D8 /* NetworkConstants.swift */; };
+		EBB260A12838A0A9001416D8 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A02838A0A9001416D8 /* AuthRouter.swift */; };
+		EBB260A32838A0CA001416D8 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A22838A0CA001416D8 /* AuthService.swift */; };
+		EBB260A52838A0ED001416D8 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A42838A0ED001416D8 /* GeneralResponse.swift */; };
+		EBB260A82838A105001416D8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A72838A105001416D8 /* SignIn.swift */; };
+		EBB260AA2838A10E001416D8 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A92838A10E001416D8 /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -184,6 +194,16 @@
 		EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCVLayout.swift; sourceTree = "<group>"; };
 		EBB260752834BA0A001416D8 /* PostImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCVC.swift; sourceTree = "<group>"; };
 		EBB260902836AAC8001416D8 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		EBB260932838A020001416D8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EBB260982838A054001416D8 /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
+		EBB2609A2838A069001416D8 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		EBB2609C2838A078001416D8 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		EBB2609E2838A092001416D8 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		EBB260A02838A0A9001416D8 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		EBB260A22838A0CA001416D8 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EBB260A42838A0ED001416D8 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		EBB260A72838A105001416D8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
+		EBB260A92838A10E001416D8 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -421,6 +441,10 @@
 		EBB25FA22831154F001416D8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				EBB260972838A03F001416D8 /* Services */,
+				EBB260962838A036001416D8 /* Routers */,
+				EBB260952838A02C001416D8 /* Environment */,
+				EBB260922838A011001416D8 /* Foundation */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -435,6 +459,8 @@
 		EBB25FA428311568001416D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBB260A62838A0FC001416D8 /* Auth */,
+				EBB260A42838A0ED001416D8 /* GeneralResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -670,6 +696,50 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		EBB260922838A011001416D8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				EBB260932838A020001416D8 /* Router.swift */,
+				EBB260982838A054001416D8 /* HeaderType.swift */,
+				EBB2609A2838A069001416D8 /* BaseService.swift */,
+				EBB2609C2838A078001416D8 /* NetworkResult.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		EBB260952838A02C001416D8 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				EBB2609E2838A092001416D8 /* NetworkConstants.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		EBB260962838A036001416D8 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				EBB260A02838A0A9001416D8 /* AuthRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		EBB260972838A03F001416D8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EBB260A22838A0CA001416D8 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EBB260A62838A0FC001416D8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				EBB260A72838A105001416D8 /* SignIn.swift */,
+				EBB260A92838A10E001416D8 /* SignUp.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		F94A29A01BE128371292BB9E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,12 +881,14 @@
 				EBB25FAE2831194A001416D8 /* UILabel+.swift in Sources */,
 				EBB260742834ABF8001416D8 /* PostDetailCVLayout.swift in Sources */,
 				EBB26039283226BB001416D8 /* BaseNotiList.swift in Sources */,
+				EBB260942838A020001416D8 /* Router.swift in Sources */,
 				EBB25FA828311911001416D8 /* UIView+.swift in Sources */,
 				EBB25FC028311E72001416D8 /* UIViewController+.swift in Sources */,
 				EBB2604528323248001416D8 /* MainTBC.swift in Sources */,
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
 				EBB25FF22831E8EA001416D8 /* Router.swift in Sources */,
 				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
+				EBB260992838A054001416D8 /* HeaderType.swift in Sources */,
 				EBB2607128342D70001416D8 /* PostContentCVC.swift in Sources */,
 				EBB260152831F38D001416D8 /* applyShadow.swift in Sources */,
 				EBB2604E28323393001416D8 /* MyPageVC.swift in Sources */,
@@ -829,9 +901,12 @@
 				EBB25FB028311956001416D8 /* Reactive+.swift in Sources */,
 				8EBAFFE22834F983003A8278 /* AddPhotoCVC.swift in Sources */,
 				EBB25FFB2831EE7E001416D8 /* setRootViewController.swift in Sources */,
+				EBB260A32838A0CA001416D8 /* AuthService.swift in Sources */,
 				EBB2600F2831F313001416D8 /* getClassName.swift in Sources */,
+				EBB260AA2838A10E001416D8 /* SignUp.swift in Sources */,
 				EBB25FEF2831E8CA001416D8 /* LaunchInstructor.swift in Sources */,
 				EBB2604828323369001416D8 /* TownVC.swift in Sources */,
+				EBB260A12838A0A9001416D8 /* AuthRouter.swift in Sources */,
 				EBB2604C28323386001416D8 /* ChatVC.swift in Sources */,
 				EBB25FF92831EB2E001416D8 /* controllerFromStoryBoard.swift in Sources */,
 				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
@@ -844,20 +919,24 @@
 				EBB25FBE28311E38001416D8 /* UITextView+.swift in Sources */,
 				8E6146D12834BC4C0032D8FF /* PhotoDataModel.swift in Sources */,
 				EBB260072831F1B2001416D8 /* buttonPress.swift in Sources */,
+				EBB2609F2838A092001416D8 /* NetworkConstants.swift in Sources */,
 				EBB25FDE2831DAB4001416D8 /* Storyboarded.swift in Sources */,
 				EBB2601928321223001416D8 /* UICollectionViewRegisterable.swift in Sources */,
 				EBB25FE82831E865001416D8 /* CoordinatorFinishOutput.swift in Sources */,
 				EBB25FE62831E81B001416D8 /* Presentable.swift in Sources */,
+				EBB260A52838A0ED001416D8 /* GeneralResponse.swift in Sources */,
 				EBB25FEA2831E88D001416D8 /* BaseControllable.swift in Sources */,
 				EBB25FEC2831E8A2001416D8 /* Coordinator.swift in Sources */,
 				EBB260132831F36E001416D8 /* calculatePastTime.swift in Sources */,
 				EBB25FE42831E803001416D8 /* BaseCoordinator.swift in Sources */,
+				EBB2609B2838A069001416D8 /* BaseService.swift in Sources */,
 				EBB260052831F18D001416D8 /* setDefaultFonts.swift in Sources */,
 				8EBAFFE42834F9AA003A8278 /* ListPhotoCVC.swift in Sources */,
 				EBB2601728321205001416D8 /* UITableViewRegisterable.swift in Sources */,
 				EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */,
 				EBB2600D2831F2D0001416D8 /* makeAlert.swift in Sources */,
 				EBB25FE02831E6B1001416D8 /* addSubViewFromNib.swift in Sources */,
+				EBB2609D2838A078001416D8 /* NetworkResult.swift in Sources */,
 				EBB25FD22831D7D2001416D8 /* UIDevice+.swift in Sources */,
 				EBB25FAA28311926001416D8 /* UIStackView+.swift in Sources */,
 				EBB2606F28341DD6001416D8 /* PostDetailUserHeader.swift in Sources */,
@@ -867,6 +946,7 @@
 				EBB2601B28321236001416D8 /* ViewModelType.swift in Sources */,
 				EBB25FFD2831EEF6001416D8 /* Logger.swift in Sources */,
 				EBB2606D2833EB63001416D8 /* PostDetailBottomView.swift in Sources */,
+				EBB260A82838A105001416D8 /* SignIn.swift in Sources */,
 				EBB25FB228311D18001416D8 /* UIButton+.swift in Sources */,
 				EBB25FDC2831DA86001416D8 /* Adjusted+.swift in Sources */,
 				EBB25FB428311D4E001416D8 /* UIColor+.swift in Sources */,
