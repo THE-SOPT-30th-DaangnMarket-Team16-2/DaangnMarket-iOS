@@ -187,7 +187,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="글 제목" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="yWP-pJ-3ZR">
                                                 <rect key="frame" x="15.000000000000004" y="131" width="46.333333333333343" height="28"/>
                                                 <color key="backgroundColor" name="carrot_white"/>
-                                                <color key="textColor" name="carrot_white"/>
+                                                <color key="textColor" name="carrot_black"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
@@ -285,9 +285,12 @@
                                                     <constraint firstAttribute="height" constant="1" id="rX5-g5-MKM"/>
                                                 </constraints>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="내용을 작성해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zf-Ki2">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="내용을 작성해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zf-Ki2">
                                                 <rect key="frame" x="15" y="345" width="345" height="320"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="320" id="gnD-7y-fUH"/>
+                                                </constraints>
                                                 <color key="textColor" name="carrot_square_gray"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -409,7 +412,6 @@
                             <constraint firstItem="kwm-5U-wv8" firstAttribute="top" secondItem="sTH-58-TXF" secondAttribute="bottom" id="f11-7L-1Pi"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kwm-5U-wv8" secondAttribute="bottom" id="h7f-Mx-SGo"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="sTH-58-TXF" secondAttribute="trailing" id="kWw-eg-AO3"/>
-                            <constraint firstItem="kwm-5U-wv8" firstAttribute="top" secondItem="sTH-58-TXF" secondAttribute="bottom" id="mxp-1W-9zq"/>
                             <constraint firstItem="sTH-58-TXF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="wjj-3L-hAY"/>
                         </constraints>
                     </view>
