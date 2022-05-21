@@ -188,16 +188,16 @@ extension PostWriteVC: ListPhotoCVCDelegate {
 // MARK: - contextTextView Placeholder 설정
 extension PostWriteVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if contextTextView.textColor == UIColor(named: "carrot_square_gray") {
-          contextTextView.text = nil
-          contextTextView.textColor = UIColor.carrotBlack
+        if textView.textColor == UIColor(named: "carrot_square_gray") {
+            textView.text = nil
+            textView.textColor = UIColor.carrotBlack
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if contextTextView.text.isEmpty {
-          contextTextView.text = "내용을 작성해주세요."
-            contextTextView.textColor = UIColor(named: "carrot_square_gray")
+        if textView.text.isEmpty {
+            textView.text = "내용을 작성해주세요."
+            textView.textColor = UIColor(named: "carrot_square_gray")
         }
     }
 }
@@ -205,7 +205,7 @@ extension PostWriteVC: UITextViewDelegate {
 // MARK: - priceTextField Max Length 설정
 extension PostWriteVC: UITextFieldDelegate {
     func checkMaxLength(_ textField: UITextField,_ maxLength: Int) {
-        if priceTextField.text!.count > maxLength {
+        if textField.text!.count > maxLength {
             textField.deleteBackward()
         }
     }
