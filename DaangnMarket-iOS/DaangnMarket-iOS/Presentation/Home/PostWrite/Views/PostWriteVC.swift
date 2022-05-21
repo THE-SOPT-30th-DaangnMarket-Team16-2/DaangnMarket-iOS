@@ -36,11 +36,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        photoCollectionView.delegate = self
-        photoCollectionView.dataSource = self
-        priceTextField.delegate = self
-        contextTextView.delegate = self
+        setDelegate()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,6 +71,13 @@ final class PostWriteVC: UIViewController, Storyboarded {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         return numberFormatter.string(from: NSNumber(value: number))!
+    }
+    
+    private func setDelegate() {
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
+        priceTextField.delegate = self
+        contextTextView.delegate = self
     }
     
     private func addKeyboardObserver() {
