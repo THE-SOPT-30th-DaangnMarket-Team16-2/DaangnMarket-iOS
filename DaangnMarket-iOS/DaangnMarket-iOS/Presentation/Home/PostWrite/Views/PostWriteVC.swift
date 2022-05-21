@@ -30,13 +30,13 @@ final class PostWriteVC: UIViewController, Storyboarded {
     @IBOutlet weak var bottomView: UIView!
     
     // MARK: - Life Cycle Part
-    override func viewWillAppear(_ animated: Bool) {
-        addKeyboardObserver()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addKeyboardObserver()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
