@@ -11,7 +11,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
     
     // MARK: - Properties
     static var storyboard: Storyboards = .postWrite
-    private let photoModel: PhotoDataModel = PhotoDataModel()
+    private var photoModel: PhotoDataModel = PhotoDataModel()
     
     // MARK: - UI Component Part
     @IBOutlet weak var writeScrollView: UIScrollView!
@@ -166,7 +166,6 @@ extension PostWriteVC: ListPhotoCVCDelegate {
     func didPressDeleteBtn(at index: Int) {
         photoModel.userSelectedImages.remove(at: index - 1)
         photoCollectionView.reloadData()
-        viewWillLayoutSubviews()
     }
 }
 

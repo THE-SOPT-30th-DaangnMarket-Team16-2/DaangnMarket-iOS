@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol ListPhotoCVCDelegate {
+protocol ListPhotoCVCDelegate: AnyObject {
   func didPressDeleteBtn(at index: Int)
 }
 
 class ListPhotoCVC: UICollectionViewCell {
   
   static let identifier = "ListPhotoCVC"
-  var delegate: ListPhotoCVCDelegate!
+  weak var delegate: ListPhotoCVCDelegate?
   var indexPath: Int = 0
       
   @IBOutlet weak var photoImageView: UIImageView!
