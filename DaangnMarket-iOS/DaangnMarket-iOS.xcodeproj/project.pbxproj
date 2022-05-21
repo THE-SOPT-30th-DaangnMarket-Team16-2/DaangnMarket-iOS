@@ -233,6 +233,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8EBAFFE52836A0C7003A8278 /* Subin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Subin;
+			sourceTree = "<group>";
+		};
 		EBB25F6828311102001416D8 = {
 			isa = PBXGroup;
 			children = (
@@ -548,6 +555,7 @@
 		EBB2602328321DB8001416D8 /* PostDetail */ = {
 			isa = PBXGroup;
 			children = (
+				8EBAFFE52836A0C7003A8278 /* Subin */,
 				EBB2602B2832211C001416D8 /* Junho */,
 			);
 			path = PostDetail;
@@ -1013,7 +1021,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FY8N9XTH66;
+				DEVELOPMENT_TEAM = R6RDNJW78B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DaangnMarket-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1041,7 +1049,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FY8N9XTH66;
+				DEVELOPMENT_TEAM = R6RDNJW78B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "DaangnMarket-iOS/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

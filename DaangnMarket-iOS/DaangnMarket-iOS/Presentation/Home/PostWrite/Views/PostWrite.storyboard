@@ -185,10 +185,10 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="글 제목" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="yWP-pJ-3ZR">
-                                                <rect key="frame" x="15" y="131" width="46" height="21"/>
+                                                <rect key="frame" x="15.000000000000004" y="131" width="46.333333333333343" height="28"/>
                                                 <color key="backgroundColor" name="carrot_white"/>
-                                                <color key="textColor" name="carrot_black"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <color key="textColor" name="carrot_white"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -197,7 +197,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-l9-I6s">
-                                                <rect key="frame" x="15" y="175" width="345" height="1"/>
+                                                <rect key="frame" x="15" y="182" width="345" height="1"/>
                                                 <color key="backgroundColor" name="carrot_linelightgray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="T5d-ph-BjT"/>
@@ -205,13 +205,13 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="카테고리" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="J2i-zM-bEE">
-                                                <rect key="frame" x="14.999999999999996" y="198" width="55.666666666666657" height="24"/>
+                                                <rect key="frame" x="14.999999999999996" y="205" width="55.666666666666657" height="24"/>
                                                 <color key="backgroundColor" name="carrot_white"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="SFH-T2-0XA"/>
                                                 </constraints>
                                                 <color key="textColor" name="carrot_black"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -220,7 +220,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-gH-sMC">
-                                                <rect key="frame" x="15" y="245" width="345" height="1"/>
+                                                <rect key="frame" x="15" y="252" width="345" height="1"/>
                                                 <color key="backgroundColor" name="carrot_linelightgray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="1Cg-ps-gTu"/>
@@ -229,7 +229,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bhJ-BE-rH6">
-                                                <rect key="frame" x="15" y="270" width="20" height="20"/>
+                                                <rect key="frame" x="15" y="277" width="20" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="BcO-GK-ojF"/>
                                                     <constraint firstAttribute="width" constant="20" id="P3t-DG-bST"/>
@@ -239,13 +239,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="가격" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-Z5-KrK">
-                                                <rect key="frame" x="35" y="268" width="28" height="24"/>
+                                                <rect key="frame" x="35" y="275" width="28" height="24"/>
                                                 <color key="backgroundColor" name="carrot_white"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="R67-ll-4rs"/>
                                                 </constraints>
                                                 <color key="textColor" name="carrot_black"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -257,7 +257,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-eT-ziL">
-                                                <rect key="frame" x="259.66666666666669" y="268" width="24" height="24"/>
+                                                <rect key="frame" x="259.33333333333331" y="277.66666666666669" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="UkL-Ov-Fru"/>
                                                     <constraint firstAttribute="width" constant="24" id="c9A-8e-qay"/>
@@ -270,13 +270,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격제안 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAn-Vt-jAT">
-                                                <rect key="frame" x="288.66666666666669" y="272" width="71.333333333333314" height="15.666666666666686"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <rect key="frame" x="288.33333333333331" y="279" width="71.666666666666686" height="21.333333333333314"/>
+                                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" name="carrot_square_gray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPN-nm-wCE">
-                                                <rect key="frame" x="15" y="315" width="345" height="1"/>
+                                                <rect key="frame" x="15" y="322" width="345" height="1"/>
                                                 <color key="backgroundColor" name="carrot_linelightgray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="0LC-lO-5dC"/>
@@ -286,7 +286,7 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="내용을 작성해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zf-Ki2">
-                                                <rect key="frame" x="15" y="338" width="345" height="327"/>
+                                                <rect key="frame" x="15" y="345" width="345" height="320"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" name="carrot_square_gray"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
