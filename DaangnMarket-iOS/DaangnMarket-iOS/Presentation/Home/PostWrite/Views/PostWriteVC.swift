@@ -200,6 +200,22 @@ extension PostWriteVC: UITextViewDelegate {
             textView.textColor = UIColor(named: "carrot_square_gray")
         }
     }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach { cons in
+            if estimatedSize.height <= 320 {
+                
+            } else {
+                if cons.firstAttribute == .height {
+                    cons.constant = estimatedSize.height
+                }
+            }
+        }
+        
+    }
 }
 
 // MARK: - priceTextField Max Length 설정
