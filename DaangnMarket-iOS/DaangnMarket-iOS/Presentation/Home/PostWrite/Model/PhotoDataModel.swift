@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoDataModel {
+struct PhotoDataModel {
     
     var userSelectedImages: [UIImage]
     
