@@ -21,7 +21,8 @@ class BaseService {
         let configuration = URLSessionConfiguration.af.default
         configuration.timeoutIntervalForRequest = NetworkEnvironment.requestTimeOut
         configuration.timeoutIntervalForResource = NetworkEnvironment.resourceTimeOut
-        session = Session(configuration: configuration)
+        let eventLogger = APIEventLogger()
+        session = Session(configuration: configuration, eventMonitors: [eventLogger])
         return session
     }()
     

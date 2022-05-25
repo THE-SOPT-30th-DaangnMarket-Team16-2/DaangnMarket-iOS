@@ -71,6 +71,20 @@ final class PostDetailVC: BaseVC, Storyboarded {
         bind()
         setDelegate()
         setCollectionView()
+        AuthService.shared.requestPost(postId: 33) { networkResult in
+            switch networkResult {
+                
+            case .success(let data):
+                print(data)
+                if let data = data as? PostData {
+                    print(data.postID, "성공")
+                }
+            case .requestErr(let status):
+                print(status)
+            default:
+                print("serverError")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

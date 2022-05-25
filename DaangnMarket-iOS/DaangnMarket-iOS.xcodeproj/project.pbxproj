@@ -92,7 +92,7 @@
 		EBB260742834ABF8001416D8 /* PostDetailCVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */; };
 		EBB260762834BA0A001416D8 /* PostImageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260752834BA0A001416D8 /* PostImageCVC.swift */; };
 		EBB260912836AAC9001416D8 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260902836AAC8001416D8 /* PostDetailViewModel.swift */; };
-		EBB260942838A020001416D8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260932838A020001416D8 /* Router.swift */; };
+		EBB260942838A020001416D8 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260932838A020001416D8 /* BaseRouter.swift */; };
 		EBB260992838A054001416D8 /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260982838A054001416D8 /* HeaderType.swift */; };
 		EBB2609B2838A069001416D8 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2609A2838A069001416D8 /* BaseService.swift */; };
 		EBB2609D2838A078001416D8 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB2609C2838A078001416D8 /* NetworkResult.swift */; };
@@ -102,6 +102,7 @@
 		EBB260A52838A0ED001416D8 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A42838A0ED001416D8 /* GeneralResponse.swift */; };
 		EBB260A82838A105001416D8 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A72838A105001416D8 /* SignIn.swift */; };
 		EBB260AA2838A10E001416D8 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260A92838A10E001416D8 /* SignUp.swift */; };
+		EBB260CE283E16BF001416D8 /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260CD283E16BF001416D8 /* EventLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,7 +195,7 @@
 		EBB260732834ABF8001416D8 /* PostDetailCVLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailCVLayout.swift; sourceTree = "<group>"; };
 		EBB260752834BA0A001416D8 /* PostImageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCVC.swift; sourceTree = "<group>"; };
 		EBB260902836AAC8001416D8 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
-		EBB260932838A020001416D8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EBB260932838A020001416D8 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		EBB260982838A054001416D8 /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
 		EBB2609A2838A069001416D8 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		EBB2609C2838A078001416D8 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -204,6 +205,7 @@
 		EBB260A42838A0ED001416D8 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		EBB260A72838A105001416D8 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		EBB260A92838A10E001416D8 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		EBB260CD283E16BF001416D8 /* EventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -699,10 +701,11 @@
 		EBB260922838A011001416D8 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				EBB260932838A020001416D8 /* Router.swift */,
+				EBB260932838A020001416D8 /* BaseRouter.swift */,
 				EBB260982838A054001416D8 /* HeaderType.swift */,
 				EBB2609A2838A069001416D8 /* BaseService.swift */,
 				EBB2609C2838A078001416D8 /* NetworkResult.swift */,
+				EBB260CD283E16BF001416D8 /* EventLogger.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -881,7 +884,7 @@
 				EBB25FAE2831194A001416D8 /* UILabel+.swift in Sources */,
 				EBB260742834ABF8001416D8 /* PostDetailCVLayout.swift in Sources */,
 				EBB26039283226BB001416D8 /* BaseNotiList.swift in Sources */,
-				EBB260942838A020001416D8 /* Router.swift in Sources */,
+				EBB260942838A020001416D8 /* BaseRouter.swift in Sources */,
 				EBB25FA828311911001416D8 /* UIView+.swift in Sources */,
 				EBB25FC028311E72001416D8 /* UIViewController+.swift in Sources */,
 				EBB2604528323248001416D8 /* MainTBC.swift in Sources */,
@@ -912,6 +915,7 @@
 				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
 				EBB25FF52831E91C001416D8 /* ModuleFactory.swift in Sources */,
 				EBB25FBC28311DF4001416D8 /* UITableView+.swift in Sources */,
+				EBB260CE283E16BF001416D8 /* EventLogger.swift in Sources */,
 				EBB25FBA28311DE1001416D8 /* UITabBar+.swift in Sources */,
 				EBB2603D28322C19001416D8 /* PostWriteVC.swift in Sources */,
 				EBB260032831F137001416D8 /* setImage.swift in Sources */,

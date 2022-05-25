@@ -11,6 +11,7 @@ import Alamofire
 enum AuthRouter {
     case requestSignUp(email: String, name: String, pw: String)
     case requestSignIn(email: String, pw: String)
+    case requestPostData(postId: Int)
 }
 
 extension AuthRouter: BaseRouter {
@@ -21,6 +22,8 @@ extension AuthRouter: BaseRouter {
             return "/auth/signup"
         case .requestSignIn:
             return "/auth/signin"
+        case .requestPostData(let postId):
+            return "/post/\(postId)"
         }
     }
     
@@ -28,6 +31,8 @@ extension AuthRouter: BaseRouter {
         switch self {
         case .requestSignUp, .requestSignIn:
             return .post
+        default:
+            return .get
         }
     }
     
@@ -46,6 +51,8 @@ extension AuthRouter: BaseRouter {
                 "password": pw
             ]
             return .requestParameters(body)
+        default:
+            return .requestPlain
         }
     }
 }

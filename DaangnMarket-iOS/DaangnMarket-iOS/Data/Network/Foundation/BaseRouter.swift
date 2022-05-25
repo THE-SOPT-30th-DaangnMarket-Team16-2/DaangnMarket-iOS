@@ -14,6 +14,7 @@ protocol BaseRouter: URLRequestConvertible {
     var path: String { get }
     var parameters: RequestParams { get }
     var header: HeaderType { get }
+    var multipart: MultipartFormData { get }
 }
 
 // MARK: asURLRequest()
@@ -85,11 +86,15 @@ extension BaseRouter {
 
 extension BaseRouter {
     var baseURL: String {
-        return URLConstants.veginURL
+        return URLConstants.baseURL
     }
     
     var header: HeaderType {
-        return HeaderType.default
+        return HeaderType.withToken
+    }
+    
+    var multipart: MultipartFormData {
+        return MultipartFormData()
     }
 }
 
