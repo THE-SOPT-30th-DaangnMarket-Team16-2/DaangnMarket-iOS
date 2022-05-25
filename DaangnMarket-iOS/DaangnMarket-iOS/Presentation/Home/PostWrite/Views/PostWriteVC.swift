@@ -11,7 +11,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
     
     // MARK: - Properties
     static var storyboard: Storyboards = .postWrite
-    private let photoModel: PhotoDataModel = PhotoDataModel()
+    private var photoModel: PhotoDataModel = PhotoDataModel()
     
     // MARK: - UI Component Part
     @IBOutlet weak var writeScrollView: UIScrollView!
@@ -30,17 +30,13 @@ final class PostWriteVC: UIViewController, Storyboarded {
     @IBOutlet weak var bottomView: UIView!
     
     // MARK: - Life Cycle Part
-    override func viewWillAppear(_ animated: Bool) {
-        addKeyboardObserver()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        photoCollectionView.delegate = self
-        photoCollectionView.dataSource = self
-        priceTextField.delegate = self
-        contextTextView.delegate = self
+        setDelegate()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        addKeyboardObserver()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -75,6 +71,13 @@ final class PostWriteVC: UIViewController, Storyboarded {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         return numberFormatter.string(from: NSNumber(value: number))!
+    }
+    
+    private func setDelegate() {
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
+        priceTextField.delegate = self
+        contextTextView.delegate = self
     }
     
     private func addKeyboardObserver() {
@@ -163,7 +166,6 @@ extension PostWriteVC: ListPhotoCVCDelegate {
     func didPressDeleteBtn(at index: Int) {
         photoModel.userSelectedImages.remove(at: index - 1)
         photoCollectionView.reloadData()
-        viewWillLayoutSubviews()
     }
 }
 
@@ -178,31 +180,47 @@ extension PostWriteVC: ListPhotoCVCDelegate {
      }
 
      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         return 2
+         return 5
      }
  }
 
 // MARK: - contextTextView Placeholder 설정
 extension PostWriteVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        if contextTextView.textColor == UIColor(named: "carrot_square_gray") {
-          contextTextView.text = nil
-          contextTextView.textColor = UIColor.carrotBlack
+        if textView.textColor == UIColor(named: "carrot_square_gray") {
+            textView.text = nil
+            textView.textColor = UIColor.carrotBlack
         }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        if contextTextView.text.isEmpty {
-          contextTextView.text = "내용을 작성해주세요."
-            contextTextView.textColor = UIColor(named: "carrot_square_gray")
+        if textView.text.isEmpty {
+            textView.text = "내용을 작성해주세요."
+            textView.textColor = UIColor(named: "carrot_square_gray")
         }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach { cons in
+            if estimatedSize.height <= 320 {
+                
+            } else {
+                if cons.firstAttribute == .height {
+                    cons.constant = estimatedSize.height
+                }
+            }
+        }
+        
     }
 }
 
 // MARK: - priceTextField Max Length 설정
 extension PostWriteVC: UITextFieldDelegate {
     func checkMaxLength(_ textField: UITextField,_ maxLength: Int) {
-        if priceTextField.text!.count > maxLength {
+        if textField.text!.count > maxLength {
             textField.deleteBackward()
         }
     }

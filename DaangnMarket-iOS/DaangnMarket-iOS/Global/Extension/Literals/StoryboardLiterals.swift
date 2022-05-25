@@ -19,6 +19,7 @@ enum Storyboards: String {
     case postDetail = "PostDetail"
     case postList = "PostList"
     case postWrite = "PostWrite"
+    case postDetail2 = "PostDetail2"
 }
 
 extension UIStoryboard{

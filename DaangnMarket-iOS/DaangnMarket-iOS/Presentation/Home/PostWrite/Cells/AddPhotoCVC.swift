@@ -10,14 +10,14 @@ import BSImagePicker
 import Photos
 
 
-protocol AddImageDelegate {
+protocol AddImageDelegate: AnyObject {
     func didPickImagesToUpload(images: [UIImage])
 }
 
 class AddPhotoCVC: UICollectionViewCell {
   
   static let identifier = "AddPhotoCVC"
-  var delegate: AddImageDelegate!
+  weak var delegate: AddImageDelegate?
   
   var selectedAssets: [PHAsset] = [PHAsset]()
   var userSelectedImages: [UIImage] = [UIImage]()
