@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import SwiftUI
 
 final class PostDetailVC: BaseVC, Storyboarded {
     
@@ -95,6 +96,10 @@ final class PostDetailVC: BaseVC, Storyboarded {
         PostContentCVC.register(target: detailCV)
     }
     
+    private func fetchPostDetailData(data: PostDetail) {
+        
+    }
+    
     // MARK: - UI & Layout
     
     override func configUI() {
@@ -126,6 +131,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
     }
 }
 
+// MARK: Collection DataSource
 extension PostDetailVC: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -169,6 +175,7 @@ extension PostDetailVC: UICollectionViewDataSource{
     }
 }
 
+// MARK: CollectionView Delegate
 extension PostDetailVC: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.pageControl.snp.remakeConstraints { make in
@@ -178,6 +185,7 @@ extension PostDetailVC: UICollectionViewDelegate {
     }
 }
 
+// MARK: Cell Delegate
 extension PostDetailVC: PostContentDelegate {
     func presentSellStatusActionSheet() {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
@@ -209,7 +217,7 @@ extension PostDetailVC {
             switch networkResult {
             case .success(let data):
                 if let data = data as? PostDetail {
-                    self.fetchPostDetailData()
+                    self.fetchPostDetailData(data: data)
                 }
             default:
                 break;
