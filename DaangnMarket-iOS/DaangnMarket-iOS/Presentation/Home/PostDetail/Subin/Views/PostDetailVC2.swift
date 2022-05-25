@@ -50,6 +50,11 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         }
     }
     
+    @IBAction func heartBtnTapped(_ sender: UIButton) {
+        sender.isSelected.toggle()
+    }
+
+    
 }
 
 extension PostDetailVC2: UIScrollViewDelegate {
