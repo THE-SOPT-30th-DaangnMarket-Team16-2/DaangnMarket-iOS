@@ -72,6 +72,9 @@ extension BaseRouter {
         case .requestParameters(let requestParams):
             let params = requestParams
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: [])
+            
+        case .requestPlain:
+            break;
         }
         
         return request
@@ -82,7 +85,7 @@ extension BaseRouter {
 
 extension BaseRouter {
     var baseURL: String {
-        return URLConstants.baseURL
+        return URLConstants.veginURL
     }
     
     var header: HeaderType {
@@ -96,6 +99,7 @@ enum RequestParams {
     case query(_ parameter: Codable?)
     case body(_ parameter: Codable?)
     case requestParameters(_ parameter: [String : Any])
+    case requestPlain
 }
 
 // MARK: toDictionary
