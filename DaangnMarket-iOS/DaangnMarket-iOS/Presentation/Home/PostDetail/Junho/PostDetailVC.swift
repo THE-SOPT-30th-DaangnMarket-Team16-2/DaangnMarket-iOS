@@ -71,20 +71,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         bind()
         setDelegate()
         setCollectionView()
-        AuthService.shared.requestPost(postId: 33) { networkResult in
-            switch networkResult {
-                
-            case .success(let data):
-                print(data)
-                if let data = data as? PostData {
-                    print(data.postID, "성공")
-                }
-            case .requestErr(let status):
-                print(status)
-            default:
-                print("serverError")
-            }
-        }
+        getPostDetail(postId: "4ioqqfnas328sd")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -212,5 +199,21 @@ extension PostDetailVC: PostContentDelegate {
         actionSheet.addAction(cancelAction)
         
         self.present(actionSheet, animated: true)
+    }
+}
+
+// MARK: Network
+extension PostDetailVC {
+    func getPostDetail(postId: String) {
+        HomeService.shared.getPostDetail(postId: postId) { networkResult in
+            switch networkResult {
+            case .success(let data):
+                if let data = data as? PostDetail {
+                    self.fetchPostDetailData()
+                }
+            default:
+                break;
+            }
+        }
     }
 }

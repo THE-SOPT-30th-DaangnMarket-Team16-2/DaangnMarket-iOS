@@ -10,7 +10,7 @@ import Foundation
 struct URLConstants {
     
     // MARK: - Base URL
-    static let baseURL = "http://13.124.62.236"
+    static let baseURL = "https://83008f6f-c9e8-4bb3-a1f8-db102f7e9b13.mock.pstmn.io"
 }
 
 struct NetworkEnvironment {
