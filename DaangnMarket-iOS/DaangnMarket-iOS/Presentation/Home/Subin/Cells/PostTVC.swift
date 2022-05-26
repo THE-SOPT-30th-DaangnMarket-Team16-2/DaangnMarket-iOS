@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostTVC: UITableViewCell {
+final class PostTVC: UITableViewCell {
     
     static let identifier = "PostTVC"
     

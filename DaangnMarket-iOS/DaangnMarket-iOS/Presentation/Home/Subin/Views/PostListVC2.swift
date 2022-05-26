@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostListVC2: UIViewController, Storyboarded {
+final class PostListVC2: UIViewController, Storyboarded {
         
     static var storyboard: Storyboards = .postList2
     
