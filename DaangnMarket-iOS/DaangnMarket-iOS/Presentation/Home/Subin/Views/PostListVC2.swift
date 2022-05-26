@@ -63,20 +63,8 @@ extension PostListVC2: UITableViewDataSource{
         
         guard let detailVC = UIStoryboard(name: "PostDetail2", bundle: nil).instantiateViewController(withIdentifier: "PostDetailVC2") as? PostDetailVC2 else { return }
         
-        self.navigationController?.pushViewController(detailVC, animated: true)
+//        detailVC.itemModel = model[indexPath.row]
         
-//        // 셀 선택 해제
-//        tableView.deselectRow(at: indexPath, animated: true)
-//
-//        guard let detailVC2 = UIStoryboard(name: "PostDetail2", bundle: nil).instantiateViewController(withIdentifier: "PostDetailVC2") as? PostDetailVC2 else { return }
-//
-//        //detailVC.modalPresentationStyle = .overFullScreen
-//        //detailVC.modalTransitionStyle = .crossDissolve
-//
-//        // 셀 선택 시 데이터 전달
-//        detailVC2.itemModel = model[indexPath.row]
-//
-//        //self.present(detailVC, animated: true, completion: nil)
-//        self.navigationController?.pushViewController(detailVC2, animated: true)
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
