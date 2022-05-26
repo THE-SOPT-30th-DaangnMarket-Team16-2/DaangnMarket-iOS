@@ -26,7 +26,7 @@
         <!--Post DetailVC2-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="PostDetailVC2" id="Y6W-OH-hqX" customClass="PostDetailVC2" customModule="DaangnMarket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostDetailVC2" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="PostDetailVC2" customModule="DaangnMarket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,6 +322,7 @@
                             <constraint firstItem="F4O-lZ-ggL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zTa-WR-rVB"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qkf-YA-j63"/>
                     <connections>
                         <outlet property="categoryLabel" destination="ey1-5f-PbA" id="MCN-OG-fCv"/>
                         <outlet property="contextLabel" destination="UGV-M7-hzI" id="wqr-JU-Rdr"/>
