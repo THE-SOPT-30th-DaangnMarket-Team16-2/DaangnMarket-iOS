@@ -28,7 +28,11 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var priceOfferLabel: UILabel!
     
-    var images = [UIImage(named: "postDetail_1"), UIImage(named: "postDetail_2"), UIImage(named: "postDetail_3"), UIImage(named: "postDetail_4"), UIImage(named: "postDetail_5")]
+    var images = [UIImage(named: "postDetail_1"),
+                  UIImage(named: "postDetail_2"),
+                  UIImage(named: "postDetail_3"),
+                  UIImage(named: "postDetail_4"),
+                  UIImage(named: "postDetail_5")]
     var imageViews = [UIImageView]()
     
     override func viewDidLoad() {
