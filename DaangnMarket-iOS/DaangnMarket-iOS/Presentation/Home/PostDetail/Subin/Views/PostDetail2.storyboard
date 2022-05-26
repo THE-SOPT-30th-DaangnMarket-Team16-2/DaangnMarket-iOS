@@ -144,7 +144,7 @@
                                                 </constraints>
                                                 <color key="tintColor" name="carrot_black"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="icn_arrow" imagePlacement="trailing" title="판매완료" imagePadding="25" cornerStyle="medium">
+                                                <buttonConfiguration key="configuration" style="plain" image="icn_arrow" imagePlacement="trailing" title="판매중" imagePadding="25" cornerStyle="medium">
                                                     <backgroundConfiguration key="background">
                                                         <color key="strokeColor" name="carrot_squaregray"/>
                                                     </backgroundConfiguration>
@@ -341,128 +341,6 @@
             </objects>
             <point key="canvasLocation" x="130.40000000000001" y="118.22660098522168"/>
         </scene>
-        <!--Post Detail Bottom Sheet-->
-        <scene sceneID="D0W-3p-w4Z">
-            <objects>
-                <viewController storyboardIdentifier="PostDetailBottomSheet" id="bc1-kL-UMO" customClass="PostDetailBottomSheet" customModule="DaangnMarket_iOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dF9-h9-tJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-bL-i16">
-                                <rect key="frame" x="0.0" y="578" width="375" height="200"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFp-ny-ov8">
-                                        <rect key="frame" x="0.0" y="50" width="375" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="S1K-Su-Xh3"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="판매중">
-                                            <color key="titleColor" name="carrot_black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="saleBtnDidTap:" destination="bc1-kL-UMO" eventType="touchUpInside" id="Whd-ez-elm"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-8G-uf9">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="MH1-7x-y4y"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="예약중">
-                                            <color key="titleColor" name="carrot_black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="reservedBtnDidTap:" destination="bc1-kL-UMO" eventType="touchUpInside" id="GgN-fs-sAc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RpA-Mv-Bnq">
-                                        <rect key="frame" x="0.0" y="150" width="375" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="QbB-u8-KHc"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="판매완료">
-                                            <color key="titleColor" name="carrot_black"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="soldoutBtnDidTap:" destination="bc1-kL-UMO" eventType="touchUpInside" id="W7q-bB-9Oi"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상태변경" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w3-WL-wxT">
-                                        <rect key="frame" x="161.66666666666666" y="15" width="52" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                                        <color key="textColor" name="carrot_blue"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="omt-z0-E4r">
-                                        <rect key="frame" x="10" y="8" width="50" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="OcS-Oi-Eq8"/>
-                                            <constraint firstAttribute="height" constant="32" id="PKU-ot-Xlb"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="닫기">
-                                            <color key="titleColor" name="carrot_deepgray"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelBtnTapped:" destination="bc1-kL-UMO" eventType="touchUpInside" id="JBf-Fk-BYE"/>
-                                        </connections>
-                                    </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2UB-Fc-LJd">
-                                        <rect key="frame" x="15" y="50" width="345" height="1"/>
-                                        <color key="backgroundColor" name="carrot_squaregray"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Wa6-jo-m34"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" name="carrot_linelightgray"/>
-                                <constraints>
-                                    <constraint firstItem="m0p-8G-uf9" firstAttribute="leading" secondItem="eOt-bL-i16" secondAttribute="leading" id="1Vv-TM-ozE"/>
-                                    <constraint firstItem="omt-z0-E4r" firstAttribute="centerY" secondItem="3w3-WL-wxT" secondAttribute="centerY" id="5IG-q2-FzA"/>
-                                    <constraint firstAttribute="width" constant="375" id="6rp-eA-0hd"/>
-                                    <constraint firstItem="3w3-WL-wxT" firstAttribute="centerX" secondItem="eOt-bL-i16" secondAttribute="centerX" id="8dP-g4-fOM"/>
-                                    <constraint firstAttribute="trailing" secondItem="2UB-Fc-LJd" secondAttribute="trailing" constant="15" id="GHS-nG-24w"/>
-                                    <constraint firstAttribute="trailing" secondItem="HFp-ny-ov8" secondAttribute="trailing" id="Lr5-6s-hS4"/>
-                                    <constraint firstItem="RpA-Mv-Bnq" firstAttribute="top" secondItem="m0p-8G-uf9" secondAttribute="bottom" id="M4M-Jd-9SV"/>
-                                    <constraint firstItem="RpA-Mv-Bnq" firstAttribute="leading" secondItem="eOt-bL-i16" secondAttribute="leading" id="M98-bS-rUA"/>
-                                    <constraint firstItem="2UB-Fc-LJd" firstAttribute="top" secondItem="eOt-bL-i16" secondAttribute="top" constant="50" id="MoV-gh-g5M"/>
-                                    <constraint firstAttribute="height" constant="200" id="UBw-YW-1ZX"/>
-                                    <constraint firstAttribute="trailing" secondItem="RpA-Mv-Bnq" secondAttribute="trailing" id="X0o-XK-h3B"/>
-                                    <constraint firstAttribute="bottom" secondItem="RpA-Mv-Bnq" secondAttribute="bottom" id="ZzC-Vv-6Fd"/>
-                                    <constraint firstItem="2UB-Fc-LJd" firstAttribute="leading" secondItem="eOt-bL-i16" secondAttribute="leading" constant="15" id="bvg-81-U73"/>
-                                    <constraint firstItem="omt-z0-E4r" firstAttribute="leading" secondItem="eOt-bL-i16" secondAttribute="leading" constant="10" id="hJ5-iG-Qv5"/>
-                                    <constraint firstItem="3w3-WL-wxT" firstAttribute="top" secondItem="eOt-bL-i16" secondAttribute="top" constant="15" id="paa-Ls-fAk"/>
-                                    <constraint firstAttribute="trailing" secondItem="m0p-8G-uf9" secondAttribute="trailing" id="s2w-Bv-BSS"/>
-                                    <constraint firstItem="m0p-8G-uf9" firstAttribute="top" secondItem="HFp-ny-ov8" secondAttribute="bottom" id="wsu-E2-MNW"/>
-                                    <constraint firstItem="HFp-ny-ov8" firstAttribute="leading" secondItem="eOt-bL-i16" secondAttribute="leading" id="x3X-Hv-lfo"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="tgu-hg-vrq"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="eOt-bL-i16" firstAttribute="leading" secondItem="tgu-hg-vrq" secondAttribute="leading" id="0DS-Hk-BPe"/>
-                            <constraint firstItem="eOt-bL-i16" firstAttribute="trailing" secondItem="tgu-hg-vrq" secondAttribute="trailing" id="LAq-u7-aAp"/>
-                            <constraint firstItem="tgu-hg-vrq" firstAttribute="bottom" secondItem="eOt-bL-i16" secondAttribute="bottom" id="Uwp-a9-UDt"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="containerHeight" destination="UBw-YW-1ZX" id="NAs-hc-TvW"/>
-                        <outlet property="containerView" destination="eOt-bL-i16" id="CU7-to-Rlp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bkT-pq-5z5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1007" y="137"/>
-        </scene>
     </scenes>
     <resources>
         <image name="icn_arrow" width="8.3333330154418945" height="4.6666665077209473"/>
@@ -481,9 +359,6 @@
         </namedColor>
         <namedColor name="carrot_darklightgray">
             <color red="0.51800000667572021" green="0.53299999237060547" blue="0.57300001382827759" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="carrot_deepgray">
-            <color red="0.19200000166893005" green="0.19200000166893005" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="carrot_linelightgray">
             <color red="0.94099998474121094" green="0.94099998474121094" blue="0.94099998474121094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
