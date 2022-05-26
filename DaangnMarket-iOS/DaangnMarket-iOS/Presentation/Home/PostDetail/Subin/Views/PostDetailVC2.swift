@@ -11,7 +11,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
 
     // MARK: - Properties
     static var storyboard: Storyboards = .postDetail2
-//    private var photoModel: PhotoDataModel = PhotoDataModel()
+    var itemModel: ItemModel?
 
     @IBOutlet weak var photoScrollView: UIScrollView!
     @IBOutlet weak var photoPageControl: UIPageControl!
