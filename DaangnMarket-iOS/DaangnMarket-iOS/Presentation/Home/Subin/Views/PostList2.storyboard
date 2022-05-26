@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sgz-sg-UZJ">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3uC-Nc-GaH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odo-vw-tMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="sgz-sg-UZJ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6B-Ur-Txr">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="DdL-N0-IyU"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-614" y="76"/>
+        </scene>
+        <!--Post ListVC2-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PostListVC2" id="Y6W-OH-hqX" customClass="PostListVC2" customModule="DaangnMarket_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-1L-adl">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asE-Pu-HQ6">
+                                <rect key="frame" x="306" y="712" width="54" height="54"/>
+                                <color key="backgroundColor" name="carrot_text_orange"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="Bmx-X7-cuZ"/>
+                                    <constraint firstAttribute="height" constant="54" id="HE6-Lz-APf"/>
+                                </constraints>
+                                <color key="tintColor" name="carrot_white"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="plus" catalog="system">
+                                    <color key="titleShadowColor" name="carrot_white"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="27"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="floatingButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uz6-X6-pI2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="asE-Pu-HQ6" secondAttribute="trailing" constant="15" id="3Sh-2u-ccH"/>
+                            <constraint firstItem="QkD-1L-adl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3c1-UB-LJO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QkD-1L-adl" secondAttribute="trailing" id="Owd-x1-PQa"/>
+                            <constraint firstItem="QkD-1L-adl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TvV-6V-2di"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="asE-Pu-HQ6" secondAttribute="bottom" constant="12" id="jgn-gM-wAs"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QkD-1L-adl" secondAttribute="bottom" id="oQo-bT-aWu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7LZ-k9-Gcg"/>
+                    <connections>
+                        <outlet property="floatingButton" destination="asE-Pu-HQ6" id="ROm-dw-Gi1"/>
+                        <outlet property="itemTableView" destination="QkD-1L-adl" id="MAH-te-rzt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112.8" y="76.847290640394093"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="carrot_text_orange">
+            <color red="0.99599999189376831" green="0.49399998784065247" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="carrot_white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
