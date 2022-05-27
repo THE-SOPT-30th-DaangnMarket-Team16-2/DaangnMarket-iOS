@@ -29,14 +29,44 @@ final class PostWriteVC: UIViewController, Storyboarded {
     @IBOutlet weak var contextTextView: UITextView!
     @IBOutlet weak var bottomView: UIView!
     
+    private lazy var naviCompleteButton: UIButton =  {
+        let bt = UIButton()
+        bt.setTitleColor(UIColor.carrotTextOrange, for: .normal)
+        bt.setTitle("완료", for: .normal)
+        bt.titleLabel?.font = .NotoRegular(size: 17)
+        bt.addAction(UIAction(handler: { _ in
+            let nextVC = PostDetailVC.instantiate()
+            if let rootVC = self.navigationController?.viewControllers.first as? PostListVC {
+                self.navigationController?.popViewController(animated: true)
+                rootVC.navigationController?.pushViewController(nextVC, animated: true)
+            }
+        }), for: .touchUpInside)
+        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        return bt
+    }()
+    
+    private lazy var naviBackButton: UIButton =  {
+        let bt = UIButton()
+        bt.setTitleColor(UIColor.carrotDeepGray, for: .normal)
+        bt.setTitle("닫기", for: .normal)
+        bt.titleLabel?.font = .NotoRegular(size: 17)
+        bt.addAction(UIAction(handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }), for: .touchUpInside)
+        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        return bt
+    }()
+    
     // MARK: - Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegate()
+        configUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         addKeyboardObserver()
+        setNavigationBar()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -78,6 +108,22 @@ final class PostWriteVC: UIViewController, Storyboarded {
         photoCollectionView.dataSource = self
         priceTextField.delegate = self
         contextTextView.delegate = self
+    }
+    
+    private func configUI() {
+        let completeBtn = UIBarButtonItem(customView: naviCompleteButton)
+        let backBtn = UIBarButtonItem(customView: naviBackButton)
+        
+        self.navigationItem.title = "중고거래 글쓰기"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.carrotBlack,
+                                                                        NSAttributedString.Key.font : UIFont.NotoBold(size: 16)]
+        
+        self.navigationItem.setRightBarButton(completeBtn, animated: false)
+        self.navigationItem.setLeftBarButton(backBtn, animated: false)
+    }
+    
+    private func setNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     private func addKeyboardObserver() {
