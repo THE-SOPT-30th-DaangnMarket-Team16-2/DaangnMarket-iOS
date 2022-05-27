@@ -11,7 +11,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
 
     // MARK: - Properties
     static var storyboard: Storyboards = .postDetail2
-//    private var photoModel: PhotoDataModel = PhotoDataModel()
+    var itemModel: ItemModel?
 
     @IBOutlet weak var photoScrollView: UIScrollView!
     @IBOutlet weak var photoPageControl: UIPageControl!
@@ -28,7 +28,11 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var priceOfferLabel: UILabel!
     
-    var images = [UIImage(named: "postDetail_1"), UIImage(named: "postDetail_2"), UIImage(named: "postDetail_3"), UIImage(named: "postDetail_4"), UIImage(named: "postDetail_5")]
+    var images = [UIImage(named: "postDetail_1"),
+                  UIImage(named: "postDetail_2"),
+                  UIImage(named: "postDetail_3"),
+                  UIImage(named: "postDetail_4"),
+                  UIImage(named: "postDetail_5")]
     var imageViews = [UIImageView]()
     
     override func viewDidLoad() {
@@ -41,19 +45,31 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     
     @IBAction func stateButtonTapped(_ sender: Any) {
         
-        print("바텀시트 띄우기 버튼 클릭")
-        guard let customBottomSheet = self.storyboard?.instantiateViewController(withIdentifier: "PostDetailBottomSheet") as? PostDetailBottomSheet else { return }
-        customBottomSheet.modalTransitionStyle = .crossDissolve
-        customBottomSheet.modalPresentationStyle = .overFullScreen
-        present(customBottomSheet, animated: false) {
-            customBottomSheet.showBottomSheetWithAnimation()
+        let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
+
+        let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
+            self.stateButton.titleLabel?.text = "판매중"
         }
+        let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
+            self.stateButton.titleLabel?.text = "예약중"
+        }
+        let completedAction = UIAlertAction(title: "판매완료", style: .default) { _ in
+            self.stateButton.titleLabel?.text = "판매완료"
+        }
+        let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
+
+        actionSheet.addAction(sellingAction)
+        actionSheet.addAction(reservedAction)
+        actionSheet.addAction(completedAction)
+        actionSheet.addAction(cancelAction)
+        
+        self.present(actionSheet, animated: true)
+
     }
     
     @IBAction func heartBtnTapped(_ sender: UIButton) {
         sender.isSelected.toggle()
     }
-
     
 }
 
