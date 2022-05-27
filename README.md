@@ -14,7 +14,7 @@
 ## 👀  Simulator
 | PostListVC & Flow | PostDetailVC | PostDetailVC |
 | ----------------- | :-----: | ----- |
-|<img src = "https://user-images.githubusercontent.com/77208067/170718972-09dec0f0-e7d0-4618-be0d-50a8427843f0.gif" width ="250"> |<img src ="https://user-images.githubusercontent.com/80062632/170726094-4707132f-db52-4d45-81fc-77bdf985fee9.gif" width ="250">  |<img src = "https://user-images.githubusercontent.com/77208067/170719101-65798262-f404-4e51-ab7d-0bde355cf0c4.gif" width ="250">|
+|<img src = "https://user-images.githubusercontent.com/80062632/170760297-ddb38c38-3b56-4bfd-8557-e3906871919a.gif" width ="250"> |<img src ="https://user-images.githubusercontent.com/80062632/170726094-4707132f-db52-4d45-81fc-77bdf985fee9.gif" width ="250">  |<img src = "https://user-images.githubusercontent.com/77208067/170719101-65798262-f404-4e51-ab7d-0bde355cf0c4.gif" width ="250">|
 
 </br>
 
