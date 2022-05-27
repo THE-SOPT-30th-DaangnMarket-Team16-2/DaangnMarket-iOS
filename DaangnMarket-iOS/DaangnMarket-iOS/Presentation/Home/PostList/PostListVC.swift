@@ -27,6 +27,8 @@ class PostListVC: UIViewController, Storyboarded {
         tableView.dataSource = self
         tableView.estimatedRowHeight = 100
         
+        self.tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        
     }
 }
 

@@ -12,8 +12,8 @@ class ListTableViewCell: UITableViewCell {
     static let identifier = "ListTableViewCell"
 
     @IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var place: UILabel!
+    @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
     
     override func awakeFromNib() {
