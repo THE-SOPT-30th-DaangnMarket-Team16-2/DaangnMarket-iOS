@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,8 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ma-SD-FyL">
+                                <rect key="frame" x="0.0" y="89.5" width="414" height="1"/>
+                                <color key="backgroundColor" name="carrot_square_gray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="rFI-KZ-c3R"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sXR-CY-Vsb">
-                                <rect key="frame" x="0.0" y="89.5" width="414" height="806.5"/>
+                                <rect key="frame" x="0.0" y="90.5" width="414" height="805.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTM-ZJ-zPb">
@@ -76,12 +84,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="DTM-ZJ-zPb" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="44" id="60W-WK-pWA"/>
-                            <constraint firstItem="sXR-CY-Vsb" firstAttribute="top" secondItem="DTM-ZJ-zPb" secondAttribute="bottom" id="Da6-3L-Ptn"/>
+                            <constraint firstItem="sXR-CY-Vsb" firstAttribute="top" secondItem="1Ma-SD-FyL" secondAttribute="bottom" id="C4m-0Q-xkS"/>
+                            <constraint firstItem="1Ma-SD-FyL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="D70-KD-Kif"/>
                             <constraint firstItem="DTM-ZJ-zPb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KKc-eQ-YMe"/>
                             <constraint firstItem="sXR-CY-Vsb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ohx-nB-jQ3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DTM-ZJ-zPb" secondAttribute="trailing" id="Pat-uK-jLP"/>
                             <constraint firstAttribute="bottom" secondItem="sXR-CY-Vsb" secondAttribute="bottom" id="Qb1-Us-08i"/>
                             <constraint firstItem="sXR-CY-Vsb" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="afL-2A-Guf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1Ma-SD-FyL" secondAttribute="trailing" id="hmk-DN-5gb"/>
+                            <constraint firstItem="1Ma-SD-FyL" firstAttribute="top" secondItem="DTM-ZJ-zPb" secondAttribute="bottom" id="ipZ-6J-2UQ"/>
                             <constraint firstAttribute="bottom" secondItem="n8x-77-SXI" secondAttribute="bottom" constant="91" id="o95-uU-4qe"/>
                             <constraint firstAttribute="trailing" secondItem="n8x-77-SXI" secondAttribute="trailing" constant="15" id="uFb-TU-aT4"/>
                         </constraints>
@@ -101,6 +112,9 @@
         <image name="icn_alarm" width="24" height="24"/>
         <image name="icn_info" width="24" height="24"/>
         <image name="icn_more_search" width="24" height="24"/>
+        <namedColor name="carrot_square_gray">
+            <color red="0.88599997758865356" green="0.88599997758865356" blue="0.89399999380111694" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
