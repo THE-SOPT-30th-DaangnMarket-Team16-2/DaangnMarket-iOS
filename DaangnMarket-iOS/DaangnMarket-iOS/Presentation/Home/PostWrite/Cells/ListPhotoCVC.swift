@@ -11,7 +11,7 @@ protocol ListPhotoCVCDelegate: AnyObject {
   func didPressDeleteBtn(at index: Int)
 }
 
-class ListPhotoCVC: UICollectionViewCell {
+final class ListPhotoCVC: UICollectionViewCell {
   
   static let identifier = "ListPhotoCVC"
   weak var delegate: ListPhotoCVCDelegate?
