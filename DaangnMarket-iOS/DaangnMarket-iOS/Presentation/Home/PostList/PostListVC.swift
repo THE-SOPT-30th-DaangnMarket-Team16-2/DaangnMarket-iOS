@@ -29,6 +29,7 @@ class PostListVC: UIViewController, Storyboarded {
         
         self.tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         
+        self.view.backgroundColor = .white
     }
 }
 
