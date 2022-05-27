@@ -27,7 +27,7 @@ final class MainTBC: UITabBarController {
         let PostListNVC = makeNavigationController(
             unselectedImage: ImageLiterals.MainTabBar.homeIcon,
             selectedImage: ImageLiterals.MainTabBar.homeIcon_selected,
-            rootViewController: PostListVC2.instantiate(), title: "홈")
+            rootViewController: PostListVC.instantiate(), title: "홈")
         
         let townNVC = makeNavigationController(
             unselectedImage: ImageLiterals.MainTabBar.townIcon,
