@@ -14,7 +14,7 @@ protocol AddImageDelegate: AnyObject {
     func didPickImagesToUpload(images: [UIImage])
 }
 
-class AddPhotoCVC: UICollectionViewCell {
+final class AddPhotoCVC: UICollectionViewCell {
   
   static let identifier = "AddPhotoCVC"
   weak var delegate: AddImageDelegate?

@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import SwiftUI
 
 final class PostDetailVC: BaseVC, Storyboarded {
     
@@ -71,6 +72,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         bind()
         setDelegate()
         setCollectionView()
+        getPostDetail(postId: "4ioqqfnas328sd")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -92,6 +94,10 @@ final class PostDetailVC: BaseVC, Storyboarded {
         
         PostImageCVC.register(target: detailCV)
         PostContentCVC.register(target: detailCV)
+    }
+    
+    private func fetchPostDetailData(data: PostDetail) {
+        
     }
     
     // MARK: - UI & Layout
@@ -125,6 +131,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
     }
 }
 
+// MARK: Collection DataSource
 extension PostDetailVC: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -168,6 +175,7 @@ extension PostDetailVC: UICollectionViewDataSource{
     }
 }
 
+// MARK: CollectionView Delegate
 extension PostDetailVC: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.pageControl.snp.remakeConstraints { make in
@@ -177,6 +185,7 @@ extension PostDetailVC: UICollectionViewDelegate {
     }
 }
 
+// MARK: Cell Delegate
 extension PostDetailVC: PostContentDelegate {
     func presentSellStatusActionSheet() {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
@@ -198,5 +207,21 @@ extension PostDetailVC: PostContentDelegate {
         actionSheet.addAction(cancelAction)
         
         self.present(actionSheet, animated: true)
+    }
+}
+
+// MARK: Network
+extension PostDetailVC {
+    func getPostDetail(postId: String) {
+        HomeService.shared.getPostDetail(postId: postId) { networkResult in
+            switch networkResult {
+            case .success(let data):
+                if let data = data as? PostDetail {
+                    self.fetchPostDetailData(data: data)
+                }
+            default:
+                break;
+            }
+        }
     }
 }
