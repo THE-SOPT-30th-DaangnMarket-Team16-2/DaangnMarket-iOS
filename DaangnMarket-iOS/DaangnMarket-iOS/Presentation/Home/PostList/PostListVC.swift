@@ -35,6 +35,12 @@ class PostListVC: UIViewController, Storyboarded {
         setTapGesture()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     private func setTapGesture() {
         plusButton.isUserInteractionEnabled = true
         let tap = UITapGestureRecognizer(target: self, action: #selector(presentPostWriteVC))
@@ -54,7 +60,8 @@ extension PostListVC: UITableViewDelegate{
 //    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
+        let nextVC = PostDetailVC.instantiate()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 

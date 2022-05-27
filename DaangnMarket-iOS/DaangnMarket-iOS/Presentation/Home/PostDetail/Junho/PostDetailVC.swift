@@ -10,7 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
-import SwiftUI
 
 final class PostDetailVC: BaseVC, Storyboarded {
     
@@ -46,7 +45,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         let bt = UIButton()
         bt.setImage(ImageLiterals.PostDetail.homeIcon, for: .normal)
         bt.addAction(UIAction(handler: { _ in
-            
+            self.navigationController?.popViewController(animated: true)
         }), for: .touchUpInside)
         bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         return bt
@@ -109,6 +108,8 @@ final class PostDetailVC: BaseVC, Storyboarded {
         let moreBtn = UIBarButtonItem(customView: naviMoreButton)
         self.navigationItem.setLeftBarButton(homeBtn, animated: false)
         self.navigationItem.setRightBarButton(moreBtn, animated: false)
+        
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func setLayout() {
