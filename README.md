@@ -7,13 +7,14 @@
 
 | 이준호 | 윤수빈 | 강승현  |
 | ----------------- | :-----: | ----- |
-| <img src="https://user-images.githubusercontent.com/77208067/169958888-f18a0edf-7969-4f25-920f-288ccf255950.png" width="200">|<img src="https://user-images.githubusercontent.com/77208067/169958298-d3f074da-5b1b-4b93-9af8-25353bb3c946.jpeg" width="200">||
+| <img src="https://user-images.githubusercontent.com/77208067/169958888-f18a0edf-7969-4f25-920f-288ccf255950.png" width="200">|<img src="https://user-images.githubusercontent.com/77208067/169958298-d3f074da-5b1b-4b93-9af8-25353bb3c946.jpeg" width="200">|<img src="https://user-images.githubusercontent.com/77208067/170718481-ccb42a24-3118-45b8-ad4f-bcb8f4cbbfe3.jpeg" width="200">|
 
 </br>
 
 ## 👀  Simulator
-
-구현화면 공간
+| PostListVC & Flow | PostDetailVC | PostDetailVC |
+| ----------------- | :-----: | ----- |
+|<img src = "https://user-images.githubusercontent.com/77208067/170718972-09dec0f0-e7d0-4618-be0d-50a8427843f0.gif" width ="250"> |<img src = "https://user-images.githubusercontent.com/77208067/170719054-7fa9322e-9cd5-408d-96be-dc8f3d273a60.gif" width ="250">  |<img src = "https://user-images.githubusercontent.com/77208067/170719101-65798262-f404-4e51-ab7d-0bde355cf0c4.gif" width ="250">|
 
 </br>
 
