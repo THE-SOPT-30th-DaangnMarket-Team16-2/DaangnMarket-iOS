@@ -17,9 +17,6 @@ class PostListVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .black
         
         let nib = UINib(nibName: ListTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: ListTableViewCell.identifier)
@@ -55,9 +52,6 @@ class PostListVC: UIViewController, Storyboarded {
 }
 
 extension PostListVC: UITableViewDelegate{
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 400
-//    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nextVC = PostDetailVC.instantiate()
