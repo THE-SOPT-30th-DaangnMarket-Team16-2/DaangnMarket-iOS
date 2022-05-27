@@ -14,6 +14,9 @@
 		8EE63050283D499B0057B61B /* PostDetailVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6304F283D499B0057B61B /* PostDetailVC2.swift */; };
 		8EE63052283D49CB0057B61B /* PostDetail2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE63051283D49CB0057B61B /* PostDetail2.storyboard */; };
 		8EE63056283DF1030057B61B /* PostDetailBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE63055283DF1030057B61B /* PostDetailBottomSheet.swift */; };
+		EB2FF8A12840D27600625EBC /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2FF8A02840D27600625EBC /* ListTableViewCell.xib */; };
+		EB2FF8A32840D27C00625EBC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2FF8A22840D27C00625EBC /* ListTableViewCell.swift */; };
+		EB2FF8A52840D2C400625EBC /* PostListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2FF8A42840D2C400625EBC /* PostListDataModel.swift */; };
 		EBB25F7528311102001416D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7428311102001416D8 /* AppDelegate.swift */; };
 		EBB25F7728311102001416D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB25F7628311102001416D8 /* SceneDelegate.swift */; };
 		EBB25F7E28311103001416D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB25F7D28311103001416D8 /* Assets.xcassets */; };
@@ -121,6 +124,9 @@
 		8EE63055283DF1030057B61B /* PostDetailBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailBottomSheet.swift; sourceTree = "<group>"; };
 		B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarket_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8133F19115414C0F7EC57B9 /* Pods-DaangnMarket-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EB2FF8A02840D27600625EBC /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = "DaangnMarket-iOS/Presentation/Home/PostList/ListTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
+		EB2FF8A22840D27C00625EBC /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableViewCell.swift; path = "DaangnMarket-iOS/Presentation/Home/PostList/ListTableViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		EB2FF8A42840D2C400625EBC /* PostListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostListDataModel.swift; path = "DaangnMarket-iOS/Domain/Model/PostListDataModel.swift"; sourceTree = SOURCE_ROOT; };
 		EBB25F7128311102001416D8 /* DaangnMarket-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DaangnMarket-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB25F7428311102001416D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB25F7628311102001416D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -507,6 +513,7 @@
 		EBB25FA428311568001416D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB2FF8A42840D2C400625EBC /* PostListDataModel.swift */,
 				EBB260CF283E1843001416D8 /* Home */,
 				EBB260A62838A0FC001416D8 /* Auth */,
 				EBB260A42838A0ED001416D8 /* GeneralResponse.swift */,
@@ -693,6 +700,8 @@
 		EBB2602D28322168001416D8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				EB2FF8A02840D27600625EBC /* ListTableViewCell.xib */,
+				EB2FF8A22840D27C00625EBC /* ListTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -874,6 +883,7 @@
 				EBB2603F28322C21001416D8 /* PostWrite.storyboard in Resources */,
 				EBB260662833C6C9001416D8 /* Poppins-Medium.ttf in Resources */,
 				EBB2603B28322BB1001416D8 /* PostList.storyboard in Resources */,
+				EB2FF8A12840D27600625EBC /* ListTableViewCell.xib in Resources */,
 				EBB25F8128311103001416D8 /* LaunchScreen.storyboard in Resources */,
 				EBB260502832606B001416D8 /* Colors.xcassets in Resources */,
 				EBB260352832228D001416D8 /* PostDetail.storyboard in Resources */,
@@ -948,6 +958,7 @@
 				EBB25FC028311E72001416D8 /* UIViewController+.swift in Sources */,
 				EBB2604528323248001416D8 /* MainTBC.swift in Sources */,
 				8EE63050283D499B0057B61B /* PostDetailVC2.swift in Sources */,
+				EB2FF8A52840D2C400625EBC /* PostListDataModel.swift in Sources */,
 				EBB25FB628311D65001416D8 /* UIFont+.swift in Sources */,
 				EBB25FF22831E8EA001416D8 /* Router.swift in Sources */,
 				EBB25FAC28311937001416D8 /* UITextField+.swift in Sources */,
@@ -965,6 +976,7 @@
 				8EBAFFE22834F983003A8278 /* AddPhotoCVC.swift in Sources */,
 				EBB25FFB2831EE7E001416D8 /* setRootViewController.swift in Sources */,
 				EBB260A32838A0CA001416D8 /* AuthService.swift in Sources */,
+				EB2FF8A32840D27C00625EBC /* ListTableViewCell.swift in Sources */,
 				EBB2600F2831F313001416D8 /* getClassName.swift in Sources */,
 				EBB260AA2838A10E001416D8 /* SignUp.swift in Sources */,
 				EBB25FEF2831E8CA001416D8 /* LaunchInstructor.swift in Sources */,

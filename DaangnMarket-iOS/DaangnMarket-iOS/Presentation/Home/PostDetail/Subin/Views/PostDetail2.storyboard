@@ -96,7 +96,7 @@
                                                             <fragment content="매너온도">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.51764705882352935" green="0.53333333333333333" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" size="11" name=".AppleSDGothicNeoI-Regular"/>
+                                                                    <font key="NSFont" metaFont="smallSystem"/>
                                                                     <integer key="NSUnderline" value="1"/>
                                                                 </attributes>
                                                             </fragment>
