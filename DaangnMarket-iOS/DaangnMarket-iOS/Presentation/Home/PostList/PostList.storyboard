@@ -87,6 +87,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="plusButton" destination="n8x-77-SXI" id="NC1-ld-u62"/>
                         <outlet property="tableView" destination="sXR-CY-Vsb" id="XrK-k4-FQ9"/>
                     </connections>
                 </viewController>

@@ -11,6 +11,7 @@ class PostListVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addAction: UIButton!
+    @IBOutlet weak var plusButton: UIImageView!
     
     static var storyboard: Storyboards = .postList
     
@@ -30,6 +31,20 @@ class PostListVC: UIViewController, Storyboarded {
         self.tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         
         self.view.backgroundColor = .white
+        
+        setTapGesture()
+    }
+    
+    private func setTapGesture() {
+        plusButton.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(presentPostWriteVC))
+        plusButton.addGestureRecognizer(tap)
+    }
+    
+    @objc
+    private func presentPostWriteVC() {
+        let nextVC = PostWriteVC.instantiate()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
@@ -38,7 +53,9 @@ extension PostListVC: UITableViewDelegate{
 //        return 400
 //    }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 }
 
 extension PostListVC: UITableViewDataSource{
@@ -53,8 +70,5 @@ extension PostListVC: UITableViewDataSource{
         
         return cell
     }
-    
-    
 }
-
 
