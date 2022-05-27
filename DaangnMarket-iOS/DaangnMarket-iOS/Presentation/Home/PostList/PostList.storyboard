@@ -47,11 +47,18 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Fiy-tj-1aS">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Group 62"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="addAction" destination="Fiy-tj-1aS" id="Wj8-UJ-ReB"/>
                         <outlet property="tableView" destination="sXR-CY-Vsb" id="XrK-k4-FQ9"/>
                     </connections>
                 </viewController>
@@ -61,6 +68,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Group 62" width="54" height="54"/>
         <image name="icn_alarm" width="24" height="24"/>
         <image name="icn_info" width="24" height="24"/>
         <image name="icn_more_search" width="24" height="24"/>

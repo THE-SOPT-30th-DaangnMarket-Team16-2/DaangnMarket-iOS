@@ -10,6 +10,8 @@ import UIKit
 class PostListVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addAction: UIButton!
+    
     static var storyboard: Storyboards = .postList
     
     override func viewDidLoad() {

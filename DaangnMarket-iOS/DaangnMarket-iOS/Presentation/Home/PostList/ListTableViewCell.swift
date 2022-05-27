@@ -9,7 +9,7 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell {
     
-    static let identifier = "FeedTableViewCell"
+    static let identifier = "ListTableViewCell"
 
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var productName: UILabel!
@@ -32,7 +32,7 @@ class ListTableViewCell: UITableViewCell {
         productImage.image = listData.productImage
         productName.text = listData.productName
         place.text = listData.placeName
-        productPrice.text = listData.price
+        productPrice.text = "\(listData.price)"
         
         
         
