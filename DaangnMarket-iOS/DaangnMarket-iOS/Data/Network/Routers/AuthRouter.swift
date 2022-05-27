@@ -44,13 +44,13 @@ extension AuthRouter: BaseRouter {
                 "name": name,
                 "password": pw
             ]
-            return .requestParameters(body)
+            return .requestBody(body)
         case .requestSignIn(let email, let pw):
             let body: [String : Any] = [
                 "email": email,
                 "password": pw
             ]
-            return .requestParameters(body)
+            return .requestBody(body)
         default:
             return .requestPlain
         }
