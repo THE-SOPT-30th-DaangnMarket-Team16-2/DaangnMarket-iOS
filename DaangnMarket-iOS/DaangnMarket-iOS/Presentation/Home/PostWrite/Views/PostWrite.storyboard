@@ -343,7 +343,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="Gve-j6-5IZ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="FoU-Rs-bcF"/>
                             </scrollView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-5U-wv8">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-5U-wv8">
                                 <rect key="frame" x="0.0" y="731" width="375" height="47"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-TM-BXo">

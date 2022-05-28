@@ -68,7 +68,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
         addKeyboardObserver()
         setNavigationBar()
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         removeKeyboardObserver()
     }
@@ -78,7 +78,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
         
         checkMaxLength(priceTextField, 11) /// 999,999,999
         priceOfferButton.isEnabled = priceTextField.hasText
-
+        
         if sender.text?.isEmpty == true {
             wonLabel.textColor = UIColor.carrotSquareGray
             priceOfferLabel.textColor = UIColor.carrotSquareGray
@@ -128,7 +128,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
     
     private func addKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
@@ -139,13 +139,14 @@ final class PostWriteVC: UIViewController, Storyboarded {
     
     @objc func keyboardUp(notification:NSNotification) {
         if let keyboardFrame:NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-           let keyboardRectangle = keyboardFrame.cgRectValue
-       
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let safeHeight = self.view.safeAreaInsets.bottom
+            
             UIView.animate(
                 withDuration: 0.3
                 , animations: {
                     self.bottomView.transform =
-                    CGAffineTransform(translationX: 0, y: -(keyboardRectangle.height - 38))
+                    CGAffineTransform(translationX: 0, y: -(keyboardRectangle.height - safeHeight))
                 }
             )
         }
@@ -216,19 +217,19 @@ extension PostWriteVC: ListPhotoCVCDelegate {
 }
 
 // MARK: - UICollectionView DelegateFlowLayout
- extension PostWriteVC: UICollectionViewDelegateFlowLayout {
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-         return CGSize(width: 80, height: 80)
-     }
-
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-         return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-     }
-
-     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         return 5
-     }
- }
+extension PostWriteVC: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 80, height: 80)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+}
 
 // MARK: - contextTextView Placeholder 설정
 extension PostWriteVC: UITextViewDelegate {
