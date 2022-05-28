@@ -139,13 +139,14 @@ final class PostWriteVC: UIViewController, Storyboarded {
     
     @objc func keyboardUp(notification:NSNotification) {
         if let keyboardFrame:NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-           let keyboardRectangle = keyboardFrame.cgRectValue
-       
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let safeHeight = self.view.safeAreaInsets.bottom
+            
             UIView.animate(
                 withDuration: 0.3
                 , animations: {
                     self.bottomView.transform =
-                    CGAffineTransform(translationX: 0, y: -(keyboardRectangle.height - 38))
+                    CGAffineTransform(translationX: 0, y: -(keyboardRectangle.height - safeHeight))
                 }
             )
         }
