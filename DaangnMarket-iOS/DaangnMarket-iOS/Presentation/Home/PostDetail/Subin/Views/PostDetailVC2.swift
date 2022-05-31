@@ -12,6 +12,8 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     // MARK: - Properties
     static var storyboard: Storyboards = .postDetail2
     var itemModel: ItemModel?
+    
+    var postId: String?
 
     @IBOutlet weak var photoScrollView: UIScrollView!
     @IBOutlet weak var photoPageControl: UIPageControl!
@@ -69,6 +71,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     
     @IBAction func heartBtnTapped(_ sender: UIButton) {
         sender.isSelected.toggle()
+        changeLikesStatus()
     }
     
 }
@@ -101,5 +104,19 @@ extension PostDetailVC2: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let value = scrollView.contentOffset.x/scrollView.frame.size.width
         setPageControlSelectedPage(currentPage: Int(round(value)))
+    }
+}
+
+extension PostDetailVC2 {
+    
+    func changeLikesStatus() {
+        HomeService.shared.changeLikeStatus(postId: postId ?? "628d7c7ccd92160ec569ddf4") { networkResult in
+            switch networkResult {
+            case .success(let message):
+                print(message)
+            default:
+                break;
+            }
+        }
     }
 }
