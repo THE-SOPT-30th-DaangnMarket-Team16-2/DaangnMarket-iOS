@@ -22,6 +22,8 @@ final class PostDetailVC: BaseVC, Storyboarded {
         case postSection = 1
     }
     
+    private var postId: String?
+    
     private lazy var postContentCell = PostContentCVC()
     
     private lazy var detailCV: UICollectionView = {
@@ -71,7 +73,8 @@ final class PostDetailVC: BaseVC, Storyboarded {
         bind()
         setDelegate()
         setCollectionView()
-        getPostDetail(postId: "4ioqqfnas328sd")
+        
+        getPostDetail(postId: postId ?? "628d7c7ccd92160ec569ddf4")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,7 +99,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
     }
     
     private func fetchPostDetailData(data: PostDetail) {
-        
+        postContentCell.changeSellStatus(status: "\(data.onSale)")
     }
     
     // MARK: - UI & Layout
@@ -190,18 +193,21 @@ extension PostDetailVC: UICollectionViewDelegate {
 extension PostDetailVC: PostContentDelegate {
     func presentSellStatusActionSheet() {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
-
+        
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
             self.postContentCell.changeSellStatus(status: "판매중")
+            self.changeSellStatus(onSale: 0)
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
             self.postContentCell.changeSellStatus(status: "예약중")
+            self.changeSellStatus(onSale: 1)
         }
         let completedAction = UIAlertAction(title: "거래완료", style: .default) { _ in
             self.postContentCell.changeSellStatus(status: "거래완료")
+            self.changeSellStatus(onSale: 2)
         }
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
-
+        
         actionSheet.addAction(sellingAction)
         actionSheet.addAction(reservedAction)
         actionSheet.addAction(completedAction)
@@ -225,4 +231,16 @@ extension PostDetailVC {
             }
         }
     }
+    
+    func changeSellStatus(onSale: Int) {
+        HomeService.shared.changeSellStatus(postId: self.postId ?? "628d7c7ccd92160ec569ddf4", onSale: onSale) { networkResult in
+            switch networkResult {
+            case .success(let message):
+                print(message)
+            default:
+                break;
+            }
+        }
+    }
 }
+

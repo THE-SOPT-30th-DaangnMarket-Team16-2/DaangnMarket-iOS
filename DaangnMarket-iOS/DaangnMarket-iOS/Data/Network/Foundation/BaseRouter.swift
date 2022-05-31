@@ -93,7 +93,7 @@ extension BaseRouter {
     }
     
     var header: HeaderType {
-        return HeaderType.withToken
+        return HeaderType.default
     }
     
     var multipart: MultipartFormData {
@@ -108,15 +108,4 @@ enum RequestParams {
     case query(_ query: [String : Any])
     case requestBody(_ body: [String : Any])
     case requestPlain
-}
-
-// MARK: toDictionary
-
-extension Encodable {
-    func toDictionary() -> [String: Any] {
-        guard let data = try? JSONEncoder().encode(self),
-              let jsonData = try? JSONSerialization.jsonObject(with: data),
-              let dictionaryData = jsonData as? [String: Any] else { return [:] }
-        return dictionaryData
-    }
 }
