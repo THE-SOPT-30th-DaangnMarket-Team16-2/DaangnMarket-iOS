@@ -18,7 +18,6 @@
 		8EE63065283E8F420057B61B /* PostTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE63063283E8F420057B61B /* PostTVC.swift */; };
 		8EE63066283E8F420057B61B /* PostTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE63064283E8F420057B61B /* PostTVC.xib */; };
 		8EE63068283E98C10057B61B /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE63067283E98C10057B61B /* ItemModel.swift */; };
-		8EE63056283DF1030057B61B /* PostDetailBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE63055283DF1030057B61B /* PostDetailBottomSheet.swift */; };
 		EB2FF8A12840D27600625EBC /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2FF8A02840D27600625EBC /* ListTableViewCell.xib */; };
 		EB2FF8A32840D27C00625EBC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2FF8A22840D27C00625EBC /* ListTableViewCell.swift */; };
 		EB2FF8A52840D2C400625EBC /* PostListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2FF8A42840D2C400625EBC /* PostListDataModel.swift */; };
@@ -117,6 +116,7 @@
 		EBB260D1283E1851001416D8 /* PostDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260D0283E1851001416D8 /* PostDetail.swift */; };
 		EBB260D3283E186F001416D8 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260D2283E186F001416D8 /* HomeService.swift */; };
 		EBB260D5283E1877001416D8 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB260D4283E1877001416D8 /* HomeRouter.swift */; };
+		EBC80DEE2845F8DE003162E5 /* NoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC80DED2845F8DE003162E5 /* NoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -233,6 +233,7 @@
 		EBB260D0283E1851001416D8 /* PostDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetail.swift; sourceTree = "<group>"; };
 		EBB260D2283E186F001416D8 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		EBB260D4283E1877001416D8 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		EBC80DED2845F8DE003162E5 /* NoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -562,6 +563,7 @@
 				EBB260CF283E1843001416D8 /* Home */,
 				EBB260A62838A0FC001416D8 /* Auth */,
 				EBB260A42838A0ED001416D8 /* GeneralResponse.swift */,
+				EBC80DED2845F8DE003162E5 /* NoData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1035,6 +1037,7 @@
 				EBB2604C28323386001416D8 /* ChatVC.swift in Sources */,
 				EBB25FF92831EB2E001416D8 /* controllerFromStoryBoard.swift in Sources */,
 				EBB2602028321D1D001416D8 /* BaseVC.swift in Sources */,
+				EBC80DEE2845F8DE003162E5 /* NoData.swift in Sources */,
 				EBB260D5283E1877001416D8 /* HomeRouter.swift in Sources */,
 				EBB25FF52831E91C001416D8 /* ModuleFactory.swift in Sources */,
 				EBB25FBC28311DF4001416D8 /* UITableView+.swift in Sources */,

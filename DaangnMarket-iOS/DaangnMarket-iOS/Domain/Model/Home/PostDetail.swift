@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - PostDetail
 struct PostDetail: Codable {
+    let _id: String
     let image: [String]
     let user: User
     let onSale: Int
