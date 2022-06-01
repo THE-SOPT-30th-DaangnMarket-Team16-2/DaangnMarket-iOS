@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33FCCFC6B3A74A404D24D33E /* Pods_DaangnMarket_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */; };
 		8E6146D12834BC4C0032D8FF /* PhotoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6146D02834BC4C0032D8FF /* PhotoDataModel.swift */; };
+		8E6150D528478C8100102DCE /* PostWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E6150D428478C8100102DCE /* PostWrite.swift */; };
 		8EBAFFE22834F983003A8278 /* AddPhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBAFFE12834F983003A8278 /* AddPhotoCVC.swift */; };
 		8EBAFFE42834F9AA003A8278 /* ListPhotoCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EBAFFE32834F9A9003A8278 /* ListPhotoCVC.swift */; };
 		8EE63050283D499B0057B61B /* PostDetailVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE6304F283D499B0057B61B /* PostDetailVC2.swift */; };
@@ -122,6 +123,7 @@
 /* Begin PBXFileReference section */
 		0A9DBF19FA6F6C795F23839B /* Pods-DaangnMarket-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket-iOS.release.xcconfig"; path = "Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		8E6146D02834BC4C0032D8FF /* PhotoDataModel.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataModel.swift; sourceTree = "<group>"; };
+		8E6150D428478C8100102DCE /* PostWrite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostWrite.swift; sourceTree = "<group>"; };
 		8EBAFFE12834F983003A8278 /* AddPhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoCVC.swift; sourceTree = "<group>"; };
 		8EBAFFE32834F9A9003A8278 /* ListPhotoCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPhotoCVC.swift; sourceTree = "<group>"; };
 		8EE6304F283D499B0057B61B /* PostDetailVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailVC2.swift; sourceTree = "<group>"; };
@@ -845,6 +847,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB260D0283E1851001416D8 /* PostDetail.swift */,
+				8E6150D428478C8100102DCE /* PostWrite.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1066,6 +1069,7 @@
 				EBB260012831EFDE001416D8 /* ShowToast.swift in Sources */,
 				EBB260112831F356001416D8 /* calculateTopInset.swift in Sources */,
 				EBB25FC428311EAD001416D8 /* String+.swift in Sources */,
+				8E6150D528478C8100102DCE /* PostWrite.swift in Sources */,
 				EBB2601B28321236001416D8 /* ViewModelType.swift in Sources */,
 				EBB25FFD2831EEF6001416D8 /* Logger.swift in Sources */,
 				EBB2606D2833EB63001416D8 /* PostDetailBottomView.swift in Sources */,

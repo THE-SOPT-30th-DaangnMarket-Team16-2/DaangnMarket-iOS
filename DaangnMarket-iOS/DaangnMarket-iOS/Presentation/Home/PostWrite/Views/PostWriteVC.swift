@@ -35,6 +35,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
         bt.setTitle("완료", for: .normal)
         bt.titleLabel?.font = .NotoRegular(size: 17)
         bt.addAction(UIAction(handler: { _ in
+            self.createPostWrite()
             let nextVC = PostDetailVC.instantiate()
             if let rootVC = self.navigationController?.viewControllers.first as? PostListVC {
                 self.navigationController?.popViewController(animated: true)
@@ -269,6 +270,27 @@ extension PostWriteVC: UITextFieldDelegate {
     func checkMaxLength(_ textField: UITextField,_ maxLength: Int) {
         if textField.text!.count > maxLength {
             textField.deleteBackward()
+        }
+    }
+}
+
+extension PostWriteVC {
+    func createPostWrite() {
+        guard let price = priceTextField.text?.replacingOccurrences(of: ",", with: "") else { return }
+        guard let intPrice = Int(price) else { return }
+        
+        HomeService.shared.createPostWrite(imageCount: photoModel.userSelectedImages.count,
+                                           title: titleTextField.text!,
+                                           category: categoryTextField.text!,
+                                           price: intPrice,
+                                           contents: contextTextView.text,
+                                           isPriceSuggestion: priceOfferButton.isEnabled) { networkResult in
+            switch networkResult {
+            case .success(let model):
+                print(model)
+            default:
+                break;
+            }
         }
     }
 }
