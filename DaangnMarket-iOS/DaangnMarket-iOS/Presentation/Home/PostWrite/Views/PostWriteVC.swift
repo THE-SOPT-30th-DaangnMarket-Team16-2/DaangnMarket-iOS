@@ -36,12 +36,7 @@ final class PostWriteVC: UIViewController, Storyboarded {
         bt.titleLabel?.font = .NotoRegular(size: 17)
         bt.addAction(UIAction(handler: { _ in
             self.createPostWrite()
-            let nextVC = PostDetailVC.instantiate()
-            if let rootVC = self.navigationController?.viewControllers.first as? PostListVC {
-                self.navigationController?.popViewController(animated: true)
-                rootVC.navigationController?.pushViewController(nextVC, animated: true)
-            }
-        }), for: .touchUpInside)
+          }), for: .touchUpInside)
         bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
         return bt
     }()
@@ -278,16 +273,42 @@ extension PostWriteVC {
     func createPostWrite() {
         guard let price = priceTextField.text?.replacingOccurrences(of: ",", with: "") else { return }
         guard let intPrice = Int(price) else { return }
+        guard let title = titleTextField.text,
+              let category = categoryTextField.text,
+              let contents = contextTextView.text else { return }
         let boolPriceOffer = priceOfferButton.isSelected ? true : false
         
         HomeService.shared.createPostWrite(imageCount: photoModel.userSelectedImages.count,
-                                           title: titleTextField.text!,
-                                           category: categoryTextField.text!,
+                                           title: title,
+                                           category: category,
                                            price: intPrice,
-                                           contents: contextTextView.text,
+                                           contents: contents,
                                            isPriceSuggestion: boolPriceOffer ) { networkResult in
             switch networkResult {
             case .success(let model):
+                guard let model = model as? PostWrite else { return }
+                let priceSuggestionStr = boolPriceOffer ? "가격제안 가능" : "가격제안 불가"
+                let detailModel = PostDetail.init(_id: model.id,
+                                                 image: ["https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"],
+                                                 user: User.init(profile: "postDetail_1",
+                                                                 name: "수빈",
+                                                                 area: "잠실동"),
+                                                 onSale: 0,
+                                                 title: title,
+                                                 category: category,
+                                                 createdAt: "1분전",
+                                                 content: contents,
+                                                 view: 1,
+                                                 price: price,
+                                                 isPriceSuggestion: priceSuggestionStr,
+                                                 isLiked: false )
+                let nextVC = PostDetailVC2.instantiate()
+                nextVC.detailModel = detailModel
+                if let rootVC = self.navigationController?.viewControllers.first as? PostListVC {
+                    self.navigationController?.popViewController(animated: true)
+                    rootVC.navigationController?.pushViewController(nextVC, animated: true)
+                }
+            
                 print(model)
             default:
                 break;
