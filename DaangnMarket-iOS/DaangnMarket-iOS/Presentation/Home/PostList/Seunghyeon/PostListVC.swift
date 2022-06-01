@@ -54,7 +54,9 @@ class PostListVC: UIViewController, Storyboarded {
 extension PostListVC: UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let nextVC = PostDetailVC.instantiate()
+//        let nextVC = PostDetailVC.instantiate()
+        let nextVC = PostDetailVC2.instantiate()
+        nextVC.postId = "4ioqqfnas328sd"
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

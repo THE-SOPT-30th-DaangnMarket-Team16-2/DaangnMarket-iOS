@@ -74,7 +74,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         setDelegate()
         setCollectionView()
         
-        getPostDetail(postId: postId ?? "628d7c7ccd92160ec569ddf4")
+        getPostDetail(postId: postId ?? "4ioqqfnas328sd")
     }
     
     override func viewWillAppear(_ animated: Bool) {

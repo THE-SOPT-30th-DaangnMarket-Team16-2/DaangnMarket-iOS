@@ -89,7 +89,7 @@ extension BaseRouter {
 
 extension BaseRouter {
     var baseURL: String {
-        return URLConstants.baseURL
+        return URLConstants.mockingURL
     }
     
     var header: HeaderType {

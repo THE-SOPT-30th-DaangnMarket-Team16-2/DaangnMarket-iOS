@@ -11,6 +11,7 @@ import Alamofire
 enum HomeRouter {
     case getPostDetail(postId: String)
     case changeSellStatus(postId: String, onSale: Int)
+    case changeLikeStatus(postId: String)
 }
 
 extension HomeRouter: BaseRouter {
@@ -21,6 +22,8 @@ extension HomeRouter: BaseRouter {
             return "/feed/\(postId)"
         case .changeSellStatus(_, _):
             return "/feed/on-sale"
+        case .changeLikeStatus(let postId):
+            return "/feed/like/\(postId)"
         }
     }
     
@@ -30,6 +33,8 @@ extension HomeRouter: BaseRouter {
                 return .get
         case .changeSellStatus(_, _):
                 return .put
+        case .changeLikeStatus(_):
+            return .put
         }
     }
     
@@ -42,6 +47,8 @@ extension HomeRouter: BaseRouter {
             ["id": postId,
              "onSale": onSale ]
             return .requestBody(body)
+        case .changeLikeStatus(_):
+            return .requestPlain
         }
     }
 }
