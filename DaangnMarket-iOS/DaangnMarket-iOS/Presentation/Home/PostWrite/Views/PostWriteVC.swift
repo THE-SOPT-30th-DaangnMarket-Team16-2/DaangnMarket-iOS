@@ -278,13 +278,14 @@ extension PostWriteVC {
     func createPostWrite() {
         guard let price = priceTextField.text?.replacingOccurrences(of: ",", with: "") else { return }
         guard let intPrice = Int(price) else { return }
+        let boolPriceOffer = priceOfferButton.isSelected ? true : false
         
         HomeService.shared.createPostWrite(imageCount: photoModel.userSelectedImages.count,
                                            title: titleTextField.text!,
                                            category: categoryTextField.text!,
                                            price: intPrice,
                                            contents: contextTextView.text,
-                                           isPriceSuggestion: priceOfferButton.isEnabled) { networkResult in
+                                           isPriceSuggestion: boolPriceOffer ) { networkResult in
             switch networkResult {
             case .success(let model):
                 print(model)
