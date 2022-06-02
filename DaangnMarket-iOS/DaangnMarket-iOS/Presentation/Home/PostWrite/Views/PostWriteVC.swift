@@ -302,11 +302,11 @@ extension PostWriteVC {
                                                  price: price,
                                                  isPriceSuggestion: priceSuggestionStr,
                                                  isLiked: false )
-                let nextVC = PostDetailVC2.instantiate()
-                nextVC.detailModel = detailModel
+                let detailVC2 = PostDetailVC2.instantiate()
+                detailVC2.detailModel = detailModel
                 if let rootVC = self.navigationController?.viewControllers.first as? PostListVC {
                     self.navigationController?.popViewController(animated: true)
-                    rootVC.navigationController?.pushViewController(nextVC, animated: true)
+                    rootVC.navigationController?.pushViewController(detailVC2, animated: true)
                 }
             
                 print(model)

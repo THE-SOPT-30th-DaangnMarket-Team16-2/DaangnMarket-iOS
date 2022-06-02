@@ -62,10 +62,10 @@ final class PostListVC2: UIViewController, Storyboarded {
     }
     
     @IBAction func floatingButtonTapped(_ sender: Any) {
-        guard let writeVC = UIStoryboard(name: "PostWrite", bundle: nil).instantiateViewController(withIdentifier: "PostWriteVC") as? PostWriteVC else { return }
-        
+        let writeVC = PostWriteVC.instantiate()
         self.navigationController?.pushViewController(writeVC, animated: true)
-        
+    }
+    
     private func configUI() {
         let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         spacer.width = 16
@@ -100,11 +100,7 @@ extension PostListVC2: UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        guard let detailVC = UIStoryboard(name: "PostDetail2", bundle: nil).instantiateViewController(withIdentifier: "PostDetailVC2") as? PostDetailVC2 else { return }
-        
-//        detailVC.itemModel = model[indexPath.row]
-        
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        let detailVC2 = PostDetailVC2.instantiate()
+        self.navigationController?.pushViewController(detailVC2, animated: true)
     }
 }
