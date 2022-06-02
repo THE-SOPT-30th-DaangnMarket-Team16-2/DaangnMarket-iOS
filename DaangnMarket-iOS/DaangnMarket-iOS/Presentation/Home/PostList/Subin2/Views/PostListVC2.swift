@@ -101,6 +101,7 @@ extension PostListVC2: UITableViewDataSource{
         
         tableView.deselectRow(at: indexPath, animated: true)
         let detailVC2 = PostDetailVC2.instantiate()
+        detailVC2.postId = "628f3743b32d474b28bba948"
         self.navigationController?.pushViewController(detailVC2, animated: true)
     }
 }
