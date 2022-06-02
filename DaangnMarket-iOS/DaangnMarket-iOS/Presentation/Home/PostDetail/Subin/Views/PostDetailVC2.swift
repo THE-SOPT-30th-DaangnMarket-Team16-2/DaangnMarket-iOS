@@ -100,6 +100,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     }
     
     private func configUI() {
+        self.stateButton.titleLabel?.text = "판매중"
         guard let detailModel = detailModel else { return }
         let strPrice = numberFormatter(number: Int(detailModel.price)!)
         
