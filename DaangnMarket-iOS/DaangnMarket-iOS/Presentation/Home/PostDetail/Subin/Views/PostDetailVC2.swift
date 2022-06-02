@@ -11,9 +11,29 @@ final class PostDetailVC2: UIViewController, Storyboarded {
 
     // MARK: - Properties
     static var storyboard: Storyboards = .postDetail2
-    var itemModel: ItemModel?
+    var detailModel: PostDetail?
     
     var postId: String?
+    
+    private lazy var naviHomeButton: UIButton =  {
+        let bt = UIButton()
+        bt.setImage(ImageLiterals.PostDetail.homeIcon, for: .normal)
+        bt.addAction(UIAction(handler: { _ in
+            self.navigationController?.popViewController(animated: true)
+        }), for: .touchUpInside)
+        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        return bt
+    }()
+    
+    private lazy var naviMoreButton: UIButton =  {
+        let bt = UIButton()
+        bt.setImage(ImageLiterals.PostDetail.moreIcon, for: .normal)
+        bt.addAction(UIAction(handler: { _ in
+            
+        }), for: .touchUpInside)
+        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+        return bt
+    }()
 
     @IBOutlet weak var photoScrollView: UIScrollView!
     @IBOutlet weak var photoPageControl: UIPageControl!
@@ -42,7 +62,12 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         photoScrollView.delegate = self
         addContentScrollView()
         setPageControl()
-        
+        configUI()
+        navigationBarUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
     }
     
     @IBAction func stateButtonTapped(_ sender: Any) {
@@ -74,6 +99,31 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         changeLikesStatus()
     }
     
+    private func configUI() {
+        guard let detailModel = detailModel else { return }
+        let strPrice = numberFormatter(number: Int(detailModel.price)!)
+        
+        userNameLabel.text = detailModel.user.name
+        titleLabel.text = detailModel.title
+        categoryLabel.text = detailModel.category
+        contextLabel.text = detailModel.content
+        priceLabel.text = strPrice + "원"
+        priceOfferLabel.text = detailModel.isPriceSuggestion
+    }
+    
+    private func navigationBarUI() {
+        let homeBtn = UIBarButtonItem(customView: naviHomeButton)
+        let moreBtn = UIBarButtonItem(customView: naviMoreButton)
+        
+        self.navigationItem.setLeftBarButton(homeBtn, animated: false)
+        self.navigationItem.setRightBarButton(moreBtn, animated: false)
+    }
+    
+    private func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        return numberFormatter.string(from: NSNumber(value: number))!
+    }
 }
 
 extension PostDetailVC2: UIScrollViewDelegate {
@@ -110,7 +160,7 @@ extension PostDetailVC2: UIScrollViewDelegate {
 extension PostDetailVC2 {
     
     func changeLikesStatus() {
-        HomeService.shared.changeLikeStatus(postId: postId ?? "628d7c7ccd92160ec569ddf4") { networkResult in
+        HomeService.shared.changeLikeStatus(postId: postId ?? "628f3743b32d474b28bba948") { networkResult in
             switch networkResult {
             case .success(let message):
                 print(message)

@@ -61,5 +61,19 @@ extension HomeService {
             }
         }
     }
+    
+    func createPostWrite(imageCount: Int, title: String, category: String, price: Int, contents: String, isPriceSuggestion: Bool, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFManager.request(HomeRouter.createPostWrite(imageCount: imageCount, title: title, category: category, price: price, contents: contents, isPriceSuggestion: isPriceSuggestion)).responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let data = response.data else { return }
+                let networkResult = self.judgeStatus(by: statusCode, data, type: PostWrite.self, decodingMode: .model)
+                completion(networkResult)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
 }
 
