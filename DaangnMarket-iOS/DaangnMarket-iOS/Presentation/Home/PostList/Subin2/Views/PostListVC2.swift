@@ -12,6 +12,32 @@ final class PostListVC2: UIViewController, Storyboarded {
     static var storyboard: Storyboards = .postList2
     
     private var model = ItemModel.samplePost
+    
+    private lazy var naviLocateButton: UIButton =  {
+        let bt = UIButton()
+        bt.setTitleColor(UIColor.carrotBlack, for: .normal)
+        bt.setTitle("잠실3동", for: .normal)
+        bt.titleLabel?.font = .NotoBold(size: 18)
+        return bt
+    }()
+    
+    private lazy var naviSearchButton: UIButton =  {
+        let bt = UIButton()
+        bt.setImage(ImageLiterals.PostList2.searchIcon, for: .normal)
+        return bt
+    }()
+    
+    private lazy var naviMenuButton: UIButton =  {
+        let bt = UIButton()
+        bt.setImage(ImageLiterals.PostList2.menuIcon, for: .normal)
+        return bt
+    }()
+    
+    private lazy var naviAlarmButton: UIButton =  {
+        let bt = UIButton()
+        bt.setImage(ImageLiterals.PostList2.alarmIcon, for: .normal)
+        return bt
+    }()
 
     @IBOutlet weak var itemTableView: UITableView!
     @IBOutlet weak var floatingButton: UIButton!
@@ -19,6 +45,11 @@ final class PostListVC2: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         registerNib()
+        configUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setNavigationBar()
     }
     
     private func registerNib() {
@@ -35,8 +66,17 @@ final class PostListVC2: UIViewController, Storyboarded {
         
         self.navigationController?.pushViewController(writeVC, animated: true)
         
+    private func configUI() {
+        let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        spacer.width = 16
+                
+        self.navigationItem.setLeftBarButton(UIBarButtonItem(customView: naviLocateButton), animated: false)
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: naviAlarmButton), spacer, UIBarButtonItem(customView: naviMenuButton), spacer, UIBarButtonItem(customView: naviSearchButton)]
     }
     
+    private func setNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = false
+    }
 }
 
 extension PostListVC2: UITableViewDelegate{
