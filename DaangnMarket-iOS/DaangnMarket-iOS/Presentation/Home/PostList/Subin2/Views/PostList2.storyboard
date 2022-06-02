@@ -17,21 +17,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFh-sU-Dps" userLabel="line">
+                                <rect key="frame" x="0.0" y="44" width="375" height="1"/>
+                                <color key="backgroundColor" name="carrot_squaregray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="fqb-to-be2"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-1L-adl">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="45" width="375" height="733"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-ad-tcC" userLabel="line">
+                                <rect key="frame" x="0.0" y="777" width="375" height="1"/>
+                                <color key="backgroundColor" name="carrot_squaregray"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="QXg-FZ-gJ2"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asE-Pu-HQ6">
                                 <rect key="frame" x="306" y="712" width="54" height="54"/>
-                                <color key="backgroundColor" name="carrot_text_orange"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="Bmx-X7-cuZ"/>
                                     <constraint firstAttribute="height" constant="54" id="HE6-Lz-APf"/>
                                 </constraints>
-                                <color key="tintColor" name="carrot_white"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="plus" catalog="system">
                                     <color key="titleShadowColor" name="carrot_white"/>
                                 </state>
+                                <buttonConfiguration key="configuration" style="plain" image="icn_plus">
+                                    <color key="baseForegroundColor" name="carrot_white"/>
+                                </buttonConfiguration>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="27"/>
@@ -46,11 +61,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="asE-Pu-HQ6" secondAttribute="trailing" constant="15" id="3Sh-2u-ccH"/>
-                            <constraint firstItem="QkD-1L-adl" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="3c1-UB-LJO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WFh-sU-Dps" secondAttribute="trailing" id="6Mf-or-wor"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jJY-ad-tcC" secondAttribute="bottom" id="GGq-2c-LbD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QkD-1L-adl" secondAttribute="trailing" id="Owd-x1-PQa"/>
                             <constraint firstItem="QkD-1L-adl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TvV-6V-2di"/>
+                            <constraint firstItem="WFh-sU-Dps" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="V23-UJ-oWc"/>
+                            <constraint firstItem="QkD-1L-adl" firstAttribute="top" secondItem="WFh-sU-Dps" secondAttribute="top" constant="1" id="ZQc-LY-EDP"/>
+                            <constraint firstItem="WFh-sU-Dps" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bCd-tj-YyT"/>
+                            <constraint firstItem="jJY-ad-tcC" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="gwc-q6-SFU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="asE-Pu-HQ6" secondAttribute="bottom" constant="12" id="jgn-gM-wAs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QkD-1L-adl" secondAttribute="bottom" id="oQo-bT-aWu"/>
+                            <constraint firstAttribute="trailing" secondItem="jJY-ad-tcC" secondAttribute="trailing" id="t6b-Mo-Uj6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7LZ-k9-Gcg"/>
@@ -65,9 +86,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icn_plus" width="54" height="54"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <namedColor name="carrot_text_orange">
-            <color red="0.99599999189376831" green="0.49399998784065247" blue="0.20800000429153442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <namedColor name="carrot_squaregray">
+            <color red="0.88999998569488525" green="0.88599997758865356" blue="0.90600001811981201" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="carrot_white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
