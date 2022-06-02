@@ -271,9 +271,9 @@ extension PostWriteVC: UITextFieldDelegate {
 
 extension PostWriteVC {
     func createPostWrite() {
-        guard let price = priceTextField.text?.replacingOccurrences(of: ",", with: "") else { return }
-        guard let intPrice = Int(price) else { return }
-        guard let title = titleTextField.text,
+        guard let price = priceTextField.text?.replacingOccurrences(of: ",", with: ""),
+              let intPrice = Int(price),
+              let title = titleTextField.text,
               let category = categoryTextField.text,
               let contents = contextTextView.text else { return }
         let boolPriceOffer = priceOfferButton.isSelected ? true : false
@@ -308,8 +308,6 @@ extension PostWriteVC {
                     self.navigationController?.popViewController(animated: true)
                     rootVC.navigationController?.pushViewController(detailVC2, animated: true)
                 }
-            
-                print(model)
             default:
                 break;
             }
