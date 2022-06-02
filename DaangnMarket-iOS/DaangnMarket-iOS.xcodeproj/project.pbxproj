@@ -288,8 +288,6 @@
 		8EBAFFE52836A0C7003A8278 /* Subin */ = {
 			isa = PBXGroup;
 			children = (
-				8EE63054283D49FB0057B61B /* Model */,
-				8EE63053283D49E10057B61B /* Cells */,
 				8EE6304C283D48ED0057B61B /* Views */,
 			);
 			path = Subin;
@@ -323,20 +321,6 @@
 				8EE6304F283D499B0057B61B /* PostDetailVC2.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8EE63053283D49E10057B61B /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		8EE63054283D49FB0057B61B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8EE6305C283E8E0A0057B61B /* Model */ = {
@@ -442,7 +426,6 @@
 		EBB25F98283114A3001416D8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				EBB25FA52831156D001416D8 /* Usecase */,
 				EBB25FA428311568001416D8 /* Model */,
 			);
 			path = Domain;
@@ -542,14 +525,6 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EBB25FA12831154B001416D8 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Entity;
-			path = ../../../Data/Entity;
-			sourceTree = "<group>";
-		};
 		EBB25FA22831154F001416D8 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -578,13 +553,6 @@
 				EBC80DED2845F8DE003162E5 /* NoData.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		EBB25FA52831156D001416D8 /* Usecase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Usecase;
 			sourceTree = "<group>";
 		};
 		EBB25FA62831157F001416D8 /* Home */ = {
@@ -698,7 +666,6 @@
 		EBB2602428321DBD001416D8 /* PostWrite */ = {
 			isa = PBXGroup;
 			children = (
-				EBB25FA12831154B001416D8 /* Entity */,
 				8E5675132834BB4100748B2F /* Model */,
 				8E56750D2834A9FB00748B2F /* Cells */,
 				8E5675082834A98C00748B2F /* Views */,
