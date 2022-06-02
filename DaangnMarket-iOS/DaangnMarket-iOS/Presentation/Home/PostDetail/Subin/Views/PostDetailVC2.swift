@@ -63,6 +63,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         addContentScrollView()
         setPageControl()
         configUI()
+        navigationBarUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,7 +109,9 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         contextLabel.text = detailModel.content
         priceLabel.text = strPrice + "원"
         priceOfferLabel.text = detailModel.isPriceSuggestion
-        
+    }
+    
+    private func navigationBarUI() {
         let homeBtn = UIBarButtonItem(customView: naviHomeButton)
         let moreBtn = UIBarButtonItem(customView: naviMoreButton)
         
