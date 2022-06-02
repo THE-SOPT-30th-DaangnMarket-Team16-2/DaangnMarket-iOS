@@ -157,7 +157,7 @@ extension PostDetailVC2: UIScrollViewDelegate {
 extension PostDetailVC2 {
     
     func changeLikesStatus() {
-        HomeService.shared.changeLikeStatus(postId: postId ?? "628d7c7ccd92160ec569ddf4") { networkResult in
+        HomeService.shared.changeLikeStatus(postId: postId ?? "628f3743b32d474b28bba948") { networkResult in
             switch networkResult {
             case .success(let message):
                 print(message)
