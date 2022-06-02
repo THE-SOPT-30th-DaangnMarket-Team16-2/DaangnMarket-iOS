@@ -136,7 +136,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="NoV-HM-zHL" secondAttribute="trailing" constant="15" id="wTz-Ac-4zV"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kq5-rh-8uo">
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kq5-rh-8uo">
                                                 <rect key="frame" x="16" y="475" width="100" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="O5C-wM-j1g"/>
@@ -144,7 +144,7 @@
                                                 </constraints>
                                                 <color key="tintColor" name="carrot_black"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="icn_arrow" imagePlacement="trailing" title="판매중" imagePadding="25" cornerStyle="medium">
+                                                <buttonConfiguration key="configuration" style="plain" image="icn_arrow" imagePlacement="trailing" title="판매상태" imagePadding="25" cornerStyle="medium">
                                                     <backgroundConfiguration key="background">
                                                         <color key="strokeColor" name="carrot_squaregray"/>
                                                     </backgroundConfiguration>
@@ -175,8 +175,8 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1분전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRx-Uj-DXW">
-                                                <rect key="frame" x="100.33333333333333" y="557.66666666666663" width="26.666666666666671" height="21.333333333333371"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1분 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRx-Uj-DXW">
+                                                <rect key="frame" x="100.33333333333333" y="557.66666666666663" width="30.666666666666671" height="21.333333333333371"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" name="carrot_darklightgray"/>
                                                 <nil key="highlightedColor"/>
@@ -187,8 +187,8 @@
                                                 <color key="textColor" name="carrot_black"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1분전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x35-1Z-9Gn">
-                                                <rect key="frame" x="16" y="626.33333333333337" width="26.666666666666671" height="22"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="조회 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x35-1Z-9Gn">
+                                                <rect key="frame" x="16" y="626.33333333333337" width="30.666666666666671" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="e97-Nj-GVQ"/>
                                                 </constraints>

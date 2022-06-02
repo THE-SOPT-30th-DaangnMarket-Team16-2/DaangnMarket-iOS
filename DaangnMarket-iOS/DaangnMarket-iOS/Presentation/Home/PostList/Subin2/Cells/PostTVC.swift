@@ -19,10 +19,6 @@ final class PostTVC: UITableViewCell {
         super.awakeFromNib()
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func setData(itemData: ItemModel) {
         itemImageView.image = UIImage(named: itemData.itemImage)
         itemNameLabel.text = itemData.itemName

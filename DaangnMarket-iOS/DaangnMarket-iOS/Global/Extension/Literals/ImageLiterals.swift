@@ -22,8 +22,10 @@ struct ImageLiterals{
         static let profileIcon_selected = UIImage(named: "icn_profile_selected")
     }
     
-    struct PostList {
-        
+    struct PostList2 {
+        static let searchIcon = UIImage(named: "icn_search")
+        static let menuIcon = UIImage(named: "icn_menu")
+        static let alarmIcon = UIImage(named: "icn_alarm")
     }
     
     struct PostDetail {
