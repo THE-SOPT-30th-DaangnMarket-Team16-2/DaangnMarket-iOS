@@ -13,6 +13,10 @@ import SnapKit
 
 final class PostDetailBottomView: UIView {
     
+    private let disposeBag = DisposeBag()
+    
+    var likeButtonTapped = PublishRelay<Bool>()
+    
     private let lineView: UIView = {
         let view = UIView()
         view.backgroundColor = .carrotLineLightGray
@@ -24,8 +28,8 @@ final class PostDetailBottomView: UIView {
         bt.setImage(ImageLiterals.PostDetail.heartOffIcon, for: .normal)
         bt.setImage(ImageLiterals.PostDetail.hearOnIcon, for: .selected)
         bt.adjustsImageWhenHighlighted = false
-        bt.addAction(UIAction(handler: { _ in
-            bt.isSelected.toggle()
+        bt.addAction(UIAction(handler: { [weak self] _ in
+            self?.likeButtonTapped.accept(bt.isSelected)
         }),for: .touchUpInside)
         return bt
     }()

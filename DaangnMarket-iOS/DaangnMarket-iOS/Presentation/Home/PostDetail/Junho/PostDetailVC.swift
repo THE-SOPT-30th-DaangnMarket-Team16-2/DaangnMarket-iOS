@@ -95,6 +95,16 @@ final class PostDetailVC: BaseVC, Storyboarded {
     
     // MARK: - Bind
     
+    override func bind() {
+        bottomView.likeButtonTapped.throttleOnMain(.seconds(1))
+            .asDriver(onErrorJustReturn: true)
+            .drive(onNext: { [weak self] selected in
+                self?.bottomView.likeButton.isSelected.toggle()
+                self?.changeLikesStatus()
+            })
+            .disposed(by: disposeBag)
+    }
+    
     // MARK: - Custom Methods
     
     private func setDelegate() {
@@ -260,7 +270,18 @@ extension PostDetailVC {
     }
     
     func changeSellStatus(onSale: String) {
-        HomeService.shared.changeSellStatus(postId: self.postId ?? "", onSale: onSale) { networkResult in
+        HomeService.shared.changeSellStatus(postId: postId ?? "", onSale: onSale) { networkResult in
+            switch networkResult {
+            case .success(let message):
+                print(message)
+            default:
+                break;
+            }
+        }
+    }
+    
+    func changeLikesStatus() {
+        HomeService.shared.changeLikeStatus(postId: postId ?? "") { networkResult in
             switch networkResult {
             case .success(let message):
                 print(message)
