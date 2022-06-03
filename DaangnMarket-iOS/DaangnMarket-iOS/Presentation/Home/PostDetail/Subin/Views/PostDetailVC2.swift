@@ -62,7 +62,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         photoScrollView.delegate = self
         addContentScrollView()
         setPageControl()
-        configUI()
+//        configUI()
         navigationBarUI()
     }
     
@@ -99,18 +99,18 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         changeLikesStatus()
     }
     
-    private func configUI() {
-        self.stateButton.titleLabel?.text = "판매중"
-        guard let detailModel = detailModel else { return }
-        let strPrice = numberFormatter(number: Int(detailModel.price)!)
-        
-        userNameLabel.text = detailModel.user.name
-        titleLabel.text = detailModel.title
-        categoryLabel.text = detailModel.category
-        contextLabel.text = detailModel.content
-        priceLabel.text = strPrice + "원"
-        priceOfferLabel.text = detailModel.isPriceSuggestion
-    }
+//    private func configUI() {
+//        self.stateButton.titleLabel?.text = "판매중"
+//        guard let detailModel = detailModel else { return }
+//        let strPrice = numberFormatter(number: Int(detailModel.price)!)
+//
+//        userNameLabel.text = detailModel.user.name
+//        titleLabel.text = detailModel.title
+//        categoryLabel.text = detailModel.category
+//        contextLabel.text = detailModel.content
+//        priceLabel.text = strPrice + "원"
+//        priceOfferLabel.text = detailModel.isPriceSuggestion
+//    }
     
     private func navigationBarUI() {
         let homeBtn = UIBarButtonItem(customView: naviHomeButton)
