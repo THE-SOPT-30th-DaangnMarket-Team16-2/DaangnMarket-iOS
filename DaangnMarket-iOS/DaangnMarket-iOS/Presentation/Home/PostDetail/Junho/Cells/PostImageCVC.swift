@@ -46,6 +46,10 @@ final class PostImageCVC: UICollectionViewCell, UICollectionViewRegisterable {
         profileImageView.image = postImage
     }
     
+    func setData(postImageURL: String) {
+        profileImageView.setImage(with: postImageURL)
+    }
+    
     // MARK: UI & Layout
     
     private func setUI() {

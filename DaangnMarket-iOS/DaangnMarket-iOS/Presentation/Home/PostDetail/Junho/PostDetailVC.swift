@@ -22,6 +22,16 @@ final class PostDetailVC: BaseVC, Storyboarded {
         case postSection = 1
     }
     
+    private var postDetailModel: PostDetail? {
+        didSet {
+            detailCV.reloadData()
+            if let data = postDetailModel {
+                self.pageControl.numberOfPages = min(5, data.image.count)
+                self.pageControl.currentPage = 0
+            }
+        }
+    }
+    
     var postId: String?
     
     private lazy var postContentCell = PostContentCVC()
@@ -142,8 +152,13 @@ extension PostDetailVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let sectionType = SectionType(rawValue: section) else { return 1 }
         
+
+        
         switch sectionType {
-        case .imageSection: return 5
+        case .imageSection:
+            if let data = postDetailModel {
+                return data.image.count
+            } else { return 5 }
         case .postSection: return 1
         }
     }
@@ -167,12 +182,19 @@ extension PostDetailVC: UICollectionViewDataSource{
         switch sectionType {
         case .imageSection:
             guard let postImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostImageCVC.className, for: indexPath) as? PostImageCVC else { return UICollectionViewCell() }
-            postImageCell.setData(postImage: ImageLiterals.PostDetail.sample[indexPath.row])
+            if let data = postDetailModel {
+                postImageCell.setData(postImageURL: data.image[indexPath.row])
+            } else {
+                postImageCell.setData(postImage: ImageLiterals.PostDetail.sample[indexPath.row])
+            }
             
             return postImageCell
         case .postSection:
             guard let postContentCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostContentCVC.className, for: indexPath) as? PostContentCVC else { return UICollectionViewCell() }
             postContentCell.delegate = self
+            if let data = postDetailModel {
+                postContentCell.setData(data: data)
+            }
             self.postContentCell = postContentCell
             
             return postContentCell
@@ -225,7 +247,7 @@ extension PostDetailVC {
             switch networkResult {
             case .success(let data):
                 if let data = data as? PostDetail {
-                    self.fetchPostDetailData(data: data)
+                    self.postDetailModel = data
                 }
             default:
                 break;

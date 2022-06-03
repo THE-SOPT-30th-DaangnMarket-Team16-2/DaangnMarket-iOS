@@ -111,8 +111,13 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
         sellStatusView.addGestureRecognizer(tap)
     }
     
-    func setData(username: String, userImage: String) {
-//        nameLabel.text = username
+    func setData(data: PostDetail) {
+        changeSellStatus(status: data.onSale)
+        postTitleLabel.text = data.title
+        categoryButton.setTitle(data.category, for: .normal)
+        timeLabel.text = data.createdAt
+        postContentLabel.text = data.title
+        viewCountLabel.text = "조희 \(data.view)"
     }
     
     func changeSellStatus(status: String) {
