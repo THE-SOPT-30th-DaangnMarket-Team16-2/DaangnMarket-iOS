@@ -22,17 +22,19 @@ final class PostDetailVC: BaseVC, Storyboarded {
         case postSection = 1
     }
     
-    private var postDetailModel: PostDetail? {
+    var postDetailModel: PostDetail? {
         didSet {
             detailCV.reloadData()
             if let data = postDetailModel {
                 self.pageControl.numberOfPages = min(5, data.image.count)
                 self.pageControl.currentPage = 0
+                bottomView.setData(data: data)
             }
         }
     }
     
     var postId: String?
+    var fromPostWrite: Bool = false
     
     private lazy var postContentCell = PostContentCVC()
     
@@ -84,7 +86,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         setDelegate()
         setCollectionView()
         
-        getPostDetail(postId: postId ?? "")
+        getPostDetail()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -121,6 +123,13 @@ final class PostDetailVC: BaseVC, Storyboarded {
     
     private func fetchPostDetailData(data: PostDetail) {
         postContentCell.changeSellStatus(status: "\(data.onSale)")
+    }
+    
+    private func getPostDetail() {
+        if let postId = postId,
+            !fromPostWrite {
+            getPostDetail(postId: postId)
+        }
     }
     
     // MARK: - UI & Layout
@@ -261,7 +270,7 @@ extension PostDetailVC {
             case .success(let data):
                 if let data = data as? PostDetail {
                     self.postDetailModel = data
-                    self.bottomView.setHeaderData(data: data)
+                    self.bottomView.setData(data: data)
                 }
             default:
                 break;

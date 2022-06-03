@@ -81,7 +81,7 @@ final class PostDetailBottomView: UIView {
     
     // MARK: - Internal Methods
     
-    func setHeaderData(data: PostDetail) {
+    func setData(data: PostDetail) {
         let price = String(data.price).replacingOccurrences(of: ",", with: "")
         priceLabel.text = numberFormatter(number: Int(price)!) + "원"
         
