@@ -10,7 +10,7 @@ import Alamofire
 
 enum HomeRouter {
     case getPostDetail(postId: String)
-    case changeSellStatus(postId: String, onSale: Int)
+    case changeSellStatus(postId: String, onSale: String)
     case changeLikeStatus(postId: String)
     case createPostWrite(imageCount: Int, title: String, category: String, price: Int, contents: String, isPriceSuggestion: Bool)
     case getPostList

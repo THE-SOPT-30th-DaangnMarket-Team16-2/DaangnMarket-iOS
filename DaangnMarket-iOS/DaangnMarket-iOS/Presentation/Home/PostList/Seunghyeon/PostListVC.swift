@@ -43,6 +43,7 @@ class PostListVC: UIViewController, Storyboarded {
         super.viewWillAppear(animated)
         
         self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     private func setTapGesture() {
@@ -61,7 +62,8 @@ class PostListVC: UIViewController, Storyboarded {
 extension PostListVC: UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let nextVC = PostDetailVC2.instantiate()
+        let nextVC = PostDetailVC.instantiate()
+        nextVC.postId = data[indexPath.row].id
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

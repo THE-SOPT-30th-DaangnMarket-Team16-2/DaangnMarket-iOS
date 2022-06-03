@@ -47,7 +47,7 @@ extension HomeService {
         }
     }
     
-    func changeSellStatus(postId: String, onSale: Int, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+    func changeSellStatus(postId: String, onSale: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
         AFManager.request(HomeRouter.changeSellStatus(postId: postId, onSale: onSale)).responseData { response in
             switch response.result {
             case .success:

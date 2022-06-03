@@ -22,7 +22,7 @@ final class PostDetailVC: BaseVC, Storyboarded {
         case postSection = 1
     }
     
-    private var postId: String?
+    var postId: String?
     
     private lazy var postContentCell = PostContentCVC()
     
@@ -74,12 +74,13 @@ final class PostDetailVC: BaseVC, Storyboarded {
         setDelegate()
         setCollectionView()
         
-        getPostDetail(postId: postId ?? "4ioqqfnas328sd")
+        getPostDetail(postId: postId ?? "")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     // MARK: - Bind
@@ -196,15 +197,15 @@ extension PostDetailVC: PostContentDelegate {
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
             self.postContentCell.changeSellStatus(status: "판매중")
-            self.changeSellStatus(onSale: 0)
+            self.changeSellStatus(onSale: "0")
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
             self.postContentCell.changeSellStatus(status: "예약중")
-            self.changeSellStatus(onSale: 1)
+            self.changeSellStatus(onSale: "1")
         }
         let completedAction = UIAlertAction(title: "거래완료", style: .default) { _ in
             self.postContentCell.changeSellStatus(status: "거래완료")
-            self.changeSellStatus(onSale: 2)
+            self.changeSellStatus(onSale: "2")
         }
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
         
@@ -232,8 +233,8 @@ extension PostDetailVC {
         }
     }
     
-    func changeSellStatus(onSale: Int) {
-        HomeService.shared.changeSellStatus(postId: self.postId ?? "628d7c7ccd92160ec569ddf4", onSale: onSale) { networkResult in
+    func changeSellStatus(onSale: String) {
+        HomeService.shared.changeSellStatus(postId: self.postId ?? "", onSale: onSale) { networkResult in
             switch networkResult {
             case .success(let message):
                 print(message)
