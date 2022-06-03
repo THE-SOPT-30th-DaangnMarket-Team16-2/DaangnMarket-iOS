@@ -196,15 +196,15 @@ extension PostDetailVC: PostContentDelegate {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
-            self.postContentCell.changeSellStatus(status: "판매중")
+            self.postContentCell.changeSellStatus(status: "0")
             self.changeSellStatus(onSale: "0")
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
-            self.postContentCell.changeSellStatus(status: "예약중")
+            self.postContentCell.changeSellStatus(status: "1")
             self.changeSellStatus(onSale: "1")
         }
         let completedAction = UIAlertAction(title: "거래완료", style: .default) { _ in
-            self.postContentCell.changeSellStatus(status: "거래완료")
+            self.postContentCell.changeSellStatus(status: "2")
             self.changeSellStatus(onSale: "2")
         }
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
