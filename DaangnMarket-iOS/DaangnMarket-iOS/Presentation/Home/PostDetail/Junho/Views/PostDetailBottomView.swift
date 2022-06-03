@@ -7,6 +7,8 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
 import SnapKit
 
 final class PostDetailBottomView: UIView {
@@ -73,7 +75,23 @@ final class PostDetailBottomView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal Methods
+    
+    func setHeaderData(data: PostDetail) {
+        let price = String(data.price).replacingOccurrences(of: ",", with: "")
+        priceLabel.text = numberFormatter(number: Int(price)!) + "원"
+        
+        likeButton.isSelected = data.isLiked
+        guideLabel.text = data.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
+    }
+    
     // MARK: - Private Methods
+    
+    private func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        return numberFormatter.string(from: NSNumber(value: number))!
+    }
     
     // MARK: - UI & Layout
     

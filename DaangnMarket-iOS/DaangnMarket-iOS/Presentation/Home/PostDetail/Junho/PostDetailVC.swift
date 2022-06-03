@@ -152,13 +152,12 @@ extension PostDetailVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let sectionType = SectionType(rawValue: section) else { return 1 }
         
-
-        
         switch sectionType {
         case .imageSection:
             if let data = postDetailModel {
                 return data.image.count
             } else { return 5 }
+            
         case .postSection: return 1
         }
     }
@@ -170,6 +169,10 @@ extension PostDetailVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == PostDetailUserHeader.className {
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: PostDetailUserHeader.className, for: indexPath)
+            if let view = view as? PostDetailUserHeader,
+               let data = postDetailModel {
+                view.setData(data: data)
+            }
             return view
         }
         else { return UICollectionReusableView() }
@@ -248,6 +251,7 @@ extension PostDetailVC {
             case .success(let data):
                 if let data = data as? PostDetail {
                     self.postDetailModel = data
+                    self.bottomView.setHeaderData(data: data)
                 }
             default:
                 break;
