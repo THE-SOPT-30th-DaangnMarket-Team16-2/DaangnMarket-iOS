@@ -13,6 +13,7 @@ enum HomeRouter {
     case changeSellStatus(postId: String, onSale: Int)
     case changeLikeStatus(postId: String)
     case createPostWrite(imageCount: Int, title: String, category: String, price: Int, contents: String, isPriceSuggestion: Bool)
+    case getPostList
 }
 
 extension HomeRouter: BaseRouter {
@@ -27,6 +28,8 @@ extension HomeRouter: BaseRouter {
             return "/feed/like/\(postId)"
         case .createPostWrite(_, _, _, _, _, _):
             return "/feed"
+        case .getPostList:
+            return "/feed"
         }
     }
     
@@ -40,6 +43,8 @@ extension HomeRouter: BaseRouter {
             return .put
         case .createPostWrite(_, _, _, _, _, _):
             return .post
+        case .getPostList:
+            return .get
         }
     }
     
@@ -63,6 +68,9 @@ extension HomeRouter: BaseRouter {
              "contents" : contents,
              "isPriceSuggestion" : isPriceSuggestion]
             return .requestBody(body)
+            
+        case .getPostList:
+            return .requestPlain
         }
     }
 }

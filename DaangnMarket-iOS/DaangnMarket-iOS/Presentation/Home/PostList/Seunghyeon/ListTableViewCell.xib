@@ -37,16 +37,16 @@
                         </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pRb-uV-lYO">
-                        <rect key="frame" x="135" y="12.000000000000004" width="63" height="59.333333333333343"/>
+                        <rect key="frame" x="135" y="12.000000000000004" width="64.666666666666686" height="59.333333333333343"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eQ-he-WQV">
-                                <rect key="frame" x="0.0" y="0.0" width="63" height="18"/>
+                                <rect key="frame" x="0.0" y="0.0" width="64.666666666666671" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" name="carrot_black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gby-Kf-GfK">
-                                <rect key="frame" x="0.0" y="23" width="63" height="13.333333333333336"/>
+                                <rect key="frame" x="0.0" y="23" width="64.666666666666671" height="13.333333333333336"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCH-HQ-GfA">
                                         <rect key="frame" x="0.0" y="0.0" width="28.666666666666668" height="13.333333333333334"/>
@@ -54,8 +54,8 @@
                                         <color key="textColor" name="carrot_darklightgray"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1분전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-Ko-h9T">
-                                        <rect key="frame" x="38.666666666666657" y="0.0" width="24.333333333333329" height="13.333333333333334"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5분전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOb-Ko-h9T">
+                                        <rect key="frame" x="38.666666666666657" y="0.0" width="26" height="13.333333333333334"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <color key="textColor" name="carrot_darklightgray"/>
                                         <nil key="highlightedColor"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSJ-cN-SCP">
-                                <rect key="frame" x="0.0" y="41.333333333333336" width="63" height="18"/>
+                                <rect key="frame" x="0.0" y="41.333333333333336" width="64.666666666666671" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" name="carrot_black"/>
                                 <nil key="highlightedColor"/>
