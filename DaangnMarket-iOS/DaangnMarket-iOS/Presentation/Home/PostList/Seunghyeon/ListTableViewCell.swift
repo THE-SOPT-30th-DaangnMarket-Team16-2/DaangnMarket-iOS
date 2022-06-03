@@ -15,6 +15,7 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var place: UILabel!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productPrice: UILabel!
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +26,21 @@ class ListTableViewCell: UITableViewCell {
     }
     
     func setData(_ listData: PostListDataModel){
-        productImage.image = listData.productImage
-        productName.text = listData.productName
-        place.text = listData.placeName
+  
+        if let image = listData.image {
+            let url = URL(string: image)
+            let data = try! Data(contentsOf: url!)
+            productImage.image = UIImage(data: data)
+        }
+//        let url = URL(string: listData.image!)
+//        let data = try! Data(contentsOf: url!)
+//        productImage.image = UIImage(data: data)
+        productName.text = listData.title
+        place.text = listData.region
         productPrice.text = "\(listData.price)"
+        
     }
+    
+    
 }
 

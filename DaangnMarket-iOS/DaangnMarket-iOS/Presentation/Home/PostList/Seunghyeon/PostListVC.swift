@@ -13,13 +13,19 @@ class PostListVC: UIViewController, Storyboarded {
     @IBOutlet weak var addAction: UIButton!
     @IBOutlet weak var plusButton: UIImageView!
     
+    
     static var storyboard: Storyboards = .postList
+    var data: [PostListDataModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         let nib = UINib(nibName: ListTableViewCell.identifier, bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: ListTableViewCell.identifier)
+        
+        getPostList()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,6 +36,7 @@ class PostListVC: UIViewController, Storyboarded {
         self.view.backgroundColor = .white
         
         setTapGesture()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,15 +68,35 @@ extension PostListVC: UITableViewDelegate{
 
 extension PostListVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return PostListDataModel.sampleData.count
+        return self.data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as? ListTableViewCell else{return UITableViewCell()}
         
-        cell.setData(PostListDataModel.sampleData[indexPath.row])
+        cell.setData(self.data[indexPath.row])
         
         return cell
     }
 }
 
+extension PostListVC {
+    func getPostList() {
+        HomeService.shared.getPostList { networkResult in
+            switch networkResult {
+            case .success(let data):
+                if let data = data as? [PostListDataModel] {
+                    
+                    self.data = data
+                    self.tableView.reloadData()
+//                    var model = PostListDataModel.self
+//                    model = data.data
+//                    self.tableView.reloadData()
+                    print(data)
+                }
+            default:
+                break;
+            }
+        }
+    }
+}

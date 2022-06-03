@@ -32,6 +32,21 @@ extension HomeService {
         }
     }
     
+    func getPostList(completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFManager.request(HomeRouter.getPostList).responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let data = response.data else { return}
+                let networkResult = self.judgeStatus(by: statusCode, data, type: [PostListDataModel].self, decodingMode: .model)
+                completion(networkResult)
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
     func changeSellStatus(postId: String, onSale: Int, completion: @escaping (NetworkResult<Any>) -> (Void)) {
         AFManager.request(HomeRouter.changeSellStatus(postId: postId, onSale: onSale)).responseData { response in
             switch response.result {
@@ -75,5 +90,7 @@ extension HomeService {
             }
         }
     }
+    
+
 }
 
