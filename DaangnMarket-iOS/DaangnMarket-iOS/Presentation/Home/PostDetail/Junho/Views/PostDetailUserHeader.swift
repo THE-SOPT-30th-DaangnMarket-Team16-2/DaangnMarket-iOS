@@ -97,9 +97,10 @@ final class PostDetailUserHeader: UICollectionReusableView {
     
     // MARK: Custom Methods
     
-    func setData(username: String, userImage: String) {
-        nameLabel.text = username
-        profileImageView.image = UIImage(named: userImage)
+    func setData(data: PostDetail) {
+        nameLabel.text = data.user.name
+        profileImageView.setImage(with: data.user.profile)
+        guideLabel.text = data.user.region
     }
     
     // MARK: UI & Layout

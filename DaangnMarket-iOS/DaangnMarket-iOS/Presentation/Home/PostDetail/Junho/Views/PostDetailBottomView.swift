@@ -7,9 +7,15 @@
 
 import UIKit
 
+import RxCocoa
+import RxSwift
 import SnapKit
 
 final class PostDetailBottomView: UIView {
+    
+    private let disposeBag = DisposeBag()
+    
+    var likeButtonTapped = PublishRelay<Bool>()
     
     private let lineView: UIView = {
         let view = UIView()
@@ -22,8 +28,8 @@ final class PostDetailBottomView: UIView {
         bt.setImage(ImageLiterals.PostDetail.heartOffIcon, for: .normal)
         bt.setImage(ImageLiterals.PostDetail.hearOnIcon, for: .selected)
         bt.adjustsImageWhenHighlighted = false
-        bt.addAction(UIAction(handler: { _ in
-            bt.isSelected.toggle()
+        bt.addAction(UIAction(handler: { [weak self] _ in
+            self?.likeButtonTapped.accept(bt.isSelected)
         }),for: .touchUpInside)
         return bt
     }()
@@ -73,7 +79,23 @@ final class PostDetailBottomView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Internal Methods
+    
+    func setData(data: PostDetail) {
+        let price = String(data.price).replacingOccurrences(of: ",", with: "")
+        priceLabel.text = numberFormatter(number: Int(price)!) + "원"
+        
+        likeButton.isSelected = data.isLiked
+        guideLabel.text = data.isPriceSuggestion ? "가격제안가능" : "가격제안불가"
+    }
+    
     // MARK: - Private Methods
+    
+    private func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        return numberFormatter.string(from: NSNumber(value: number))!
+    }
     
     // MARK: - UI & Layout
     

@@ -22,7 +22,19 @@ final class PostDetailVC: BaseVC, Storyboarded {
         case postSection = 1
     }
     
-    private var postId: String?
+    var postDetailModel: PostDetail? {
+        didSet {
+            detailCV.reloadData()
+            if let data = postDetailModel {
+                self.pageControl.numberOfPages = min(5, data.image.count)
+                self.pageControl.currentPage = 0
+                bottomView.setData(data: data)
+            }
+        }
+    }
+    
+    var postId: String?
+    var fromPostWrite: Bool = false
     
     private lazy var postContentCell = PostContentCVC()
     
@@ -74,15 +86,26 @@ final class PostDetailVC: BaseVC, Storyboarded {
         setDelegate()
         setCollectionView()
         
-        getPostDetail(postId: postId ?? "4ioqqfnas328sd")
+        getPostDetail()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     // MARK: - Bind
+    
+    override func bind() {
+        bottomView.likeButtonTapped.throttleOnMain(.seconds(1))
+            .asDriver(onErrorJustReturn: true)
+            .drive(onNext: { [weak self] selected in
+                self?.bottomView.likeButton.isSelected.toggle()
+                self?.changeLikesStatus()
+            })
+            .disposed(by: disposeBag)
+    }
     
     // MARK: - Custom Methods
     
@@ -100,6 +123,13 @@ final class PostDetailVC: BaseVC, Storyboarded {
     
     private func fetchPostDetailData(data: PostDetail) {
         postContentCell.changeSellStatus(status: "\(data.onSale)")
+    }
+    
+    private func getPostDetail() {
+        if let postId = postId,
+            !fromPostWrite {
+            getPostDetail(postId: postId)
+        }
     }
     
     // MARK: - UI & Layout
@@ -142,7 +172,11 @@ extension PostDetailVC: UICollectionViewDataSource{
         guard let sectionType = SectionType(rawValue: section) else { return 1 }
         
         switch sectionType {
-        case .imageSection: return 5
+        case .imageSection:
+            if let data = postDetailModel {
+                return data.image.count
+            } else { return 5 }
+            
         case .postSection: return 1
         }
     }
@@ -154,6 +188,10 @@ extension PostDetailVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == PostDetailUserHeader.className {
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: PostDetailUserHeader.className, for: indexPath)
+            if let view = view as? PostDetailUserHeader,
+               let data = postDetailModel {
+                view.setData(data: data)
+            }
             return view
         }
         else { return UICollectionReusableView() }
@@ -166,12 +204,19 @@ extension PostDetailVC: UICollectionViewDataSource{
         switch sectionType {
         case .imageSection:
             guard let postImageCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostImageCVC.className, for: indexPath) as? PostImageCVC else { return UICollectionViewCell() }
-            postImageCell.setData(postImage: ImageLiterals.PostDetail.sample[indexPath.row])
+            if let data = postDetailModel {
+                postImageCell.setData(postImageURL: data.image[indexPath.row])
+            } else {
+                postImageCell.setData(postImage: ImageLiterals.PostDetail.sample[indexPath.row])
+            }
             
             return postImageCell
         case .postSection:
             guard let postContentCell = collectionView.dequeueReusableCell(withReuseIdentifier: PostContentCVC.className, for: indexPath) as? PostContentCVC else { return UICollectionViewCell() }
             postContentCell.delegate = self
+            if let data = postDetailModel {
+                postContentCell.setData(data: data)
+            }
             self.postContentCell = postContentCell
             
             return postContentCell
@@ -195,16 +240,16 @@ extension PostDetailVC: PostContentDelegate {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
         
         let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
-            self.postContentCell.changeSellStatus(status: "판매중")
-            self.changeSellStatus(onSale: 0)
+            self.postContentCell.changeSellStatus(status: "0")
+            self.changeSellStatus(onSale: "0")
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
-            self.postContentCell.changeSellStatus(status: "예약중")
-            self.changeSellStatus(onSale: 1)
+            self.postContentCell.changeSellStatus(status: "1")
+            self.changeSellStatus(onSale: "1")
         }
         let completedAction = UIAlertAction(title: "거래완료", style: .default) { _ in
-            self.postContentCell.changeSellStatus(status: "거래완료")
-            self.changeSellStatus(onSale: 2)
+            self.postContentCell.changeSellStatus(status: "2")
+            self.changeSellStatus(onSale: "2")
         }
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
         
@@ -224,7 +269,8 @@ extension PostDetailVC {
             switch networkResult {
             case .success(let data):
                 if let data = data as? PostDetail {
-                    self.fetchPostDetailData(data: data)
+                    self.postDetailModel = data
+                    self.bottomView.setData(data: data)
                 }
             default:
                 break;
@@ -232,8 +278,19 @@ extension PostDetailVC {
         }
     }
     
-    func changeSellStatus(onSale: Int) {
-        HomeService.shared.changeSellStatus(postId: self.postId ?? "628d7c7ccd92160ec569ddf4", onSale: onSale) { networkResult in
+    func changeSellStatus(onSale: String) {
+        HomeService.shared.changeSellStatus(postId: postId ?? "", onSale: onSale) { networkResult in
+            switch networkResult {
+            case .success(let message):
+                print(message)
+            default:
+                break;
+            }
+        }
+    }
+    
+    func changeLikesStatus() {
+        HomeService.shared.changeLikeStatus(postId: postId ?? "") { networkResult in
             switch networkResult {
             case .success(let message):
                 print(message)

@@ -287,23 +287,16 @@ extension PostWriteVC {
             switch networkResult {
             case .success(let model):
                 guard let model = model as? PostWrite else { return }
-                let priceSuggestionStr = boolPriceOffer ? "가격제안 가능" : "가격제안 불가"
-                let detailModel = PostDetail.init(_id: model.id,
-                                                 image: ["https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"],
-                                                 user: User.init(profile: "postDetail_1",
-                                                                 name: "수빈",
-                                                                 area: "잠실동"),
-                                                 onSale: 0,
-                                                 title: title,
-                                                 category: category,
-                                                 createdAt: "1분전",
-                                                 content: contents,
-                                                 view: 1,
-                                                 price: price,
-                                                 isPriceSuggestion: priceSuggestionStr,
-                                                 isLiked: false )
-                let detailVC2 = PostDetailVC2.instantiate()
-                detailVC2.detailModel = detailModel
+                let detailModel = PostDetail.init(onSale: "0",
+                                                  category: category,
+                                                  id: model.id,
+                                                  price: intPrice,
+                                                  title: title,
+                                                  image: ["https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"], view: 1, isPriceSuggestion: boolPriceOffer, createdAt: "1분전", isLiked: false, user: User.init(region: "잠실동", id: "13534zsdjf", name: "수빈", profile: "https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"))
+                let detailVC2 = PostDetailVC.instantiate()
+                detailVC2.postId = model.id
+                detailVC2.fromPostWrite = true
+                detailVC2.postDetailModel = detailModel
                 if let rootVC = self.navigationController?.viewControllers.first as? PostListVC {
                     self.navigationController?.popViewController(animated: true)
                     rootVC.navigationController?.pushViewController(detailVC2, animated: true)

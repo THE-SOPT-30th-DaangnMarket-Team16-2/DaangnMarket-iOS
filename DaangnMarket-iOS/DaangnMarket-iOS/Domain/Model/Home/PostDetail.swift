@@ -9,19 +9,25 @@ import Foundation
 
 // MARK: - PostDetail
 struct PostDetail: Codable {
-    let _id: String
+    let onSale, category, id: String
+    let price: Int
+    let title: String
     let image: [String]
-    let user: User
-    let onSale: Int
-    let title, category, createdAt, content: String
     let view: Int
-    let price: String
-    let isPriceSuggestion: String
+    let isPriceSuggestion: Bool
+    let createdAt: String
     let isLiked: Bool
+    let user: User
 }
 
 // MARK: - User
 struct User: Codable {
+    let region, id, name: String
     let profile: String
-    let name, area: String
+
+    enum CodingKeys: String, CodingKey {
+        case region
+        case id = "_id"
+        case name, profile
+    }
 }
