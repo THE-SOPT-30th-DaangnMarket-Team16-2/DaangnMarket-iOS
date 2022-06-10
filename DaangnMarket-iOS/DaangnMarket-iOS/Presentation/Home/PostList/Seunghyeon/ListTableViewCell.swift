@@ -25,7 +25,7 @@ class ListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setData(_ listData: PostListDataModel){
+    func setData(_ listData: PostList){
   
         if let image = listData.image {
             let url = URL(string: image)
