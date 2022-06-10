@@ -15,7 +15,7 @@ class PostListVC: UIViewController, Storyboarded {
     
     
     static var storyboard: Storyboards = .postList
-    var data: [PostListDataModel] = []
+    var data: [PostList] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,11 +87,11 @@ extension PostListVC {
         HomeService.shared.getPostList { networkResult in
             switch networkResult {
             case .success(let data):
-                if let data = data as? [PostListDataModel] {
+                if let data = data as? [PostList] {
                     
                     self.data = data
                     self.tableView.reloadData()
-//                    var model = PostListDataModel.self
+//                    var model = PostList.self
 //                    model = data.data
 //                    self.tableView.reloadData()
                     print(data)
