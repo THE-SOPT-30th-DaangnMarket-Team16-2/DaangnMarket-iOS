@@ -97,18 +97,20 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="8Ii-15-Xz1" secondAttribute="bottom" id="69Y-o1-0hQ"/>
                     <constraint firstAttribute="trailing" secondItem="8Ii-15-Xz1" secondAttribute="trailing" id="7aL-7D-XFE"/>
-                    <constraint firstAttribute="trailing" secondItem="1EA-q2-TEW" secondAttribute="trailing" constant="15" id="DfM-Ch-QLX"/>
                     <constraint firstItem="8Ii-15-Xz1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IFg-9j-RS9"/>
-                    <constraint firstItem="1EA-q2-TEW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="KCB-YT-WGx"/>
+                    <constraint firstAttribute="trailing" secondItem="1EA-q2-TEW" secondAttribute="trailing" constant="15" id="LMj-CT-y6e"/>
+                    <constraint firstItem="1EA-q2-TEW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="fCP-ZV-mGB"/>
                     <constraint firstItem="8Ii-15-Xz1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="m8k-7p-9uT"/>
                     <constraint firstAttribute="bottom" secondItem="1EA-q2-TEW" secondAttribute="bottom" id="pcM-g1-JeZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="createdAtLabel" destination="BBj-PR-VZL" id="SR9-h6-Adg"/>
                 <outlet property="itemImageView" destination="LSt-4n-Ii7" id="QUL-iV-Zfr"/>
-                <outlet property="itemNameLabel" destination="4IQ-Ac-nxY" id="pjA-vb-ObG"/>
                 <outlet property="itemPriceLabel" destination="3xG-yS-CWy" id="Ilo-1c-msd"/>
+                <outlet property="itemRegionLabel" destination="gwA-nK-5SP" id="m9v-3F-Qos"/>
+                <outlet property="itemTitleLabel" destination="4IQ-Ac-nxY" id="pjA-vb-ObG"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="91.741071428571431"/>
         </tableViewCell>

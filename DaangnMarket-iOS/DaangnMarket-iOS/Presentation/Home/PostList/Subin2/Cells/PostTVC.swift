@@ -12,16 +12,31 @@ final class PostTVC: UITableViewCell {
     static let identifier = "PostTVC"
     
     @IBOutlet weak var itemImageView: UIImageView!
-    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var itemTitleLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
+    @IBOutlet weak var itemRegionLabel: UILabel!
+    @IBOutlet weak var createdAtLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func setData(itemData: ItemModel) {
-        itemImageView.image = UIImage(named: itemData.itemImage)
-        itemNameLabel.text = itemData.itemName
-        itemPriceLabel.text = itemData.itemPrice
+    func setData(_ itemData: PostList) {
+        if let image = itemData.image {
+            let url = URL(string: image)
+            let data = try! Data(contentsOf: url!)
+            itemImageView.image = UIImage(data: data)
+        }
+        let price = String(itemData.price).replacingOccurrences(of: ",", with: "")
+        itemPriceLabel.text = numberFormatter(number: Int(price)!) + "원"
+        itemTitleLabel.text = itemData.title
+        itemRegionLabel.text = itemData.region
+        createdAtLabel.text = itemData.createdAt
+    }
+    
+    private func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        return numberFormatter.string(from: NSNumber(value: number))!
     }
 }
