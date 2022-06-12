@@ -18,7 +18,6 @@
 		8EE63062283E8E430057B61B /* PostList2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EE63061283E8E430057B61B /* PostList2.storyboard */; };
 		8EE63065283E8F420057B61B /* PostTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE63063283E8F420057B61B /* PostTVC.swift */; };
 		8EE63066283E8F420057B61B /* PostTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE63064283E8F420057B61B /* PostTVC.xib */; };
-		8EE63068283E98C10057B61B /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE63067283E98C10057B61B /* ItemModel.swift */; };
 		EB2FF8A12840D27600625EBC /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB2FF8A02840D27600625EBC /* ListTableViewCell.xib */; };
 		EB2FF8A32840D27C00625EBC /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2FF8A22840D27C00625EBC /* ListTableViewCell.swift */; };
 		EB2FF8A52840D2C400625EBC /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2FF8A42840D2C400625EBC /* PostList.swift */; };
@@ -132,7 +131,6 @@
 		8EE63061283E8E430057B61B /* PostList2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PostList2.storyboard; sourceTree = "<group>"; };
 		8EE63063283E8F420057B61B /* PostTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTVC.swift; sourceTree = "<group>"; };
 		8EE63064283E8F420057B61B /* PostTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTVC.xib; sourceTree = "<group>"; };
-		8EE63067283E98C10057B61B /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		B7F05D5C0545EAFEED63B9D6 /* Pods_DaangnMarket_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaangnMarket_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8133F19115414C0F7EC57B9 /* Pods-DaangnMarket-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaangnMarket-iOS.debug.xcconfig"; path = "Target Support Files/Pods-DaangnMarket-iOS/Pods-DaangnMarket-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EB2FF8A02840D27600625EBC /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListTableViewCell.xib; path = "DaangnMarket-iOS/Presentation/Home/PostList/Seunghyeon/ListTableViewCell.xib"; sourceTree = SOURCE_ROOT; };
@@ -296,7 +294,6 @@
 		8EE4AD7F2842126C00F4232F /* Subin2 */ = {
 			isa = PBXGroup;
 			children = (
-				8EE6305C283E8E0A0057B61B /* Model */,
 				8EE6305D283E8E100057B61B /* Cells */,
 				8EE6305E283E8E170057B61B /* Views */,
 			);
@@ -321,14 +318,6 @@
 				8EE6304F283D499B0057B61B /* PostDetailVC2.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8EE6305C283E8E0A0057B61B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8EE63067283E98C10057B61B /* ItemModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		8EE6305D283E8E100057B61B /* Cells */ = {
@@ -1032,7 +1021,6 @@
 				EBB25FD22831D7D2001416D8 /* UIDevice+.swift in Sources */,
 				EBB25FAA28311926001416D8 /* UIStackView+.swift in Sources */,
 				EBB2606F28341DD6001416D8 /* PostDetailUserHeader.swift in Sources */,
-				8EE63068283E98C10057B61B /* ItemModel.swift in Sources */,
 				EBB260012831EFDE001416D8 /* ShowToast.swift in Sources */,
 				EBB260112831F356001416D8 /* calculateTopInset.swift in Sources */,
 				EBB25FC428311EAD001416D8 /* String+.swift in Sources */,

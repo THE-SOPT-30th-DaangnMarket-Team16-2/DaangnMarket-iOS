@@ -14,5 +14,4 @@ struct PhotoDataModel {
     public init() {
         self.userSelectedImages = [UIImage]()
     }
-    
 }
