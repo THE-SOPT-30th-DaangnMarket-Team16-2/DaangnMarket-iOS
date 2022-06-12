@@ -32,6 +32,7 @@
                                 <color key="backgroundColor" name="carrot_squaregray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="QXg-FZ-gJ2"/>
+                                    <constraint firstAttribute="width" constant="375" id="Sd0-Qd-R1J"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asE-Pu-HQ6">
@@ -78,6 +79,7 @@
                     <connections>
                         <outlet property="floatingButton" destination="asE-Pu-HQ6" id="ROm-dw-Gi1"/>
                         <outlet property="itemTableView" destination="QkD-1L-adl" id="MAH-te-rzt"/>
+                        <outlet property="plusBtn" destination="asE-Pu-HQ6" id="Soo-i8-CKl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
