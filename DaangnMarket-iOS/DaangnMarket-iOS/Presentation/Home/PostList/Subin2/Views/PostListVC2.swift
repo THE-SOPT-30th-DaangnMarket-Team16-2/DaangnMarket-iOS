@@ -11,8 +11,7 @@ final class PostListVC2: UIViewController, Storyboarded {
     
     // MARK: - Properties
     static var storyboard: Storyboards = .postList2
-    var newlistDataModel: [PostList] = []
-    var listDataModel: [PostList] = []
+    var listModel: [PostList] = []
     private var infiniteScrollPage: Int = 0
     private var infiniteScrollLimit: Int = 10
     private var isInfiniteScroll = true
@@ -28,7 +27,7 @@ final class PostListVC2: UIViewController, Storyboarded {
         super.viewDidLoad()
         registerNib()
         navigationBarUI()
-        getPostWithPage(lastID: listLastID ?? "") {
+        getPostWithPage() {
             self.isInfiniteScroll = true
         }
     }
@@ -101,18 +100,18 @@ extension PostListVC2: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return newlistDataModel.count
+        return listModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: PostTVC.identifier) as? PostTVC else { return UITableViewCell() }
-        cell.setData(self.newlistDataModel[indexPath.row])
+        cell.setData(self.listModel[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVC2 = PostDetailVC2.instantiate()
-        detailVC2.postId = newlistDataModel[indexPath.row].id
+        detailVC2.postId = listModel[indexPath.row].id
         self.navigationController?.pushViewController(detailVC2, animated: true)
     }
     
@@ -121,9 +120,7 @@ extension PostListVC2: UITableViewDelegate, UITableViewDataSource {
         if scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.bounds.height {
             if isInfiniteScroll {
                 isInfiniteScroll = false
-                
-                listLastID = listDataModel.last?.id
-                getPostWithPage(lastID: listLastID ?? "") {
+                getPostWithPage() {
                     self.isInfiniteScroll = true
                 }
             }
@@ -133,12 +130,12 @@ extension PostListVC2: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - NETWORK
 extension PostListVC2 {
-    private func getPostWithPage(lastID: String, completion: @escaping() -> Void) {
+    private func getPostWithPage(completion: @escaping() -> Void) {
         HomeService.shared.getPostWithPage(page: infiniteScrollPage, limit: infiniteScrollLimit) { networkResult in
             switch networkResult {
             case .success(let data):
                 if let data = data as? [PostList] {
-                    self.newlistDataModel.append(contentsOf: data)
+                    self.listModel.append(contentsOf: data)
                     self.infiniteScrollPage += 10
                     self.itemTableView.reloadData()
                 }
