@@ -256,7 +256,7 @@ extension PostWriteVC: UITextViewDelegate {
         let estimatedSize = textView.sizeThatFits(size)
         
         textView.constraints.forEach { cons in
-            if !(estimatedSize.height <= 320) {
+            if !(estimatedSize.height <= 200) {
                 if cons.firstAttribute == .height {
                     cons.constant = estimatedSize.height
                 }
