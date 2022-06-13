@@ -116,7 +116,6 @@ extension PostListVC2: UITableViewDelegate, UITableViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         if scrollView.contentOffset.y > scrollView.contentSize.height - scrollView.bounds.height {
             if isInfiniteScroll {
                 isInfiniteScroll = false
@@ -130,7 +129,7 @@ extension PostListVC2: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - NETWORK
 extension PostListVC2 {
-    private func getPostWithPage(completion: @escaping() -> Void) {
+    func getPostWithPage(completion: @escaping() -> Void) {
         HomeService.shared.getPostWithPage(page: infiniteScrollPage, limit: infiniteScrollLimit) { networkResult in
             switch networkResult {
             case .success(let data):
@@ -140,6 +139,20 @@ extension PostListVC2 {
                     self.itemTableView.reloadData()
                 }
                 completion()
+            default:
+                break;
+            }
+        }
+    }
+    
+    func getPostList() {
+        HomeService.shared.getPostList { networkResult in
+            switch networkResult {
+            case .success(let data):
+                if let data = data as? [PostList] {
+                    self.listModel = data.reversed()
+                    self.itemTableView.reloadData()
+                }
             default:
                 break;
             }

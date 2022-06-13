@@ -89,7 +89,6 @@ extension PostListVC {
             case .success(let data):
                 if let data = data as? [PostList] {
                     
-                    self.data = data.reversed()
                     self.tableView.reloadData()
 //                    var model = PostList.self
 //                    model = data.data
