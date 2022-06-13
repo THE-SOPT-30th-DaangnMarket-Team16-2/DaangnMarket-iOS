@@ -27,6 +27,7 @@ final class PostListVC2: UIViewController, Storyboarded {
         super.viewDidLoad()
         registerNib()
         navigationBarUI()
+//        getPostList()
         getPostWithPage() {
             self.isInfiniteScroll = true
         }
