@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFh-sU-Dps" userLabel="line">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFh-sU-Dps" userLabel="line1">
                                 <rect key="frame" x="0.0" y="44" width="375" height="1"/>
                                 <color key="backgroundColor" name="carrot_squaregray"/>
                                 <constraints>
@@ -27,7 +27,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QkD-1L-adl">
                                 <rect key="frame" x="0.0" y="45" width="375" height="733"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-ad-tcC" userLabel="line">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-ad-tcC" userLabel="line2">
                                 <rect key="frame" x="0.0" y="777" width="375" height="1"/>
                                 <color key="backgroundColor" name="carrot_squaregray"/>
                                 <constraints>
@@ -61,15 +61,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="asE-Pu-HQ6" secondAttribute="trailing" constant="15" id="3Sh-2u-ccH"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WFh-sU-Dps" secondAttribute="trailing" id="6Mf-or-wor"/>
+                            <constraint firstAttribute="trailing" secondItem="WFh-sU-Dps" secondAttribute="trailing" id="6Mf-or-wor"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jJY-ad-tcC" secondAttribute="bottom" id="GGq-2c-LbD"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="QkD-1L-adl" secondAttribute="trailing" id="Owd-x1-PQa"/>
-                            <constraint firstItem="QkD-1L-adl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TvV-6V-2di"/>
+                            <constraint firstItem="QkD-1L-adl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="UvX-qT-3Mk"/>
                             <constraint firstItem="WFh-sU-Dps" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="V23-UJ-oWc"/>
                             <constraint firstItem="QkD-1L-adl" firstAttribute="top" secondItem="WFh-sU-Dps" secondAttribute="top" constant="1" id="ZQc-LY-EDP"/>
                             <constraint firstItem="WFh-sU-Dps" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bCd-tj-YyT"/>
                             <constraint firstItem="jJY-ad-tcC" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="gwc-q6-SFU"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="asE-Pu-HQ6" secondAttribute="bottom" constant="12" id="jgn-gM-wAs"/>
+                            <constraint firstAttribute="trailing" secondItem="QkD-1L-adl" secondAttribute="trailing" id="kli-AB-uz8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="QkD-1L-adl" secondAttribute="bottom" id="oQo-bT-aWu"/>
                             <constraint firstAttribute="trailing" secondItem="jJY-ad-tcC" secondAttribute="trailing" id="t6b-Mo-Uj6"/>
                         </constraints>
@@ -78,11 +78,12 @@
                     <connections>
                         <outlet property="floatingButton" destination="asE-Pu-HQ6" id="ROm-dw-Gi1"/>
                         <outlet property="itemTableView" destination="QkD-1L-adl" id="MAH-te-rzt"/>
+                        <outlet property="plusBtn" destination="asE-Pu-HQ6" id="Soo-i8-CKl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="112.8" y="76.847290640394093"/>
+            <point key="canvasLocation" x="111.59420289855073" y="76.339285714285708"/>
         </scene>
     </scenes>
     <resources>

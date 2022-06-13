@@ -58,7 +58,7 @@ final class PostContentCVC: UICollectionViewCell, UICollectionViewRegisterable {
     private lazy var categoryButton: UIButton = {
         let bt = UIButton()
         bt.setTitleColor(UIColor.carrotDarkLightGray, for: .normal)
-        bt.setTitle("도서/티켓/음반", for: .normal)
+        bt.setTitle("", for: .normal)
         bt.titleLabel?.font = .PopMedium(size: 13)
         bt.setUnderline()
         return bt

@@ -29,35 +29,11 @@ final class PostWriteVC: UIViewController, Storyboarded {
     @IBOutlet weak var contextTextView: UITextView!
     @IBOutlet weak var bottomView: UIView!
     
-    private lazy var naviCompleteButton: UIButton =  {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.carrotTextOrange, for: .normal)
-        bt.setTitle("완료", for: .normal)
-        bt.titleLabel?.font = .NotoRegular(size: 17)
-        bt.addAction(UIAction(handler: { _ in
-            self.createPostWrite()
-          }), for: .touchUpInside)
-        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        return bt
-    }()
-    
-    private lazy var naviBackButton: UIButton =  {
-        let bt = UIButton()
-        bt.setTitleColor(UIColor.carrotDeepGray, for: .normal)
-        bt.setTitle("닫기", for: .normal)
-        bt.titleLabel?.font = .NotoRegular(size: 17)
-        bt.addAction(UIAction(handler: { _ in
-            self.navigationController?.popViewController(animated: true)
-        }), for: .touchUpInside)
-        bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
-        return bt
-    }()
-    
     // MARK: - Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegate()
-        configUI()
+        navigationBarUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,17 +41,81 @@ final class PostWriteVC: UIViewController, Storyboarded {
         setNavigationBar()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    deinit {
         removeKeyboardObserver()
     }
     
     // MARK: - IBAction Part
+    
+    @IBAction func titleEditingChanged(_ sender: UITextField) {
+        checkMaxLength(titleTextField, 20)
+    }
+    
+    @IBAction func categoryEditingChanged(_ sender: UITextField) {
+        checkMaxLength(categoryTextField, 20)
+    }
+    
     @IBAction func priceEditingChanged(_ sender: UITextField) {
+        priceSectionCustom()
+    }
+    
+    @IBAction func offerBtnDidTap(_ sender: UIButton) {
+        sender.isSelected.toggle()
+    }
+    
+    // MARK: - Custom Method Part
+    private func setDelegate() {
+        photoCollectionView.delegate = self
+        photoCollectionView.dataSource = self
+        priceTextField.delegate = self
+        contextTextView.delegate = self
+    }
+    
+    private func setNavigationBar() {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    private func navigationBarUI() {
+        let naviCompleteButton: UIButton =  {
+            let bt = UIButton()
+            bt.setTitleColor(UIColor.carrotTextOrange, for: .normal)
+            bt.setTitle("완료", for: .normal)
+            bt.titleLabel?.font = .NotoRegular(size: 17)
+            bt.addAction(UIAction(handler: { _ in
+                self.createPostWrite()
+            }), for: .touchUpInside)
+            bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            return bt
+        }()
         
+        let naviBackButton: UIButton =  {
+            let bt = UIButton()
+            bt.setTitleColor(UIColor.carrotDeepGray, for: .normal)
+            bt.setTitle("닫기", for: .normal)
+            bt.titleLabel?.font = .NotoRegular(size: 17)
+            bt.addAction(UIAction(handler: { _ in
+                self.navigationController?.popViewController(animated: true)
+            }), for: .touchUpInside)
+            bt.frame = CGRect(x: 0, y: 0, width: 24, height: 24)
+            return bt
+        }()
+        
+        let completeBtn = UIBarButtonItem(customView: naviCompleteButton)
+        let backBtn = UIBarButtonItem(customView: naviBackButton)
+        
+        self.navigationItem.title = "중고거래 글쓰기"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.carrotBlack,
+                                                                        NSAttributedString.Key.font : UIFont.NotoBold(size: 16)]
+        
+        self.navigationItem.setRightBarButton(completeBtn, animated: false)
+        self.navigationItem.setLeftBarButton(backBtn, animated: false)
+    }
+    
+    private func priceSectionCustom() {
         checkMaxLength(priceTextField, 11) /// 999,999,999
         priceOfferButton.isEnabled = priceTextField.hasText
         
-        if sender.text?.isEmpty == true {
+        if priceTextField.text?.isEmpty == true {
             wonLabel.textColor = UIColor.carrotSquareGray
             priceOfferLabel.textColor = UIColor.carrotSquareGray
             priceOfferButton.isEnabled = false
@@ -88,49 +128,19 @@ final class PostWriteVC: UIViewController, Storyboarded {
         }
     }
     
-    @IBAction func offerBtnDidTap(_ sender: UIButton) {
-        sender.isSelected.toggle()
-    }
-    
-    // MARK: - Custom Method Part
     private func numberFormatter(number: Int) -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         return numberFormatter.string(from: NSNumber(value: number))!
     }
     
-    private func setDelegate() {
-        photoCollectionView.delegate = self
-        photoCollectionView.dataSource = self
-        priceTextField.delegate = self
-        contextTextView.delegate = self
-    }
-    
-    private func configUI() {
-        let completeBtn = UIBarButtonItem(customView: naviCompleteButton)
-        let backBtn = UIBarButtonItem(customView: naviBackButton)
-        
-        self.navigationItem.title = "중고거래 글쓰기"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.carrotBlack,
-                                                                        NSAttributedString.Key.font : UIFont.NotoBold(size: 16)]
-        
-        self.navigationItem.setRightBarButton(completeBtn, animated: false)
-        self.navigationItem.setLeftBarButton(backBtn, animated: false)
-    }
-    
-    private func setNavigationBar() {
-        self.navigationController?.isNavigationBarHidden = false
-    }
-    
     private func addKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     private func removeKeyboardObserver() {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self)
     }
     
     @objc func keyboardUp(notification:NSNotification) {
@@ -178,7 +188,6 @@ extension PostWriteVC: UICollectionViewDelegate, UICollectionViewDataSource {
                 addCell.countLabel.textColor = UIColor.carrotTextOrange
             }
             addCell.countLabel.text = "\(photoModel.userSelectedImages.count)"
-            
             return addCell
         } else {
             /// 그 외의 셀은 사용자가 고른 사진으로 구성된 cell
@@ -194,7 +203,6 @@ extension PostWriteVC: UICollectionViewDelegate, UICollectionViewDataSource {
         }
     }
 }
-
 
 //MARK: - AddImageDelegate
 extension PostWriteVC: AddImageDelegate {
@@ -227,7 +235,7 @@ extension PostWriteVC: UICollectionViewDelegateFlowLayout {
     }
 }
 
-// MARK: - contextTextView Placeholder 설정
+// MARK: - UITextViewDelegate
 extension PostWriteVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor(named: "carrot_square_gray") {
@@ -248,19 +256,16 @@ extension PostWriteVC: UITextViewDelegate {
         let estimatedSize = textView.sizeThatFits(size)
         
         textView.constraints.forEach { cons in
-            if estimatedSize.height <= 320 {
-                
-            } else {
+            if !(estimatedSize.height <= 200) {
                 if cons.firstAttribute == .height {
                     cons.constant = estimatedSize.height
                 }
             }
         }
-        
     }
 }
 
-// MARK: - priceTextField Max Length 설정
+// MARK: - UITextFieldDelegate
 extension PostWriteVC: UITextFieldDelegate {
     func checkMaxLength(_ textField: UITextField,_ maxLength: Int) {
         if textField.text!.count > maxLength {
@@ -269,6 +274,7 @@ extension PostWriteVC: UITextFieldDelegate {
     }
 }
 
+// MARK: - NETWORK
 extension PostWriteVC {
     func createPostWrite() {
         guard let price = priceTextField.text?.replacingOccurrences(of: ",", with: ""),
@@ -292,14 +298,20 @@ extension PostWriteVC {
                                                   id: model.id,
                                                   price: intPrice,
                                                   title: title,
-                                                  image: ["https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"], view: 1, isPriceSuggestion: boolPriceOffer, createdAt: "1분전", isLiked: false, user: User.init(region: "잠실동", id: "13534zsdjf", name: "수빈", profile: "https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"))
-                let detailVC2 = PostDetailVC.instantiate()
-                detailVC2.postId = model.id
-                detailVC2.fromPostWrite = true
-                detailVC2.postDetailModel = detailModel
-                if let rootVC = self.navigationController?.viewControllers.first as? PostListVC {
+                                                  image: ["https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"],
+                                                  view: 1,
+                                                  isPriceSuggestion: boolPriceOffer,
+                                                  createdAt: "방금 전",
+                                                  isLiked: false,
+                                                  user: User.init(region: "잠실 3동", id: "", name: "아요미", profile: ""))
+                let nextVC = PostDetailVC2.instantiate()
+                nextVC.postId = model.id
+                nextVC.imageCount = self.photoModel.userSelectedImages.count
+                nextVC.fromPostWrite = true
+                nextVC.detailModel = detailModel
+                if let rootVC = self.navigationController?.viewControllers.first as? PostListVC2 {
                     self.navigationController?.popViewController(animated: true)
-                    rootVC.navigationController?.pushViewController(detailVC2, animated: true)
+                    rootVC.navigationController?.pushViewController(nextVC, animated: true)
                 }
             default:
                 break;

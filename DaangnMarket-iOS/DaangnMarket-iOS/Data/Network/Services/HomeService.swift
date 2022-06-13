@@ -17,28 +17,13 @@ class HomeService: BaseService {
 
 extension HomeService {
     
-    func getPostDetail(postId: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
-        AFManager.request(HomeRouter.getPostDetail(postId: postId)).responseData { response in
-            switch response.result {
-            case .success:
-                guard let statusCode = response.response?.statusCode else { return }
-                guard let data = response.data else { return}
-                let networkResult = self.judgeStatus(by: statusCode, data, type: PostDetail.self, decodingMode: .model)
-                completion(networkResult)
-                
-            case .failure(let err):
-                print(err.localizedDescription)
-            }
-        }
-    }
-    
     func getPostList(completion: @escaping (NetworkResult<Any>) -> (Void)) {
         AFManager.request(HomeRouter.getPostList).responseData { response in
             switch response.result {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
-                guard let data = response.data else { return}
-                let networkResult = self.judgeStatus(by: statusCode, data, type: [PostListDataModel].self, decodingMode: .model)
+                guard let data = response.data else { return }
+                let networkResult = self.judgeStatus(by: statusCode, data, type: [PostList].self, decodingMode: .model)
                 completion(networkResult)
                 
             case .failure(let err):
@@ -47,13 +32,13 @@ extension HomeService {
         }
     }
     
-    func changeSellStatus(postId: String, onSale: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
-        AFManager.request(HomeRouter.changeSellStatus(postId: postId, onSale: onSale)).responseData { response in
+    func getPostWithPage(page: Int, limit: Int, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFManager.request(HomeRouter.getPostWithPage(page: page, limit: limit)).responseData { response in
             switch response.result {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
-                guard let data = response.data else { return}
-                let networkResult = self.judgeStatus(by: statusCode, data, type: NoData.self, decodingMode: .message)
+                guard let data = response.data else { return }
+                let networkResult = self.judgeStatus(by: statusCode, data, type: [PostList].self, decodingMode: .model)
                 completion(networkResult)
                 
             case .failure(let err):
@@ -62,13 +47,13 @@ extension HomeService {
         }
     }
     
-    func changeLikeStatus(postId: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
-        AFManager.request(HomeRouter.changeLikeStatus(postId: postId)).responseData { response in
+    func getPostDetail(postId: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFManager.request(HomeRouter.getPostDetail(postId: postId)).responseData { response in
             switch response.result {
             case .success:
                 guard let statusCode = response.response?.statusCode else { return }
-                guard let data = response.data else { return}
-                let networkResult = self.judgeStatus(by: statusCode, data, type: NoData.self, decodingMode: .message)
+                guard let data = response.data else { return }
+                let networkResult = self.judgeStatus(by: statusCode, data, type: PostDetail.self, decodingMode: .model)
                 completion(networkResult)
                 
             case .failure(let err):
@@ -91,6 +76,35 @@ extension HomeService {
         }
     }
     
-
+    func changeLikeStatus(postId: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFManager.request(HomeRouter.changeLikeStatus(postId: postId)).responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let data = response.data else { return }
+                let networkResult = self.judgeStatus(by: statusCode, data, type: NoData.self, decodingMode: .message)
+                completion(networkResult)
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
+    func changeSellStatus(postId: String, onSale: String, completion: @escaping (NetworkResult<Any>) -> (Void)) {
+        AFManager.request(HomeRouter.changeSellStatus(postId: postId, onSale: onSale)).responseData { response in
+            switch response.result {
+            case .success:
+                guard let statusCode = response.response?.statusCode else { return }
+                guard let data = response.data else { return }
+                let networkResult = self.judgeStatus(by: statusCode, data, type: NoData.self, decodingMode: .message)
+                completion(networkResult)
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
+    
 }
 

@@ -15,6 +15,7 @@ struct PostDetail: Codable {
     let image: [String]
     let view: Int
     let isPriceSuggestion: Bool
+    //let content: String
     let createdAt: String
     let isLiked: Bool
     let user: User

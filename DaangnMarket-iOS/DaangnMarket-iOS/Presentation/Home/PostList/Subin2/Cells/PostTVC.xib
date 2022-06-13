@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LSt-4n-Ii7">
-                                <rect key="frame" x="15" y="18.5" width="103" height="103"/>
+                                <rect key="frame" x="15" y="18.666666666666671" width="103" height="103"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="103" id="gTs-nR-eyw"/>
                                     <constraint firstAttribute="width" constant="103" id="qjy-1F-MdF"/>
@@ -51,19 +51,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="송파구 잠실동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwA-nK-5SP">
-                                <rect key="frame" x="135" y="46" width="60.5" height="18.5"/>
+                                <rect key="frame" x="135" y="46" width="60.666666666666657" height="18.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
                                 <color key="textColor" name="carrot_darklightgray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5분 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBj-PR-VZL">
-                                <rect key="frame" x="205.5" y="46" width="30" height="19"/>
+                                <rect key="frame" x="205.66666666666666" y="46" width="30" height="19"/>
                                 <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="11"/>
                                 <color key="textColor" name="carrot_darklightgray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xG-yS-CWy">
-                                <rect key="frame" x="135" y="67.5" width="51" height="21"/>
+                                <rect key="frame" x="135" y="67.666666666666671" width="51" height="21"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="15"/>
                                 <color key="textColor" name="carrot_deepgray"/>
                                 <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="140" id="8Wd-xQ-P0Y"/>
+                            <constraint firstAttribute="width" secondItem="8Ii-15-Xz1" secondAttribute="height" multiplier="375:140" id="993-iQ-5yY"/>
                             <constraint firstAttribute="trailing" secondItem="4IQ-Ac-nxY" secondAttribute="trailing" constant="15" id="Akk-YV-aHb"/>
                             <constraint firstItem="gwA-nK-5SP" firstAttribute="top" secondItem="4IQ-Ac-nxY" secondAttribute="bottom" constant="4" id="Dkd-6C-3u7"/>
                             <constraint firstItem="LSt-4n-Ii7" firstAttribute="centerY" secondItem="8Ii-15-Xz1" secondAttribute="centerY" id="Dy0-5R-H9v"/>
@@ -83,7 +83,6 @@
                             <constraint firstItem="LSt-4n-Ii7" firstAttribute="leading" secondItem="8Ii-15-Xz1" secondAttribute="leading" constant="15" id="j6L-Ja-Lt6"/>
                             <constraint firstItem="BBj-PR-VZL" firstAttribute="leading" secondItem="gwA-nK-5SP" secondAttribute="trailing" constant="10" id="mBo-nE-HaS"/>
                             <constraint firstItem="4IQ-Ac-nxY" firstAttribute="leading" secondItem="LSt-4n-Ii7" secondAttribute="trailing" constant="17" id="mFv-Qv-jc4"/>
-                            <constraint firstAttribute="width" constant="375" id="pdu-uz-XPd"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EA-q2-TEW">
@@ -97,18 +96,20 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="8Ii-15-Xz1" secondAttribute="bottom" id="69Y-o1-0hQ"/>
                     <constraint firstAttribute="trailing" secondItem="8Ii-15-Xz1" secondAttribute="trailing" id="7aL-7D-XFE"/>
-                    <constraint firstAttribute="trailing" secondItem="1EA-q2-TEW" secondAttribute="trailing" constant="15" id="DfM-Ch-QLX"/>
                     <constraint firstItem="8Ii-15-Xz1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IFg-9j-RS9"/>
-                    <constraint firstItem="1EA-q2-TEW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="KCB-YT-WGx"/>
+                    <constraint firstAttribute="trailing" secondItem="1EA-q2-TEW" secondAttribute="trailing" constant="15" id="LMj-CT-y6e"/>
+                    <constraint firstItem="1EA-q2-TEW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="fCP-ZV-mGB"/>
                     <constraint firstItem="8Ii-15-Xz1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="m8k-7p-9uT"/>
                     <constraint firstAttribute="bottom" secondItem="1EA-q2-TEW" secondAttribute="bottom" id="pcM-g1-JeZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="createdAtLabel" destination="BBj-PR-VZL" id="SR9-h6-Adg"/>
                 <outlet property="itemImageView" destination="LSt-4n-Ii7" id="QUL-iV-Zfr"/>
-                <outlet property="itemNameLabel" destination="4IQ-Ac-nxY" id="pjA-vb-ObG"/>
                 <outlet property="itemPriceLabel" destination="3xG-yS-CWy" id="Ilo-1c-msd"/>
+                <outlet property="itemRegionLabel" destination="gwA-nK-5SP" id="m9v-3F-Qos"/>
+                <outlet property="itemTitleLabel" destination="4IQ-Ac-nxY" id="pjA-vb-ObG"/>
             </connections>
             <point key="canvasLocation" x="138.40579710144928" y="91.741071428571431"/>
         </tableViewCell>
