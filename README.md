@@ -12,9 +12,17 @@
 </br>
 
 ## 👀  Simulator
+
+`클라이언트-디자인: 뷰 구현`
 | PostListVC & Flow | PostDetailVC | PostDetailVC |
 | ----------------- | :-----: | ----- |
 |<img src = "https://user-images.githubusercontent.com/80062632/170760297-ddb38c38-3b56-4bfd-8557-e3906871919a.gif" width ="250"> |<img src ="https://user-images.githubusercontent.com/80062632/170726094-4707132f-db52-4d45-81fc-77bdf985fee9.gif" width ="250">  |<img src = "https://user-images.githubusercontent.com/77208067/170719101-65798262-f404-4e51-ab7d-0bde355cf0c4.gif" width ="250">|
+
+
+`클라이언트-서버: API 연결`
+| `List 뷰 무한스크롤 GET 통신` | `Write 뷰 POST 통신` | `Detail 뷰 GET, PUT 통신` |
+|:--:|:--:|:--:|
+| ![Simulator Screen Recording - iPhone 13 mini - 2022-06-13 at 17 01 50](https://user-images.githubusercontent.com/80062632/173308582-50347ac9-d442-4308-ab5f-29ba0d7e12ab.gif)| ![Simulator Screen Recording - iPhone 13 mini - 2022-06-13 at 17 02 40](https://user-images.githubusercontent.com/80062632/173308672-d81c28ea-3969-4ef1-96c0-f9637b1b9000.gif) | ![Simulator Screen Recording - iPhone 13 mini - 2022-06-13 at 17 03 39](https://user-images.githubusercontent.com/80062632/173308737-d5258758-c511-4523-a8e1-a2607eab75c8.gif) |
 
 </br>
 
