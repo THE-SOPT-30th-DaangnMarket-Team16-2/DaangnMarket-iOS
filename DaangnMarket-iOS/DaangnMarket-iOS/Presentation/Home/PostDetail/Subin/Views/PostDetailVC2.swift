@@ -11,11 +11,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     
     // MARK: - Properties
     static var storyboard: Storyboards = .postDetail2
-    var detailModel: PostDetail? {
-        didSet {
-            configUI()
-        }
-    }
+    var detailModel: PostDetail?
     var postId: String?
     var images = [String]()
     var imageCount: Int = 0
@@ -40,6 +36,7 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegate()
+        configUI()
         navigationBarUI()
         setButtonUI()
         fromPostDetail()
