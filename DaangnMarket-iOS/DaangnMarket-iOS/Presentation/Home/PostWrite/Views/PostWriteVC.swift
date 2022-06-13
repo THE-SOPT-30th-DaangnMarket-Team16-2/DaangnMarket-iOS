@@ -289,7 +289,12 @@ extension PostWriteVC {
                                                   id: model.id,
                                                   price: intPrice,
                                                   title: title,
-                                                  image: ["https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"], view: 1, isPriceSuggestion: boolPriceOffer, createdAt: "1", isLiked: false, user: User.init(region: "", id: "", name: "수빈", profile: ""))
+                                                  image: ["https://dnvefa72aowie.cloudfront.net/origin/article/202205/be6893a11bf0a24b1c6f3dfc2cd02d7affd0c7566e877576050155e5bd337d4b.webp?q=95&s=1440x1440&t=inside"],
+                                                  view: 1,
+                                                  isPriceSuggestion: boolPriceOffer,
+                                                  createdAt: "방금 전",
+                                                  isLiked: false,
+                                                  user: User.init(region: "잠실 3동", id: "", name: "아요미", profile: ""))
                 let nextVC = PostDetailVC2.instantiate()
                 nextVC.postId = model.id
                 nextVC.imageCount = self.photoModel.userSelectedImages.count
