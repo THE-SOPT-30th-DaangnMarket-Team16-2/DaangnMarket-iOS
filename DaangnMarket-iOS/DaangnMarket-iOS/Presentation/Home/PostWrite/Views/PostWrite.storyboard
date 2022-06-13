@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -20,27 +20,26 @@
             <objects>
                 <viewController storyboardIdentifier="PostWriteVC" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="PostWriteVC" customModule="DaangnMarket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTH-58-TXF">
-                                <rect key="frame" x="0.0" y="44" width="375" height="687"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="801"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-Yt-Le3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="688"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="688"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvl-xd-NkA" userLabel="line">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvl-xd-NkA" userLabel="line1">
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="1"/>
                                                 <color key="backgroundColor" name="carrot_squaregray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="WcA-wc-Oq8"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dtf-E3-e1L">
-                                                <rect key="frame" x="0.0" y="1" width="375" height="108"/>
+                                                <rect key="frame" x="0.0" y="1" width="428" height="108"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="375" id="VSY-iv-LhE"/>
                                                     <constraint firstAttribute="height" constant="108" id="Z3W-Li-Dol"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="MNa-mN-qlV">
@@ -184,8 +183,8 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3Q-dF-5Mf">
-                                                <rect key="frame" x="15" y="109" width="345" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3Q-dF-5Mf" userLabel="line2">
+                                                <rect key="frame" x="15" y="109" width="398" height="1"/>
                                                 <color key="backgroundColor" name="carrot_linelightgray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="GsZ-5K-wQa"/>
@@ -203,8 +202,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-l9-I6s">
-                                                <rect key="frame" x="15" y="183" width="345" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jAj-l9-I6s" userLabel="line3">
+                                                <rect key="frame" x="15" y="183" width="398" height="1"/>
                                                 <color key="backgroundColor" name="carrot_linelightgray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="T5d-ph-BjT"/>
@@ -226,8 +225,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-gH-sMC">
-                                                <rect key="frame" x="15" y="253" width="345" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-gH-sMC" userLabel="line4">
+                                                <rect key="frame" x="15" y="253" width="398" height="1"/>
                                                 <color key="backgroundColor" name="carrot_linelightgray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="1Cg-ps-gTu"/>
@@ -264,7 +263,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-eT-ziL">
-                                                <rect key="frame" x="259.33333333333331" y="278.66666666666669" width="24" height="24"/>
+                                                <rect key="frame" x="312.33333333333331" y="278.66666666666669" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="UkL-Ov-Fru"/>
                                                     <constraint firstAttribute="width" constant="24" id="c9A-8e-qay"/>
@@ -277,13 +276,13 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격제안 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAn-Vt-jAT">
-                                                <rect key="frame" x="288.33333333333331" y="280" width="71.666666666666686" height="21.333333333333314"/>
+                                                <rect key="frame" x="341.33333333333331" y="280" width="71.666666666666686" height="21.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" name="carrot_square_gray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPN-nm-wCE">
-                                                <rect key="frame" x="15" y="323" width="345" height="1"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPN-nm-wCE" userLabel="line5">
+                                                <rect key="frame" x="15" y="323" width="398" height="1"/>
                                                 <color key="backgroundColor" name="carrot_linelightgray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="1" id="0LC-lO-5dC"/>
@@ -293,7 +292,7 @@
                                                 </constraints>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="내용을 작성해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zf-Ki2">
-                                                <rect key="frame" x="15" y="346" width="345" height="320"/>
+                                                <rect key="frame" x="15" y="346" width="398" height="320"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="320" id="gnD-7y-fUH"/>
@@ -344,20 +343,18 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="top" secondItem="Gve-j6-5IZ" secondAttribute="top" id="9JE-er-1Vz"/>
-                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="trailing" secondItem="Gve-j6-5IZ" secondAttribute="trailing" id="WVb-7X-goJ"/>
-                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="width" secondItem="FoU-Rs-bcF" secondAttribute="width" id="tEj-JO-2AA"/>
-                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="bottom" secondItem="Gve-j6-5IZ" secondAttribute="bottom" id="tpK-kq-rAH"/>
-                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="leading" secondItem="Gve-j6-5IZ" secondAttribute="leading" id="zCx-y3-Cwh"/>
+                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="top" secondItem="sTH-58-TXF" secondAttribute="top" id="9JE-er-1Vz"/>
+                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="trailing" secondItem="sTH-58-TXF" secondAttribute="trailing" id="WVb-7X-goJ"/>
+                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="width" secondItem="sTH-58-TXF" secondAttribute="width" id="tEj-JO-2AA"/>
+                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="bottom" secondItem="sTH-58-TXF" secondAttribute="bottom" id="tpK-kq-rAH"/>
+                                    <constraint firstItem="0Kt-Yt-Le3" firstAttribute="leading" secondItem="sTH-58-TXF" secondAttribute="leading" id="zCx-y3-Cwh"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="Gve-j6-5IZ"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="FoU-Rs-bcF"/>
                             </scrollView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-5U-wv8">
-                                <rect key="frame" x="0.0" y="731" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="845" width="428" height="47"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-TM-BXo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-TM-BXo" userLabel="line">
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1"/>
                                         <color key="backgroundColor" name="carrot_linelightgray"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="krh-jM-rOU"/>
