@@ -46,6 +46,15 @@ final class PostWriteVC: UIViewController, Storyboarded {
     }
     
     // MARK: - IBAction Part
+    
+    @IBAction func titleEditingChanged(_ sender: UITextField) {
+        checkMaxLength(titleTextField, 20)
+    }
+    
+    @IBAction func categoryEditingChanged(_ sender: UITextField) {
+        checkMaxLength(categoryTextField, 20)
+    }
+    
     @IBAction func priceEditingChanged(_ sender: UITextField) {
         priceSectionCustom()
     }
