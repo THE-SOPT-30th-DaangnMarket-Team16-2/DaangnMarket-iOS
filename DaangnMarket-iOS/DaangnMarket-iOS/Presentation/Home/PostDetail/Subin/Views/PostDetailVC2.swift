@@ -38,7 +38,6 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         setDelegate()
         configUI()
         navigationBarUI()
-        setButtonUI()
         fromPostDetail()
     }
     
@@ -59,10 +58,6 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     // MARK: - Custom Method Part
     private func setDelegate() {
         photoScrollView.delegate = self
-    }
-    
-    private func setButtonUI() {
-        self.stateButton.titleLabel?.text = "판매중"
     }
     
     private func configUI() {
@@ -92,11 +87,11 @@ final class PostDetailVC2: UIViewController, Storyboarded {
         heartButton.isSelected = detailModel.isLiked
         switch detailModel.onSale {
         case "0":
-            self.stateButton.titleLabel?.text = "판매중"
+            self.stateButton.setTitle("판매중", for: .normal)
         case "1":
-            self.stateButton.titleLabel?.text = "예약중"
+            self.stateButton.setTitle("예약중", for: .normal)
         case "2":
-            self.stateButton.titleLabel?.text = "판매완료"
+            self.stateButton.setTitle("판매완료", for: .normal)
         default:
             break
         }
@@ -147,16 +142,16 @@ final class PostDetailVC2: UIViewController, Storyboarded {
     private func stateActionSheet() {
         let actionSheet = UIAlertController(title: "상태 변경", message: nil, preferredStyle: .actionSheet)
         
-        let sellingAction = UIAlertAction(title: "판매중", style: .default) { _ in
-            self.stateButton.titleLabel?.text = "판매중"
+        let sellingAction = UIAlertAction(title: "판매중 ", style: .default) { _ in
+            self.stateButton.setTitle("판매중", for: .normal)
             self.changeSellStatus(onSale: "0")
         }
         let reservedAction = UIAlertAction(title: "예약중", style: .default) { _ in
-            self.stateButton.titleLabel?.text = "예약중"
+            self.stateButton.setTitle("예약중", for: .normal)
             self.changeSellStatus(onSale: "1")
         }
         let completedAction = UIAlertAction(title: "판매완료", style: .default) { _ in
-            self.stateButton.titleLabel?.text = "판매완료"
+            self.stateButton.setTitle("판매완료", for: .normal)
             self.changeSellStatus(onSale: "2")
         }
         let cancelAction = UIAlertAction(title: "닫기", style: .cancel, handler: nil)
