@@ -22,13 +22,9 @@ final class PostTVC: UITableViewCell {
     }
     
     func setData(_ itemData: PostList) {
-        if let image = itemData.image {
-            let url = URL(string: image)
-            let data = try! Data(contentsOf: url!)
-            itemImageView.image = UIImage(data: data)
-        }
         let price = String(itemData.price).replacingOccurrences(of: ",", with: "")
         itemPriceLabel.text = numberFormatter(number: Int(price)!) + "원"
+        itemImageView.setImage(with: itemData.image ?? "")
         itemTitleLabel.text = itemData.title
         itemRegionLabel.text = itemData.region
         createdAtLabel.text = itemData.createdAt
