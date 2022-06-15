@@ -20,14 +20,26 @@ final class AddPhotoCVC: UICollectionViewCell {
     var selectedAssets: [PHAsset] = [PHAsset]()
     var userSelectedImages: [UIImage] = [UIImage]()
     
+    @IBOutlet weak var addPhotoView: UIView!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var countLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setTapGesture()
     }
     
-    @IBAction func addBtnDidTap(_ sender: UIButton) {
+    func setTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
+        addPhotoView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap(sender: UITapGestureRecognizer) {
+        print("Tap add photo view")
+        postImages()
+    }
+    
+    func postImages() {
         /// 기존 선택된 사진 모두 초기화
         selectedAssets.removeAll()
         userSelectedImages.removeAll()
@@ -56,7 +68,6 @@ final class AddPhotoCVC: UICollectionViewCell {
     }
     
     func convertAssetToImages() {
-        
         if selectedAssets.count != 0 {
             for i in 0..<selectedAssets.count {
                 let imageManager = PHImageManager.default()
