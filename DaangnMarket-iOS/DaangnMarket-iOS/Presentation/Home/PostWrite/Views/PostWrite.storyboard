@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController storyboardIdentifier="PostWriteVC" hidesBottomBarWhenPushed="YES" id="Y6W-OH-hqX" customClass="PostWriteVC" customModule="DaangnMarket_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTH-58-TXF">
-                                <rect key="frame" x="0.0" y="44" width="375" height="687"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="620"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="0Kt-Yt-Le3" userLabel="Main View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="568"/>
@@ -38,7 +38,7 @@
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dtf-E3-e1L">
                                                 <rect key="frame" x="0.0" y="1" width="375" height="108"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="carrot_white"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="108" id="Z3W-Li-Dol"/>
                                                 </constraints>
@@ -76,16 +76,16 @@
                                                                                     </connections>
                                                                                 </button>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vdw-Tt-1TI">
-                                                                                    <rect key="frame" x="18" y="36" width="28" height="21.333333333333329"/>
+                                                                                    <rect key="frame" x="18" y="36" width="28" height="21.5"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6P-pl-eg4">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="8.3333333333333339" height="21.333333333333332"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="8.5" height="21.5"/>
                                                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                             <color key="textColor" name="carrot_linegray"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-Rg-OG0">
-                                                                                            <rect key="frame" x="8.3333333333333375" y="0.0" width="19.666666666666671" height="21.333333333333332"/>
+                                                                                            <rect key="frame" x="8.5" y="0.0" width="19.5" height="21.5"/>
                                                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                                             <color key="textColor" name="carrot_linegray"/>
                                                                                             <nil key="highlightedColor"/>
@@ -191,7 +191,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="글 제목" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="yWP-pJ-3ZR">
-                                                <rect key="frame" x="15.000000000000004" y="132" width="46.333333333333343" height="28"/>
+                                                <rect key="frame" x="15" y="132" width="46.5" height="28"/>
                                                 <color key="backgroundColor" name="carrot_white"/>
                                                 <color key="textColor" name="carrot_black"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
@@ -211,7 +211,7 @@
                                                 </constraints>
                                             </view>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="카테고리" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="J2i-zM-bEE">
-                                                <rect key="frame" x="14.999999999999996" y="206" width="55.666666666666657" height="24"/>
+                                                <rect key="frame" x="15" y="206" width="55.5" height="24"/>
                                                 <color key="backgroundColor" name="carrot_white"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="SFH-T2-0XA"/>
@@ -263,7 +263,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Imf-eT-ziL">
-                                                <rect key="frame" x="259.33333333333331" y="278.66666666666669" width="24" height="24"/>
+                                                <rect key="frame" x="259.5" y="279" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="UkL-Ov-Fru"/>
                                                     <constraint firstAttribute="width" constant="24" id="c9A-8e-qay"/>
@@ -276,7 +276,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가격제안 받기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAn-Vt-jAT">
-                                                <rect key="frame" x="288.33333333333331" y="280" width="71.666666666666686" height="21.333333333333314"/>
+                                                <rect key="frame" x="288.5" y="280" width="71.5" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                 <color key="textColor" name="carrot_square_gray"/>
                                                 <nil key="highlightedColor"/>
@@ -293,7 +293,7 @@
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="내용을 작성해주세요." translatesAutoresizingMaskIntoConstraints="NO" id="uQg-zf-Ki2">
                                                 <rect key="frame" x="15" y="346" width="345" height="200"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" name="carrot_white"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="200" id="gnD-7y-fUH"/>
                                                 </constraints>
@@ -302,7 +302,7 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="carrot_white"/>
                                         <constraints>
                                             <constraint firstItem="R3Q-dF-5Mf" firstAttribute="leading" secondItem="0Kt-Yt-Le3" secondAttribute="leading" constant="15" id="2j9-rs-j2W"/>
                                             <constraint firstAttribute="trailing" secondItem="hPN-nm-wCE" secondAttribute="trailing" constant="15" id="2r5-nD-20X"/>
@@ -341,6 +341,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="carrot_white"/>
                                 <constraints>
                                     <constraint firstItem="0Kt-Yt-Le3" firstAttribute="top" secondItem="sTH-58-TXF" secondAttribute="top" id="9JE-er-1Vz"/>
                                     <constraint firstItem="0Kt-Yt-Le3" firstAttribute="trailing" secondItem="sTH-58-TXF" secondAttribute="trailing" id="WVb-7X-goJ"/>
@@ -350,7 +351,7 @@
                                 </constraints>
                             </scrollView>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwm-5U-wv8">
-                                <rect key="frame" x="0.0" y="731" width="375" height="47"/>
+                                <rect key="frame" x="0.0" y="620" width="375" height="47"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6K7-TM-BXo" userLabel="line">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -367,7 +368,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자주 쓰는 문구" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQh-jk-Lpy">
-                                        <rect key="frame" x="42" y="12.999999999999998" width="77" height="21.333333333333329"/>
+                                        <rect key="frame" x="42" y="13" width="77" height="21.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="77" id="HnK-7x-VsJ"/>
                                         </constraints>
@@ -376,14 +377,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_filter" translatesAutoresizingMaskIntoConstraints="NO" id="NrX-mn-LYL">
-                                        <rect key="frame" x="135" y="11.666666666666629" width="24" height="24"/>
+                                        <rect key="frame" x="135" y="11.5" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="lnN-pf-tc9"/>
                                             <constraint firstAttribute="height" constant="24" id="xT2-CU-X4Z"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보여줄 동네 설정" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5L-iJ-lnT">
-                                        <rect key="frame" x="164" y="12.999999999999998" width="89" height="21.333333333333329"/>
+                                        <rect key="frame" x="164" y="13" width="89" height="21.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="89" id="2Wb-ls-A5Z"/>
                                         </constraints>
