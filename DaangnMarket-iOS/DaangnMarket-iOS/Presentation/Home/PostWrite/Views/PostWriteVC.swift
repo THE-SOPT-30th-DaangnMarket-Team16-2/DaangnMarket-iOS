@@ -134,6 +134,13 @@ final class PostWriteVC: UIViewController, Storyboarded {
         return numberFormatter.string(from: NSNumber(value: number))!
     }
     
+    private func scrollToCursor() {
+        let caret = contextTextView.caretRect(for: contextTextView.selectedTextRange!.start)
+        let offset = CGPoint(x: 0,
+                             y: writeScrollView.contentSize.height - writeScrollView.bounds.height - 100 + caret.origin.y)
+        writeScrollView.setContentOffset(offset, animated: true)
+    }
+    
     private func addKeyboardObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDown), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -238,6 +245,7 @@ extension PostWriteVC: UICollectionViewDelegateFlowLayout {
 // MARK: - UITextViewDelegate
 extension PostWriteVC: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
+        scrollToCursor()
         if textView.textColor == UIColor(named: "carrot_square_gray") {
             textView.text = nil
             textView.textColor = UIColor.carrotBlack
@@ -252,11 +260,12 @@ extension PostWriteVC: UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
+        scrollToCursor()
         let size = CGSize(width: view.frame.width, height: .infinity)
         let estimatedSize = textView.sizeThatFits(size)
         
         textView.constraints.forEach { cons in
-            if !(estimatedSize.height <= 200) {
+            if !(estimatedSize.height <= 400) {
                 if cons.firstAttribute == .height {
                     cons.constant = estimatedSize.height
                 }
